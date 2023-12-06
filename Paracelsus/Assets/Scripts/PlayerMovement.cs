@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     private bool grounded;
+    private float coyote_time = 0.2f;
+    private float coyote_counter;
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -20,22 +22,38 @@ public class PlayerMovement : MonoBehaviour
 
         body.velocity = new Vector2(horizontal_input * speed, body.velocity.y);
 
+        if (grounded)
+        {
+            coyote_counter = coyote_time;
+        }
+        else
+        {
+            coyote_counter -= Time.deltaTime;
+        }
+
         if (horizontal_input > 0.01)
             transform.localScale = new Vector3(3, 3, 3);
         else if (horizontal_input < -0.01)
             transform.localScale = new Vector3(-3, 3, 3);
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space) && coyote_counter > 0f)
             Jump();
+        if (Input.GetKeyDown(KeyCode.Space) && body.velocity.y > 0f)
+            ReleaseJump();
 
         anim.SetBool("run", horizontal_input != 0);
         anim.SetBool("grounded", grounded);
     }
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed);
+        body.velocity = new Vector2(body.velocity.x, speed * 2.2f);
         anim.SetTrigger("jump");
         grounded = false;
+    }
+    private void ReleaseJump()
+    {
+        body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
+        coyote_counter = 0f;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
