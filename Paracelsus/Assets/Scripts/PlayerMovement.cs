@@ -6,11 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float jump_power;
+    [SerializeField] private float dash_power;
+    [SerializeField] private float dash_cooldown;
+    [SerializeField] private float dash_time;
+
     private Rigidbody2D body;
     private Animator anim;
     private bool grounded;
     private float coyote_time = 0.2f;
     private float coyote_counter;
+    private bool can_dash = true;
+    private bool currently_dash;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -19,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (currently_dash)
+        {
+            return;
+        }
+
         float horizontal_input = Input.GetAxis("Horizontal");
 
         body.velocity = new Vector2(horizontal_input * speed, body.velocity.y);
@@ -44,6 +56,9 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetBool("run", horizontal_input != 0);
         anim.SetBool("grounded", grounded);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && can_dash)
+            StartCoroutine(Dash());
     }
     private void Jump()
     {
@@ -60,5 +75,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
             grounded = true;
+    }
+    private IEnumerator Dash()
+    {
+        can_dash = false;
+        currently_dash = true;
+        float gravity = body.gravityScale;
+        body.gravityScale = 0f;
+        body.velocity = new Vector2(dash_power * transform.localScale.x, 0f);
+        yield return new WaitForSeconds(dash_time);
+        currently_dash = false;
+        body.gravityScale = gravity;
+        yield return new WaitForSeconds(dash_cooldown);
+        can_dash = true;
     }
 }
