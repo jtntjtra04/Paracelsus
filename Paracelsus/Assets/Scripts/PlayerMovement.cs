@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dash_time;
     [SerializeField] private Transform ground_check;
     [SerializeField] private LayerMask ground_layer;
-    [SerializeField] private float glide_velocity;
+    [SerializeField] private float glide_velocity; // glide
 
     private Rigidbody2D body;
     private Animator anim;
@@ -22,13 +22,13 @@ public class PlayerMovement : MonoBehaviour
     private bool can_dash = true;
     private bool currently_dash;
     private int extra_jump = 1;
-    private float initial_gravity;
+    private float initial_gravity; // glide
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        initial_gravity = body.gravityScale;
+        initial_gravity = body.gravityScale; // glide
     }
 
     private void Update()
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && can_dash)
             StartCoroutine(Dash());
             
-        if (Input.GetKey(KeyCode.Space) && body.velocity.y <= 0) 
+        if (Input.GetKey(KeyCode.Space) && body.velocity.y <= 0)  // glide
         {
             body.gravityScale = 0;
             body.velocity = new Vector2(body.velocity.x, y:-glide_velocity);
