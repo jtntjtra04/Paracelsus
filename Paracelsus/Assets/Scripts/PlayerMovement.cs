@@ -66,6 +66,16 @@ public class PlayerMovement : MonoBehaviour
         else if (horizontal_input < -0.01)
             transform.localScale = new Vector3(-3, 3, 3);
 
+        if (Input.GetKey(KeyCode.Space) && body.velocity.y <= 0)  // glide
+        {
+            body.gravityScale = 0;
+            body.velocity = new Vector2(body.velocity.x, y: -glide_velocity);
+        }
+        else
+        {
+            body.gravityScale = initial_gravity;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (jumpbuffer_counter > 0f && coyote_counter > 0)
@@ -84,15 +94,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && can_dash)
             StartCoroutine(Dash());
             
-        if (Input.GetKey(KeyCode.Space) && body.velocity.y <= 0)  // glide
-        {
-            body.gravityScale = 0;
-            body.velocity = new Vector2(body.velocity.x, y:-glide_velocity);
-        }
-        else
-        {
-           body.gravityScale = initial_gravity;
-        }
+        
     }
     private void Jump()
     {
