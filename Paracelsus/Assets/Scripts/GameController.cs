@@ -10,13 +10,14 @@ public class GameController : MonoBehaviour
 
     // Spawn Positions
     private Vector2 startPosition;
-    private Vector2 checkpointPosition; 
+    private Vector2 checkpointPosition;
+    private bool canSetCheckpoint = false; 
 
     private void Start()
     {
         // Respawn point
         startPosition = transform.position;
-        checkpointPosition = startPosition; 
+        checkpointPosition = startPosition;
     }
 
     private void Awake()
@@ -45,8 +46,29 @@ public class GameController : MonoBehaviour
         }
         else if (collision.CompareTag("Checkpoint"))
         {
-            checkpointPosition = collision.transform.position; 
+            canSetCheckpoint = true; // Allow setting checkpoint
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Checkpoint"))
+        {
+            canSetCheckpoint = false; // Stop allowing setting checkpoint
+        }
+    }
+
+    private void Update()
+    {
+        if (canSetCheckpoint && Input.GetKeyDown(KeyCode.F))
+        {
+            SetCheckpoint();
+        }
+    }
+
+    void SetCheckpoint()
+    {
+        checkpointPosition = transform.position;
     }
 
     void Respawn()
@@ -62,4 +84,5 @@ public class GameController : MonoBehaviour
         currHP = startHP;
     }
 }
+
 
