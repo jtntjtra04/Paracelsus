@@ -793,7 +793,8 @@ MonoBehaviour:
   speed: 7
   player_location: {fileID: 599306662}
   chasing_player: 0
-  chasing_distance: 20
+  chasing_distance: 25
+  max_distance: 40
 --- !u!4 &247194879
 Transform:
   m_ObjectHideFlags: 0
@@ -2825,7 +2826,7 @@ GameObject:
   - component: {fileID: 1160970011}
   m_Layer: 0
   m_Name: FireSkeletonEnemy
-  m_TagString: Obstacles
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2947,7 +2948,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.094154835, y: 0}
@@ -2977,7 +2978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack_CD: 1
   range: 0.75
-  collider_distance: 4.31
+  collider_distance: 5.62
   damage: 1
   BoxCollider: {fileID: 1160970009}
   player_layer:
@@ -3003,6 +3004,7 @@ MonoBehaviour:
   player_location: {fileID: 0}
   chasing_player: 0
   chasing_distance: 0
+  max_distance: 0
 --- !u!1 &1168806879
 GameObject:
   m_ObjectHideFlags: 0

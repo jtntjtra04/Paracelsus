@@ -14,6 +14,7 @@ public class SkeletonPatrol : MonoBehaviour
     public Transform player_location; 
     public bool chasing_player;
     public float chasing_distance;
+    public float max_distance;
 
     private Vector3 origin_scale;
     private bool go_left;
@@ -23,6 +24,11 @@ public class SkeletonPatrol : MonoBehaviour
     }
     private void Update()
     {
+        if (Vector2.Distance(enemy.position, player_location.position) > max_distance)
+        {
+            chasing_player = false;
+        }
+
         if(chasing_player)
         {
             if(enemy.position.x > player_location.position.x)
@@ -38,6 +44,11 @@ public class SkeletonPatrol : MonoBehaviour
         }
         else
         {
+            if (Vector2.Distance(enemy.position, player_location.position) < chasing_distance) // if player gets closer to enemy
+            {
+                chasing_player = true;
+            }
+
             if (go_left)
             {
                 if (enemy.position.x >= left_waypoint.position.x) // while not touching left waypoint
@@ -59,11 +70,6 @@ public class SkeletonPatrol : MonoBehaviour
                 {
                     ChangeDirection(); //change direction
                 }
-            }
-
-            if (Vector2.Distance(enemy.position, player_location.position) < chasing_distance) // if player gets closer to enemy
-            {
-                chasing_player = true;
             }
         }
     }
