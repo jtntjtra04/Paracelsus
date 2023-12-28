@@ -44,11 +44,6 @@ public class SkeletonPatrol : MonoBehaviour
         }
         else
         {
-            if (Vector2.Distance(enemy.position, player_location.position) < chasing_distance) // if player gets closer to enemy
-            {
-                chasing_player = true;
-            }
-
             if (go_left)
             {
                 if (enemy.position.x >= left_waypoint.position.x) // while not touching left waypoint
@@ -70,6 +65,11 @@ public class SkeletonPatrol : MonoBehaviour
                 {
                     ChangeDirection(); //change direction
                 }
+            }
+
+            if (Vector2.Distance(enemy.position, player_location.position) < chasing_distance) // if player gets closer to enemy
+            {
+                chasing_player = true;
             }
         }
     }

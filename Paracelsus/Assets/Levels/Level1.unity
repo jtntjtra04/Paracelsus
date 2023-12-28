@@ -2824,6 +2824,7 @@ GameObject:
   - component: {fileID: 1160970009}
   - component: {fileID: 1160970010}
   - component: {fileID: 1160970011}
+  - component: {fileID: 1160970012}
   m_Layer: 0
   m_Name: FireSkeletonEnemy
   m_TagString: Untagged
@@ -3005,6 +3006,33 @@ MonoBehaviour:
   chasing_player: 0
   chasing_distance: 0
   max_distance: 0
+--- !u!50 &1160970012
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160970005}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &1168806879
 GameObject:
   m_ObjectHideFlags: 0
