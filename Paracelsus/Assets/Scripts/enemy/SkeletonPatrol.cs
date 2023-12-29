@@ -33,12 +33,12 @@ public class SkeletonPatrol : MonoBehaviour
         {
             if(enemy.position.x > player_location.position.x)
             {
-                enemy.localScale = new Vector3(-0.7672f, 0.7672f, 0.7672f);
+                enemy.localScale = new Vector3(-0.2792043f, 0.2792043f, 0.2792043f);
                 enemy.position += Vector3.left * Time.deltaTime * speed;
             }
             if (enemy.position.x < player_location.position.x)
             {
-                enemy.localScale = new Vector3(0.7672f, 0.7672f, 0.7672f);
+                enemy.localScale = new Vector3(0.2792043f, 0.2792043f, 0.2792043f);
                 enemy.position += Vector3.right * Time.deltaTime * speed;
             }
         }
