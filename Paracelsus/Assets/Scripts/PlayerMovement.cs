@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && body.velocity.y <= 0)  // glide
         {
+            anim.SetTrigger("glide");
             body.gravityScale = 0;
             body.velocity = new Vector2(body.velocity.x, y: -glide_velocity);
         }
@@ -78,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            anim.SetBool("grounded", false);
             if (jumpbuffer_counter > 0f && coyote_counter > 0)
                 Jump();
             else if (extra_jump > 0)
@@ -100,7 +102,6 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetTrigger("jump");
         body.velocity = new Vector2(body.velocity.x, jump_power);
-        //double_jump = !double_jump;
         coyote_counter = 0f;
         jumpbuffer_counter = 0f;
     }
