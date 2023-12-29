@@ -80,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetBool("grounded", false);
+
             if (jumpbuffer_counter > 0f && coyote_counter > 0)
                 Jump();
             else if (extra_jump > 0)

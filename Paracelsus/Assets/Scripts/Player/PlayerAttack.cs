@@ -26,11 +26,11 @@ public class PlayerAttack : MonoBehaviour
     }
     private void attack()
     {
-        anim.SetTrigger("attack");
         cooldown_timer = 0;
 
         fireballs[LoopFire()].transform.position = firepoint.position;
         fireballs[LoopFire()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        anim.SetTrigger("attack");
     }
     private int LoopFire()
     {
