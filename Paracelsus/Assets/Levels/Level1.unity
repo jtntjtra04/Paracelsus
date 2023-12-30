@@ -309,7 +309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247194877}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b79bd5908da11843b269942ef0a9f38, type: 3}
   m_Name: 
@@ -318,10 +318,10 @@ MonoBehaviour:
   right_waypoint: {fileID: 990277341}
   enemy: {fileID: 1160970008}
   anim: {fileID: 1160970006}
-  speed: 5
+  speed: 3
   player_location: {fileID: 599306662}
   chasing_player: 0
-  chasing_distance: 3
+  chasing_distance: 5
   max_distance: 10
 --- !u!4 &247194879
 Transform:
@@ -16591,7 +16591,6 @@ GameObject:
   - component: {fileID: 1160970006}
   - component: {fileID: 1160970009}
   - component: {fileID: 1160970012}
-  - component: {fileID: 1160970013}
   - component: {fileID: 1160970014}
   - component: {fileID: 1160970010}
   m_Layer: 0
@@ -16665,7 +16664,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 397775710, guid: 68f5ffe7d7dea124b9cebfe14734ce76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.57, y: 6.67}
@@ -16771,7 +16770,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 20
+  m_GravityScale: 50
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -16783,25 +16782,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1160970013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160970005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e2cbccd67d346f4fbe732b0bc6f4085, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  left_waypoint: {fileID: 1107093653}
-  right_waypoint: {fileID: 990277340}
-  speed: 5
-  player_location: {fileID: 599306662}
-  chasing_player: 0
-  chasing_distance: 5
-  max_distance: 10
 --- !u!114 &1160970014
 MonoBehaviour:
   m_ObjectHideFlags: 0
