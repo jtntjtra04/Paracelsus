@@ -308,7 +308,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247194877}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b79bd5908da11843b269942ef0a9f38, type: 3}
   m_Name: 
@@ -317,7 +317,7 @@ MonoBehaviour:
   right_waypoint: {fileID: 990277341}
   enemy: {fileID: 1160970008}
   anim: {fileID: 1160970006}
-  speed: 4
+  speed: 3
   player_location: {fileID: 599306662}
   chasing_player: 0
   chasing_distance: 5
@@ -334,7 +334,10 @@ Transform:
   m_LocalPosition: {x: 28.44, y: 1.81, z: -0.78891146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1107093654}
+  - {fileID: 990277341}
+  - {fileID: 1160970008}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &269031208
@@ -724,7 +727,7 @@ Transform:
   m_GameObject: {fileID: 598809955}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.29, y: -0.07, z: 0}
+  m_LocalPosition: {x: 4.82, y: -0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -837,7 +840,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -862,8 +865,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jump_power: 25
-  dash_power: 50
+  jump_power: 20
+  dash_power: 120
   dash_cooldown: 0.5
   dash_time: 0.2
   ground_check: {fileID: 1743019040}
@@ -16198,11 +16201,11 @@ Transform:
   m_GameObject: {fileID: 990277340}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.690002, y: 1.6399999, z: 0}
+  m_LocalPosition: {x: 2.250002, y: -0.17000008, z: 0.78891146}
   m_LocalScale: {x: -0.7672, y: 0.7672, z: 0.7672}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 247194879}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1076208031
 PrefabInstance:
@@ -16296,11 +16299,11 @@ Transform:
   m_GameObject: {fileID: 1107093653}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.61, y: 1.5699999, z: 0}
+  m_LocalPosition: {x: -8.83, y: -0.24000001, z: 0.78891146}
   m_LocalScale: {x: -0.7672, y: 0.7672, z: 0.7672}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 247194879}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1160970005
 GameObject:
@@ -16406,12 +16409,12 @@ Transform:
   m_GameObject: {fileID: 1160970005}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.92, y: 2.03, z: 0}
-  m_LocalScale: {x: 0.2792043, y: 0.27920428, z: 0.27920428}
+  m_LocalPosition: {x: -3.5200005, y: 0.22000003, z: 0.78891146}
+  m_LocalScale: {x: -0.2792043, y: 0.27920428, z: 0.27920428}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 659586165}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 247194879}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1160970009
 BoxCollider2D:
@@ -16493,7 +16496,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -16512,14 +16515,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160970005}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e2cbccd67d346f4fbe732b0bc6f4085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypoint1: {fileID: 1107093653}
-  Waypoint2: {fileID: 990277340}
+  left_waypoint: {fileID: 1107093653}
+  right_waypoint: {fileID: 990277340}
   speed: 3
+  player_location: {fileID: 599306662}
+  chasing_player: 0
+  chasing_distance: 5
+  max_distance: 10
 --- !u!1 &1201875485
 GameObject:
   m_ObjectHideFlags: 0
@@ -17400,18 +17407,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 18893554}
     m_Modifications:
     - target: {fileID: 1150221837320791536, guid: 01b5801d61271eb4d8cf11f50519bbc1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -53.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150221837320791536, guid: 01b5801d61271eb4d8cf11f50519bbc1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150221837320791536, guid: 01b5801d61271eb4d8cf11f50519bbc1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.13019648
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150221837320791536, guid: 01b5801d61271eb4d8cf11f50519bbc1, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
@@ -17443,6 +17438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fireball
       objectReference: {fileID: 0}
+    - target: {fileID: 2083175539199450509, guid: 01b5801d61271eb4d8cf11f50519bbc1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17456,9 +17455,6 @@ SceneRoots:
   - {fileID: 1614151144}
   - {fileID: 599306662}
   - {fileID: 18893554}
-  - {fileID: 1160970008}
-  - {fileID: 1107093654}
-  - {fileID: 990277341}
   - {fileID: 247194879}
   - {fileID: 26053001}
   - {fileID: 1201875487}

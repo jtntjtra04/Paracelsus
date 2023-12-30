@@ -18,9 +18,11 @@ public class SkeletonPatrol : MonoBehaviour
 
     private Vector3 origin_scale;
     private bool go_left;
+    private Rigidbody2D body;
     private void Awake()
     {
         origin_scale = enemy.localScale; // store the current enemy scale
+        body = enemy.GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
@@ -34,12 +36,12 @@ public class SkeletonPatrol : MonoBehaviour
             if(enemy.position.x > player_location.position.x)
             {
                 enemy.localScale = new Vector3(-0.2792043f, 0.2792043f, 0.2792043f);
-                enemy.position += Vector3.left * Time.deltaTime * speed;
+                body.velocity = new Vector2(-speed, 0);
             }
             if (enemy.position.x < player_location.position.x)
             {
                 enemy.localScale = new Vector3(0.2792043f, 0.2792043f, 0.2792043f);
-                enemy.position += Vector3.right * Time.deltaTime * speed;
+                body.velocity = new Vector2(speed, 0);
             }
         }
         else
