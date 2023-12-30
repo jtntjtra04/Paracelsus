@@ -85,7 +85,5 @@ public class WaypointFollower : MonoBehaviour
         Gizmos.DrawWireSphere(left_waypoint.transform.position, 0.5f);
         Gizmos.DrawWireSphere(right_waypoint.transform.position, 0.5f);
         Gizmos.DrawLine(left_waypoint.transform.position, right_waypoint.transform.position);
-    }
-
-    
+    }   
 }

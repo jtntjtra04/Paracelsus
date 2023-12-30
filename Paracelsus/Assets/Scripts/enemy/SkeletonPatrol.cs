@@ -19,6 +19,7 @@ public class SkeletonPatrol : MonoBehaviour
     private Vector3 origin_scale;
     private bool go_left;
     private Rigidbody2D body;
+
     private void Awake()
     {
         origin_scale = enemy.localScale; // store the current enemy scale
@@ -31,17 +32,20 @@ public class SkeletonPatrol : MonoBehaviour
             chasing_player = false;
         }
 
-        if(chasing_player)
+        if (chasing_player)
         {
-            if(enemy.position.x > player_location.position.x)
+            float direction = Mathf.Sign(player_location.position.x - enemy.position.x);
+            body.velocity = new Vector2(speed * direction, body.velocity.y);
+
+            if (enemy.position.x > player_location.position.x)
             {
                 enemy.localScale = new Vector3(-0.2792043f, 0.2792043f, 0.2792043f);
-                body.velocity = new Vector2(-speed, 0);
+                body.velocity = new Vector2(-speed, 1);
             }
             if (enemy.position.x < player_location.position.x)
             {
                 enemy.localScale = new Vector3(0.2792043f, 0.2792043f, 0.2792043f);
-                body.velocity = new Vector2(speed, 0);
+                body.velocity = new Vector2(speed, 1);
             }
         }
         else
