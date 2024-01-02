@@ -33,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
         if (currently_dash)
         {
             return;
@@ -96,8 +101,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && can_dash)
             StartCoroutine(Dash());
-            
+
         
+
     }
     private void Jump()
     {

@@ -18,6 +18,11 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Update()
     {
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0) && cooldown_timer > attack_cooldown) 
         {
             attack();
