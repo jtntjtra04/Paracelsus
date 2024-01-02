@@ -27,11 +27,11 @@ public class Projectile : MonoBehaviour
         transform.Translate(movement_speed, 0, 0);
 
         // projectile lifetime
-        life_time += Time.deltaTime;
-        if (life_time > 5)
-        {
-            gameObject.SetActive(false);
-        }
+        //life_time += Time.deltaTime;
+        //if (life_time > 5)
+        //{
+        //    gameObject.SetActive(false);
+        //}
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -41,11 +41,11 @@ public class Projectile : MonoBehaviour
     }
     public void SetDirection(float _direction)
     {
+        direction = _direction;
         life_time = 0;
         gameObject.SetActive(true);
         hit = false;
         BoxCollider.enabled = true;
-        direction = _direction;
 
         float localScaleX = transform.localScale.x;
         if (Mathf.Sign(localScaleX) != _direction) 

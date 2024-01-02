@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement playerMovement;
     [SerializeField] private float attack_cooldown;
     private float cooldown_timer = 100;
-    [SerializeField] private Transform firepoint;
+    [SerializeField] private Transform shoot_point;
     [SerializeField] private GameObject[] fireballs;
     private void Awake()
     {
@@ -26,11 +26,12 @@ public class PlayerAttack : MonoBehaviour
     }
     private void attack()
     {
+        anim.SetTrigger("attack");
+
         cooldown_timer = 0;
 
-        fireballs[LoopFire()].transform.position = firepoint.position;
+        fireballs[LoopFire()].transform.position = shoot_point.position;
         fireballs[LoopFire()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
-        anim.SetTrigger("attack");
     }
     private int LoopFire()
     {
