@@ -11,7 +11,7 @@ public class SkeletonPatrol : MonoBehaviour
     [SerializeField] private float speed;
 
     // enemy follow player
-    public Transform player_location; 
+    public Transform player_location;
     public bool chasing_player;
     public float chasing_distance;
     public float max_distance;
@@ -34,13 +34,13 @@ public class SkeletonPatrol : MonoBehaviour
 
         if (chasing_player)
         {
-            //float direction = Mathf.Sign(player_location.position.x - enemy.position.x);
-            //body.velocity = new Vector2(speed * direction * 2, body.velocity.y);
+            float direction = Mathf.Sign(player_location.position.x - enemy.position.x);
+            body.velocity = new Vector2(speed * 2.5f * direction, body.velocity.y);
 
             if (enemy.position.x > player_location.position.x)
             {
                 enemy.localScale = new Vector3(-0.2792043f, 0.2792043f, 0.2792043f);
-                body.velocity = new Vector2(-speed * 2.5f, 1);
+                body.velocity = new Vector2(-speed * -2.5f , 1);
             }
             if (enemy.position.x < player_location.position.x)
             {

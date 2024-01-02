@@ -14,3 +14,4 @@ public class CameraMovement : MonoBehaviour
         transform.position = Vector3.Slerp(transform.position, newpos, follow_speed * Time.deltaTime);
     }
 }
+
