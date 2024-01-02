@@ -63,6 +63,11 @@ public class GameController : MonoBehaviour
         if (canSetCheckpoint && Input.GetKeyDown(KeyCode.F))
         {
             SetCheckpoint();
+            
+            if(currHP < 3)
+            {
+                currHP = 3;
+            }
         }
     }
 

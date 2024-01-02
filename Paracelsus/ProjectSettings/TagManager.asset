@@ -7,11 +7,12 @@ TagManager:
   - Ground
   - Obstacles
   - Checkpoint
+  - Fire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ground
