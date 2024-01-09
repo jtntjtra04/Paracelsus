@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
+            body.velocity = new Vector2(0, body.velocity.y);
+            anim.SetBool("run", false);
             return;
         }
 
