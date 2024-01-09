@@ -47,6 +47,10 @@ public class SkeletonPatrol : MonoBehaviour
                 enemy.localScale = new Vector3(0.2792043f, 0.2792043f, 0.2792043f);
                 body.velocity = new Vector2(speed * 2.5f, 1);
             }
+            //if (enemy.position.x == player_location.position.x)
+            //{
+            //    body.velocity = new Vector2(0, 1);
+            //}
         }
         else
         {
