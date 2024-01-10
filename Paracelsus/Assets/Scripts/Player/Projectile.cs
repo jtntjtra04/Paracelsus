@@ -11,11 +11,13 @@ public class Projectile : MonoBehaviour
     private bool hit;
     private float direction;
     private float life_time;
+    private Rigidbody2D body;
 
     private void Awake()
     {
         BoxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        body = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
@@ -23,6 +25,7 @@ public class Projectile : MonoBehaviour
         {
             return;
         }
+
         float movement_speed = speed * Time.deltaTime * direction;
         transform.Translate(movement_speed, 0, 0);
 

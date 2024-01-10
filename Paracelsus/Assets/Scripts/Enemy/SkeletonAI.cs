@@ -15,7 +15,6 @@ public class SkeletonAI : MonoBehaviour
     
     //references
     private Animator anim;
-    // private HealthUI player_HP;
     private GameController player_HP;
 
     private void Awake()

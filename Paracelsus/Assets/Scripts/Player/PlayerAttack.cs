@@ -9,8 +9,10 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement playerMovement;
     [SerializeField] private float attack_cooldown;
     private float cooldown_timer = 100;
+    private int current_element = 0;
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject[] elements;
+    private GameObject loop_fire;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -23,20 +25,32 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
+        // switch element
+        ElementSwitching switch_element = GetComponent<ElementSwitching>();
+        if (switch_element != null)
+        {
+            current_element = switch_element.GetCurrentElement();
+        }
+
         if (Input.GetMouseButtonDown(0) && cooldown_timer > attack_cooldown) 
         {
             attack();
+
         }
         cooldown_timer += Time.deltaTime;
     }
     private void attack()
     {
+        anim.SetTrigger("attack");
+
         cooldown_timer = 0;
 
-        elements[LoopFire()].transform.position = firepoint.position;
-        elements[LoopFire()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
-        anim.SetTrigger("attack");
+        //Instantiate(elements, firepoint.position, firepoint.rotation);
+
+        loop_fire = Instantiate(elements[current_element], firepoint.position, Quaternion.identity);
+        loop_fire.GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
+
     private int LoopFire()
     {
         for (int i = 0; i < elements.Length; i++)

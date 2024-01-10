@@ -8,6 +8,10 @@ TagManager:
   - Obstacles
   - Checkpoint
   - Fire
+  - Wind
+  - Earth
+  - Water
+  - Neutral
   layers:
   - Default
   - TransparentFX

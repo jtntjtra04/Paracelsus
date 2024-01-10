@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
             jumpbuffer_counter -= Time.deltaTime;
         }
 
+        //character flip
         if (horizontal_input > 0.01)
             transform.localScale = new Vector3(0.37f, 0.37f, 0.37f);
         else if (horizontal_input < -0.01)
