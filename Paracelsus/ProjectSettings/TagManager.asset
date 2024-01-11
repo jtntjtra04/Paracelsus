@@ -12,6 +12,10 @@ TagManager:
   - Earth
   - Water
   - Neutral
+  - FirePillar
+  - WindPillar
+  - WaterPillar
+  - EarthPillar
   layers:
   - Default
   - TransparentFX
