@@ -7,23 +7,28 @@ public class ElementSwitching : MonoBehaviour
 {
     private int current_element;
 
-    private bool fire_pillar = false;
+    //pillars
+    private bool fire_pillar = false; 
     private bool wind_pillar = false;
     private bool earth_pillar = false;
     private bool water_pillar = false;
 
+    // fire element
     private bool fire_element = false;
     private float fire_timer = 0f;
     private float fire_duration = 10f;
 
+    //wind element
     private bool wind_element = false;
     private float wind_timer = 0f;
     private float wind_duration = 10f;
 
+    //earth element
     private bool earth_element = false;
     private float earth_timer = 0f;
     private float earth_duration = 10f;
 
+    //water element
     private bool water_element = false;
     private float water_timer = 0f;
     private float water_duration = 10f;
@@ -68,30 +73,31 @@ public class ElementSwitching : MonoBehaviour
     }
     private void Update()
     {
-        if (fire_pillar && Input.GetKeyDown(KeyCode.F))
+        if (fire_pillar && Input.GetKeyDown(KeyCode.F)) // if interact with fire pillar
         {
-            UnlockFire();
+            UnlockFire(); // enable fire element
         }
-        else if (wind_pillar && Input.GetKeyDown(KeyCode.F))
+        else if (wind_pillar && Input.GetKeyDown(KeyCode.F)) // if interact with wind pillar
         {
-            UnlockWind();
+            UnlockWind(); // enable wind element
         }
-        else if (earth_pillar && Input.GetKeyDown(KeyCode.F))
+        else if (earth_pillar && Input.GetKeyDown(KeyCode.F)) // if interact with earth pillar
         {
-            UnlockEarth();
+            UnlockEarth(); // enable earth element
         }
-        else if (water_pillar && Input.GetKeyDown(KeyCode.F))
+        else if (water_pillar && Input.GetKeyDown(KeyCode.F)) // if interact with water pillar
         {
-            UnlockWater();
+            UnlockWater(); // enable water element
         }
 
-        if (fire_element)
+        if (fire_element) // check if element is active
         {
-            fire_timer -= Time.deltaTime;
+            fire_timer -= Time.deltaTime; // reduce the timer
 
             if (fire_timer <= 0)
             {
-                SwitchElement(5);
+                SwitchElement(5); // switch back to neutral element
+                fire_element = false; // set to false again so it doesn't infinite loop
             }
         }
         else if (wind_element)
@@ -101,6 +107,7 @@ public class ElementSwitching : MonoBehaviour
             if(wind_timer <= 0)
             {
                 SwitchElement(5);
+                wind_element = false;
             }
         }
         else if (earth_element)
@@ -110,6 +117,7 @@ public class ElementSwitching : MonoBehaviour
             if (earth_timer <= 0)
             {
                 SwitchElement(5);
+                earth_element = false;
             }    
         }
         else if (water_element)
@@ -119,10 +127,11 @@ public class ElementSwitching : MonoBehaviour
             if(water_timer <= 0)
             {
                 SwitchElement(5);
+                water_element = false;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && fire_element)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && fire_element) // element switcher from input and check if element active
         {
             SwitchElement(1);
         }
@@ -148,25 +157,25 @@ public class ElementSwitching : MonoBehaviour
         Debug.Log("Switch Element to Index : " + current_index);
         current_element = current_index;
     }
-    public void UnlockFire()
+    public void UnlockFire() // unlock fire element
     {
-        fire_element = true;
-        fire_timer = fire_duration;
-        Debug.Log("Fire Element Unlocked!");
+        fire_element = true; // set element to active
+        fire_timer = fire_duration; // store the duration to reduce 
+        Debug.Log("Fire Element Unlocked!"); // print debugging
     }
-    public void UnlockWind()
+    public void UnlockWind() // unlock wind element
     {
         wind_element = true;
         wind_timer = wind_duration;
         Debug.Log("Wind Element Unlocked!");
     }
-    public void UnlockWater()
+    public void UnlockWater() // unlock water element
     {
         water_element = true;
         water_timer = water_duration;
         Debug.Log("Water Element Unlocked!");
     }
-    public void UnlockEarth()
+    public void UnlockEarth() // unlock earth element
     {
         earth_element = true;
         earth_timer = earth_duration;
