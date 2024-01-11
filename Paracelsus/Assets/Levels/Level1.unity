@@ -18248,6 +18248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243e7cf5e74b0b34c8e0f328f22c076b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typingSpeed: 0.04
+  continueIcon: {fileID: 2039405300}
   dialoguePanel: {fileID: 1420835947}
   dialogueText: {fileID: 649886320}
   displayNameText: {fileID: 1475982908}
