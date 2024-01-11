@@ -12,10 +12,6 @@ public class GameController : MonoBehaviour
     private Vector2 startPosition;
     private Vector2 checkpointPosition;
     private bool canSetCheckpoint = false;
-    private bool fire_pillar = false;
-    private bool wind_pillar = false;
-    private bool earth_pillar = false;
-    private bool water_pillar = false;
 
     private void Start()
     {
@@ -46,29 +42,12 @@ public class GameController : MonoBehaviour
     {
         if (collision.CompareTag("Obstacles"))
         {
-            TakeDamage(1);
+            TakeDamage(1); // Player hitting obstacle
         }
         else if (collision.CompareTag("Checkpoint"))
         {
             canSetCheckpoint = true; // Allow setting checkpoint
         }
-        else if (collision.CompareTag("FirePillar"))
-        {
-            fire_pillar = true; // Player interact with fire pillar
-        }
-        else if (collision.CompareTag("WindPillar"))
-        {
-            wind_pillar = true; // Player interact with wind pillar
-        }
-        else if (collision.CompareTag("EarthPillar"))
-        {
-            earth_pillar = true; // Player interact with earth pillar
-        }
-        else if (collision.CompareTag("WaterPillar"))
-        {
-            water_pillar = true; // Player interact with water pillar
-        }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -77,23 +56,6 @@ public class GameController : MonoBehaviour
         {
             canSetCheckpoint = false; // Stop allowing setting checkpoint
         }
-        else if (collision.CompareTag("FirePillar"))
-        {
-            fire_pillar = false; // Player not interact with fire pillar anymore
-        }
-        else if (collision.CompareTag("WindPillar"))
-        {
-            wind_pillar = false; // Player not interact with wind pillar anymore
-        }
-        else if (collision.CompareTag("EarthPillar"))
-        {
-            earth_pillar = false; // Player not interact with earth pillar anymore
-        }
-        else if (collision.CompareTag("WaterPillar"))
-        {
-            water_pillar = false; // Player not interact with water pillar anymore
-        }
-
     }
 
     private void Update()
@@ -106,22 +68,6 @@ public class GameController : MonoBehaviour
             {
                 currHP = 3;
             }
-        }
-        else if (fire_pillar && Input.GetKeyDown(KeyCode.F))
-        {
-            
-        }
-        else if (wind_pillar && Input.GetKeyDown(KeyCode.F))
-        {
-
-        }
-        else if (earth_pillar && Input.GetKeyDown(KeyCode.F))
-        {
-
-        }
-        else if (water_pillar && Input.GetKeyDown(KeyCode.F))
-        {
-
         }
     }
 
