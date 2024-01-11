@@ -100,7 +100,7 @@ public class ElementSwitching : MonoBehaviour
                 fire_element = false; // set to false again so it doesn't infinite loop
             }
         }
-        else if (wind_element)
+        if (wind_element)
         {
             wind_timer -= Time.deltaTime;
 
@@ -110,7 +110,7 @@ public class ElementSwitching : MonoBehaviour
                 wind_element = false;
             }
         }
-        else if (earth_element)
+        if (earth_element)
         {
             earth_timer -= Time.deltaTime;
 
@@ -120,7 +120,7 @@ public class ElementSwitching : MonoBehaviour
                 earth_element = false;
             }    
         }
-        else if (water_element)
+        if (water_element)
         {
             water_timer -= Time.deltaTime;
 
