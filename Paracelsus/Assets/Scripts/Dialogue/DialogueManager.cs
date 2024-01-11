@@ -9,6 +9,11 @@ public class DialogueManager : MonoBehaviour
 {
 
     [Header("Dialogue Ui")]
+
+    [SerializeField] private float typingSpeed = 0.04f;
+
+    [SerializeField] private GameObject continueIcon;
+
     [SerializeField] private GameObject dialoguePanel;
 
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -17,9 +22,17 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private Animator portraitAnimator;
 
+    private Coroutine displayLineCoroutine;
+
     private Animator layoutAnimator;
 
     private Story currentStory;
+
+    private bool canContinueToNextLine = false;
+
+    private bool canSkip = false;
+
+    private bool submitSkip;
 
     public bool dialogueIsPlaying { get; private set; }
 
@@ -58,12 +71,18 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            submitSkip = true;
+        }
+
         if (!dialogueIsPlaying)
         {
             return;
         }
+
         // user left mouse click to proceed the dialogue
-        if (Input.GetMouseButtonDown(0))
+        if (canContinueToNextLine && Input.GetMouseButtonDown(0))
         {
             ContinueStory();
         }
@@ -84,6 +103,14 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    private IEnumerator CanSkip()
+    {
+        canSkip = false; //Making sure the variable is false.
+        yield return new WaitForSeconds(0.05f);
+        canSkip = true;
+    }
+
+
     private IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
@@ -97,7 +124,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+
+            displayLineCoroutine =  StartCoroutine(DisplayLine(currentStory.Continue()));
 
             HandleTags(currentStory.currentTags);
         }
@@ -107,6 +139,84 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = "";
+        continueIcon.SetActive(false); 
+
+        submitSkip = false;
+        canContinueToNextLine = false;
+        
+        StartCoroutine(CanSkip());
+
+        foreach (char letter in line.ToCharArray())
+        {
+            if (canSkip && submitSkip)
+            {
+                submitSkip = false;
+                dialogueText.text = line;
+                break;
+            }
+
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        continueIcon.SetActive(true); 
+        canContinueToNextLine = true;
+        canSkip = false;
+    }
+
+
+    /* private IEnumerator DisplayLine(string line)
+     {
+         dialogueText.text = "";
+
+         continueIcon.SetActive(false);
+
+         submitSkip = false;
+         canContinueToNextLine = false;
+
+         StartCoroutine(CanSkip());
+
+         bool isAddingRichTextTag = false;
+
+         foreach (char letter in line.ToCharArray())
+         {
+             if (canSkip && submitSkip)
+             {
+                 submitSkip = false;
+                 dialogueText.text = line;
+                 break;
+             }
+
+             if (Input.GetMouseButtonDown(0))
+             {
+                 dialogueText.text = line; 
+                 break;
+             }
+
+             if (letter == '<' || isAddingRichTextTag)
+             {
+                 isAddingRichTextTag = true;
+                 dialogueText.text += letter;
+                 if( letter == '>' )
+                 {
+                     isAddingRichTextTag = false;
+                 }
+             }
+             else
+             {
+                 dialogueText.text += letter;
+                 yield return new WaitForSeconds(typingSpeed);
+             }
+
+         }
+         continueIcon.SetActive(true);
+         canContinueToNextLine = true;
+         canSkip = false;
+     }
+ */
     private void HandleTags(List<string> currentTags)
     {
         foreach (string tag in currentTags)
