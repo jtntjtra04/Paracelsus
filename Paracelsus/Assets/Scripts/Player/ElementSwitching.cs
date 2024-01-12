@@ -16,22 +16,22 @@ public class ElementSwitching : MonoBehaviour
     // fire element
     private bool fire_element = false;
     private float fire_timer = 0f;
-    private float fire_duration = 10f;
+    private float fire_duration = 60f;
 
     //wind element
     private bool wind_element = false;
     private float wind_timer = 0f;
-    private float wind_duration = 10f;
+    private float wind_duration = 60f;
 
     //earth element
     private bool earth_element = false;
     private float earth_timer = 0f;
-    private float earth_duration = 10f;
+    private float earth_duration = 60f;
 
     //water element
     private bool water_element = false;
     private float water_timer = 0f;
-    private float water_duration = 10f;
+    private float water_duration = 60f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
