@@ -23,15 +23,15 @@ public class WindCrystal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Wind"))
+        if (collision.CompareTag("Wind")) // if crystal got hit by wind element
         {
             if (Door != null)
             {
-                Destroy(Door);
+                Destroy(Door); // the door is destroy
             }
 
             polygon_collider.enabled = false;
-            anim.SetTrigger("break");
+            anim.SetTrigger("break"); // the crystal also break
         }
     }
     private void CrystalBreak()
