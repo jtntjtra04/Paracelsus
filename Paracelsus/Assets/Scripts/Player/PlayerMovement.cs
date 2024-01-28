@@ -70,9 +70,9 @@ public class PlayerMovement : MonoBehaviour
 
         //character flip
         if (horizontal_input > 0.01)
-            transform.localScale = new Vector3(0.37f, 0.37f, 0.37f);
+            transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         else if (horizontal_input < -0.01)
-            transform.localScale = new Vector3(-0.37f, 0.37f, 0.37f);
+            transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f);
 
         if (Input.GetKey(KeyCode.Space) && body.velocity.y <= 0)  // glide
         {
