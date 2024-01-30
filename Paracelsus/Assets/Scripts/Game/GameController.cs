@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour
     }
     private IEnumerator DeathAnimation(float wait)
     {
-        player_movement.enabled = false;
+        player_movement.enabled = false; //stop player for moving
 
         anim.SetTrigger("defeat");
 
@@ -104,9 +104,9 @@ public class GameController : MonoBehaviour
         }
         currHP = startHP;
 
-        player_movement.enabled = true;
+        player_movement.enabled = true; // player can move again
 
-        anim.Play("Idle");
+        anim.Play("Idle"); // play and set to default animation
 
     }
 
