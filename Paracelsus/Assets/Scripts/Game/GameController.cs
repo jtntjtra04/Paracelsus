@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -90,10 +91,10 @@ public class GameController : MonoBehaviour
     {
         StartCoroutine(DeathAnimation(respawn_timer));
     }
-    private IEnumerator DeathAnimation(float wait)
+    private IEnumerator DeathAnimation(float wait_time)
     {
         player_movement.enabled = false; //stop player for moving
-        body.isKinematic = true; // freeze player position
+        body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation; // freeze player position x and rotation
 
         anim.SetTrigger("defeat"); // play defeat animation
 
@@ -109,7 +110,7 @@ public class GameController : MonoBehaviour
         }
         currHP = startHP;
 
-        body.isKinematic = false; // unfreeze player position
+        body.constraints &= ~RigidbodyConstraints2D.FreezePositionX; // unfreeze player position x
         player_movement.enabled = true; // player can move again
 
         anim.Play("Idle"); // play and set to default animation
