@@ -54,7 +54,7 @@ public class SkeletonAI : MonoBehaviour
     }
     private void DamagePlayer()
     {
-        if (PlayerDetected()) //Player still in range or still hit the box 
+        if (PlayerDetected() && player_HP.currHP != 0) //Player still in range or still hit the box 
         {
             player_HP.TakeDamage(damage);
         }

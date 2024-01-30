@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e0a61db60231b840813e5eaad4fdf21
+guid: d26873cfa4fc20f4caf84b30430b069f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run_0
+      name: defeat_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
+        width: 500
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f259a380af391d745b92b43d6551a343
-      internalID: -797085722
+      spriteID: fcfa9e2034badc94d8143dfbd81518d4
+      internalID: -322819740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run_1
+      name: defeat_1
       rect:
         serializedVersion: 2
-        x: 320
+        x: 500
         y: 0
-        width: 320
+        width: 500
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bccd4920723fd0478399c2781b49b30
-      internalID: 772155611
+      spriteID: a0c9ca08d286c1247bbeb31819282aa0
+      internalID: -891858091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run_2
+      name: defeat_2
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1000
         y: 0
-        width: 320
+        width: 500
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,19 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb335edb81b0e06458a757f65282cab4
-      internalID: 536973736
+      spriteID: 86a91eee7b35f4a4bbeccd979c35a832
+      internalID: -848821023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run_3
+      name: defeat_3
       rect:
         serializedVersion: 2
-        x: 960
+        x: 1500
         y: 0
-        width: 320
+        width: 500
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,8 +200,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaf204d76a3508e4dbd1c2bc17049a1b
-      internalID: 2118232408
+      spriteID: 6f566d556d8dbee4c9f0d80fdbc07b90
+      internalID: 1717572793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defeat_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 500
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9ed4010cfeb284995b38cf9f8aaa16
+      internalID: 2115195006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defeat_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 500
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fe5fb36aa849e4d8e26f42238fade7
+      internalID: 991041385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defeat_6
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 500
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d59770b5c0597143afb883773193ab0
+      internalID: 1423104098
       vertices: []
       indices: 
       edges: []
@@ -217,10 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      run_0: -797085722
-      run_1: 772155611
-      run_2: 536973736
-      run_3: 2118232408
+      defeat_0: -322819740
+      defeat_1: -891858091
+      defeat_2: -848821023
+      defeat_3: 1717572793
+      defeat_4: 2115195006
+      defeat_5: 991041385
+      defeat_6: 1423104098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

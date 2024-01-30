@@ -27,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
 
         // switch element
         ElementSwitching switch_element = GetComponent<ElementSwitching>();
+
         if (switch_element != null)
         {
             current_element = switch_element.GetCurrentElement();

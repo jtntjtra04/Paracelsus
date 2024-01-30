@@ -70,9 +70,9 @@ public class PlayerMovement : MonoBehaviour
 
         //character flip
         if (horizontal_input > 0.01)
-            transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            transform.localScale = new Vector3(0.46f, 0.46f, 0.46f);
         else if (horizontal_input < -0.01)
-            transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f);
+            transform.localScale = new Vector3(-0.46f, 0.46f, 0.46f);
 
         if (Input.GetKey(KeyCode.Space) && body.velocity.y <= 0)  // glide
         {
@@ -104,9 +104,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && can_dash)
             StartCoroutine(Dash());
-
-        
-
     }
     private void Jump()
     {

@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     // HP
     [SerializeField] private float startHP;
+    [SerializeField] private float respawn_timer;
     public float currHP { get; private set; }
 
     // Spawn Positions
     private Vector2 startPosition;
     private Vector2 checkpointPosition;
     private bool canSetCheckpoint = false;
+    private Animator anim;
+    private PlayerMovement player_movement;
 
     private void Start()
     {
@@ -24,6 +28,8 @@ public class GameController : MonoBehaviour
     {
         // HP
         currHP = startHP;
+        anim = GetComponent<Animator>();
+        player_movement = GetComponent<PlayerMovement>();
     }
 
     public void TakeDamage(float damage)
@@ -78,6 +84,16 @@ public class GameController : MonoBehaviour
 
     void Respawn()
     {
+        StartCoroutine(DeathAnimation(respawn_timer));
+    }
+    private IEnumerator DeathAnimation(float wait)
+    {
+        player_movement.enabled = false;
+
+        anim.SetTrigger("defeat");
+
+        yield return new WaitForSeconds(respawn_timer); // death animation delay
+
         if (checkpointPosition != Vector2.zero) // Check if a checkpoint is set
         {
             transform.position = checkpointPosition; // Respawn at the checkpoint
@@ -87,7 +103,13 @@ public class GameController : MonoBehaviour
             transform.position = startPosition; // Respawn at the starting position if no checkpoint
         }
         currHP = startHP;
+
+        player_movement.enabled = true;
+
+        anim.Play("Idle");
+
     }
+
 }
 
 
