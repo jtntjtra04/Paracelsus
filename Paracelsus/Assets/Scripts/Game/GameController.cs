@@ -14,8 +14,11 @@ public class GameController : MonoBehaviour
     private Vector2 startPosition;
     private Vector2 checkpointPosition;
     private bool canSetCheckpoint = false;
+
+    // References
     private Animator anim;
     private PlayerMovement player_movement;
+    private Rigidbody2D body;
 
     private void Start()
     {
@@ -30,6 +33,7 @@ public class GameController : MonoBehaviour
         currHP = startHP;
         anim = GetComponent<Animator>();
         player_movement = GetComponent<PlayerMovement>();
+        body = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(float damage)
@@ -89,8 +93,9 @@ public class GameController : MonoBehaviour
     private IEnumerator DeathAnimation(float wait)
     {
         player_movement.enabled = false; //stop player for moving
+        body.isKinematic = true; // freeze player position
 
-        anim.SetTrigger("defeat");
+        anim.SetTrigger("defeat"); // play defeat animation
 
         yield return new WaitForSeconds(respawn_timer); // death animation delay
 
@@ -104,6 +109,7 @@ public class GameController : MonoBehaviour
         }
         currHP = startHP;
 
+        body.isKinematic = false; // unfreeze player position
         player_movement.enabled = true; // player can move again
 
         anim.Play("Idle"); // play and set to default animation
