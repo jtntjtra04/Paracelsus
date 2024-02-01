@@ -16,6 +16,18 @@ public class GameController : MonoBehaviour
     private Vector2 checkpointPosition;
     private bool canSetCheckpoint = false;
 
+    // Spirit
+    private bool wind_spirit = false;
+    private bool fire_spirit = false;
+    private bool water_spirit = false;
+    private bool earth_spirit = false;
+
+    // Player Ability
+    public bool double_jump = false; // double jump locked
+    public bool glide = false; // glide locked
+    public bool dash = false; // dash locked
+    public bool stomp = false; // stomp locked
+
     // References
     private Animator anim;
     private PlayerMovement player_movement;
@@ -59,6 +71,22 @@ public class GameController : MonoBehaviour
         {
             canSetCheckpoint = true; // Allow setting checkpoint
         }
+        else if (collision.CompareTag("WindSpirit"))
+        {
+            wind_spirit = true;
+        }
+        else if (collision.CompareTag("WaterSpirit"))
+        {
+            water_spirit = true;
+        }
+        else if (collision.CompareTag("FireSpirit"))
+        {
+            fire_spirit = true;
+        }
+        else if(collision.CompareTag("EarthSpirit"))
+        {
+            earth_spirit = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -66,6 +94,22 @@ public class GameController : MonoBehaviour
         if (collision.CompareTag("Checkpoint"))
         {
             canSetCheckpoint = false; // Stop allowing setting checkpoint
+        }
+        else if (collision.CompareTag("WindSpirit"))
+        {
+            wind_spirit = false;
+        }
+        else if (collision.CompareTag("WaterSpirit"))
+        {
+            water_spirit = false;
+        }
+        else if (collision.CompareTag("FireSpirit"))
+        {
+            fire_spirit = false;
+        }
+        else if (collision.CompareTag("EarthSpirit"))
+        {
+            earth_spirit = false;
         }
     }
 
@@ -79,6 +123,26 @@ public class GameController : MonoBehaviour
             {
                 currHP = 3;
             }
+        }
+        else if (wind_spirit && Input.GetKeyDown(KeyCode.F) && !double_jump)
+        {
+            double_jump = true;
+            Debug.Log("Double Jump Ability Unlocked");
+        }
+        else if (water_spirit && Input.GetKeyDown(KeyCode.F) && !glide)
+        {
+            glide = true;
+            Debug.Log("Glide Ability Unlocked");
+        }
+        else if (fire_spirit && Input.GetKeyDown(KeyCode.F) && !dash)
+        {
+            dash = true;
+            Debug.Log("Dash Ability Unlocked");
+        }
+        else if (earth_spirit && Input.GetKeyDown(KeyCode.F) && !stomp)
+        {
+            stomp = true;
+            Debug.Log("Stomp Ability Unlocked");
         }
     }
 
@@ -114,9 +178,7 @@ public class GameController : MonoBehaviour
         player_movement.enabled = true; // player can move again
 
         anim.Play("Idle"); // play and set to default animation
-
     }
-
 }
 
 

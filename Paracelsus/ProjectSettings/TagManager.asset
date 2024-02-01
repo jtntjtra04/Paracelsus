@@ -16,6 +16,10 @@ TagManager:
   - WindPillar
   - WaterPillar
   - EarthPillar
+  - WindSpirit
+  - WaterSpirit
+  - FireSpirit
+  - EarthSpirit
   layers:
   - Default
   - TransparentFX
