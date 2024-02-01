@@ -7,7 +7,7 @@ using UnityEngine.SearchService;
 
 public class DialogueManager : MonoBehaviour
 {
-
+    
     [Header("Dialogue Ui")]
 
     [SerializeField] private float typingSpeed = 0.04f;
@@ -21,6 +21,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI displayNameText;
 
     [SerializeField] private Animator portraitAnimator;
+    [Header("Audio")]
+    [SerializeField] private AudioClip dialogueTypingSoundClip;
+    [SerializeField] private bool stopAudioSource;
+
+    private AudioSource audioSource;
 
     private Coroutine displayLineCoroutine;
 
@@ -54,6 +59,8 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
            instance = this;
+
+        audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
     public static DialogueManager GetInstance()
@@ -159,6 +166,11 @@ public class DialogueManager : MonoBehaviour
             }
 
             dialogueText.text += letter;
+            if (stopAudioSource)
+            {
+                audioSource.Stop();
+            }
+            audioSource.PlayOneShot(dialogueTypingSoundClip);
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -167,56 +179,10 @@ public class DialogueManager : MonoBehaviour
         canSkip = false;
     }
 
+  
 
-    /* private IEnumerator DisplayLine(string line)
-     {
-         dialogueText.text = "";
 
-         continueIcon.SetActive(false);
-
-         submitSkip = false;
-         canContinueToNextLine = false;
-
-         StartCoroutine(CanSkip());
-
-         bool isAddingRichTextTag = false;
-
-         foreach (char letter in line.ToCharArray())
-         {
-             if (canSkip && submitSkip)
-             {
-                 submitSkip = false;
-                 dialogueText.text = line;
-                 break;
-             }
-
-             if (Input.GetMouseButtonDown(0))
-             {
-                 dialogueText.text = line; 
-                 break;
-             }
-
-             if (letter == '<' || isAddingRichTextTag)
-             {
-                 isAddingRichTextTag = true;
-                 dialogueText.text += letter;
-                 if( letter == '>' )
-                 {
-                     isAddingRichTextTag = false;
-                 }
-             }
-             else
-             {
-                 dialogueText.text += letter;
-                 yield return new WaitForSeconds(typingSpeed);
-             }
-
-         }
-         continueIcon.SetActive(true);
-         canContinueToNextLine = true;
-         canSkip = false;
-     }
- */
+ 
     private void HandleTags(List<string> currentTags)
     {
         foreach (string tag in currentTags)
