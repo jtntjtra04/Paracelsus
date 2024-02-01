@@ -131,19 +131,19 @@ public class ElementSwitching : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && fire_element) // element switcher from input and check if element active
+        if (Input.GetKeyDown(KeyCode.Alpha1) && wind_element) // element switcher from input and check if element active
         {
             SwitchElement(1);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && wind_element)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && water_element)
         {
             SwitchElement(2);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && earth_element)
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && fire_element)
         {
             SwitchElement(3);
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha4) && water_element)
+        else if(Input.GetKeyDown(KeyCode.Alpha4) && earth_element)
         {
             SwitchElement(4);
         }
