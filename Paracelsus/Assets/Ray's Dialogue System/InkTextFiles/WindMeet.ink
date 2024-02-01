@@ -1,46 +1,46 @@
-A small green fairy is floating in the air. #layout:blank
+"A small green fairy is floating in the air." #layout:blank
 
-Umm excuse me... Are you Slpyh, one of the four elemental spirits? #layout:no #speaker:Celsus
+"Excuse me... Are you Sylph, one of the four elemental spirits?" #layout:no #speaker:Celsus
 
-Wow♪ A talking giant hat!! #layout:no #speaker:???
+"Wow♪ A talking giant hat!!" #layout:no #speaker:???
 
-(Celsus lifts his hat, revealing his face.) #layout:blank
+"(Celsus lifts his hat, revealing his face.)" #layout:blank
 
-I'm not a giant hat... I'm a human. My name is Celsus. #layout:no #speaker:Celsus
+"I'm not a giant hat... I'm a human. My name is Celsus." #layout:no #speaker:Celsus
 
-Oh! Excuse me then♪  #speaker:???
+"Oh! Excuse me then♪"  #speaker:???
 
-\*clears throat* #speaker:???
+"\*clears throat*" #speaker:???
 
-Yes. I am Slpyh, the wind spirit of the four elemental spirits, Do you need something from me, Celsus? #speaker:Slpyh
+"Yes. I am Sylph, the wind spirit of the four elemental spirits, Do you need something from me, Celsus?" #speaker:Sylph
 
-Of course, I was hoping to make a contract with you and grant me the power of the wind. #speaker:Celsus
+"Of course, I intent to make a contract with you and borrow your powers." #speaker:Celsus
 
-Hmm... I see... And what exactly do you plan to use my power for? #speaker:Slpyh
+"Hmm... I see... And what exactly do you plan to use my power for?" #speaker:Sylph
 
 .... #speaker:Celsus
 
-(Celsus stays silent for a bit before answering) #layout:blank
+"(Celsus stays silent for a bit before answering)" #layout:blank
 
-I- I want to become stronger so I can make a name for myself! #layout:no
+"I- I want to become stronger so I can make a name for myself!" #layout:no
 
-Hihihi♪ Such a selfish reason♪ but.... I know your intentions are not evil. #speaker:Slpyh
+"Hihihi♪ such a selfish reason♪ but... I know your intentions are not evil." #speaker:Sylph
 
-How can you be so sure? #speaker:Celsus
+"What, How can you be so sure?" #speaker:Celsus
 
-The wind tells me everything♪ #speaker:Slpyh
+"The wind tells me everything♪" #speaker:Sylph
 
-But... You know a weak human can't make a contract with spirits.
+"But... You know a weak human can't make a contract with spirits."
 
-...Rather, a weak human cannot handle the power.
+"...Rather, a weak human cannot handle it's power."
 
-But it's alright for Celsus♪ Considering you destroyed all the monsters below me.
+"But it's alright for Celsus♪ Considering you destroyed all those monsters."
 
-Now give me your hand. I will grant you my power.
+"Now give me your hand. I will grant you my power."
 
-(Celsus hold out his hand, and as Slpyh touches it, a slight breeze can be felt and a white glow appears) #layout:blank
+"(Celsus hold out his hand, and as Sylph touches it, a slight breeze can be felt and a white glow appears)" #layout:blank
 
-!!! #speaker:Celsus #layout:no
+"!!!" #speaker:Celsus #layout:no
 
 
 
