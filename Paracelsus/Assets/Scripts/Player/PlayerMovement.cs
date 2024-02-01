@@ -89,29 +89,23 @@ public class PlayerMovement : MonoBehaviour
             body.gravityScale = initial_gravity;
         }
 
-            
-
-        if (jumpbuffer_counter > 0f && coyote_counter > 0f)
+        if (jumpbuffer_counter > 0f && coyote_counter > 0f) // jump mechanic 
         {
             anim.SetBool("grounded", false);
             Jump();
             jumpbuffer_counter = 0f;
         }
-        if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0f)
+        if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0f) // jump higher
         {
             ReleaseJump();
             coyote_counter = 0f;
         }
-            
-
         if (Input.GetKeyDown(KeyCode.Space) && extra_jump > 0 && ability.double_jump) // if double jump unlocked
         {
             Jump();
             extra_jump--;
         }
         
-        
-
         anim.SetBool("run", horizontal_input != 0);
         anim.SetBool("grounded", grounded());
 
@@ -125,7 +119,6 @@ public class PlayerMovement : MonoBehaviour
         anim.SetTrigger("jump");
         body.velocity = new Vector2(body.velocity.x, jump_power);
     }
-
     private void ReleaseJump()
     {
         anim.SetTrigger("jump");
