@@ -25,10 +25,6 @@ public class SkeletonPatrol : MonoBehaviour
         origin_scale = enemy.localScale; // store the current enemy scale
         body = enemy.GetComponent<Rigidbody2D>();
     }
-    private void OnDisable()
-    {
-        anim.SetBool("Walk", false);
-    }
     private void Update()
     {
         if (Vector2.Distance(enemy.position, player_location.position) > max_distance)
