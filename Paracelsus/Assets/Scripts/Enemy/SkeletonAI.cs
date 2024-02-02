@@ -16,10 +16,12 @@ public class SkeletonAI : MonoBehaviour
     //references
     private Animator anim;
     private GameController player_HP;
+    private SkeletonPatrol skeleton_patrol;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        skeleton_patrol = GetComponent<SkeletonPatrol>();
     }
     private void Update()
     {
@@ -32,8 +34,14 @@ public class SkeletonAI : MonoBehaviour
             {
                 //attack
                 CD_timer = 0;
+                Debug.Log("Attacking");
+                anim.SetBool("Walk", false);
                 anim.SetTrigger("SkeletonAttack");
             }
+        }
+        if (skeleton_patrol != null)
+        {
+            skeleton_patrol.enabled = !PlayerDetected();
         }
     }
     private bool PlayerDetected()

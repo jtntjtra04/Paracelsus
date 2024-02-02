@@ -25,11 +25,16 @@ public class SkeletonPatrol : MonoBehaviour
         origin_scale = enemy.localScale; // store the current enemy scale
         body = enemy.GetComponent<Rigidbody2D>();
     }
+    private void OnDisable()
+    {
+        anim.SetBool("Walk", false);
+    }
     private void Update()
     {
         if (Vector2.Distance(enemy.position, player_location.position) > max_distance)
         {
             chasing_player = false;
+            anim.SetBool("Walk", false);
         }
 
         if (chasing_player)
@@ -39,13 +44,15 @@ public class SkeletonPatrol : MonoBehaviour
 
             if (enemy.position.x > player_location.position.x)
             {
-                enemy.localScale = new Vector3(-0.2792043f, 0.2792043f, 0.2792043f);
-                body.velocity = new Vector2(-speed * 1.5f, 1);
+                anim.SetBool("Walk", true);
+                enemy.localScale = new Vector3(-0.23f, 0.23f, 0.23f);
+                body.velocity = new Vector2(-speed * 1.3f, 1);
             }
             if (enemy.position.x < player_location.position.x)
             {
-                enemy.localScale = new Vector3(0.2792043f, 0.2792043f, 0.2792043f);
-                body.velocity = new Vector2(speed * 1.5f, 1);
+                anim.SetBool("Walk", true);
+                enemy.localScale = new Vector3(0.23f, 0.23f, 0.23f);
+                body.velocity = new Vector2(speed * 1.3f, 1);
             }
             //if (enemy.position.x == player_location.position.x)
             //{
@@ -85,7 +92,6 @@ public class SkeletonPatrol : MonoBehaviour
     }
     private void ChangeDirection()
     {
-        anim.SetBool("Walk", false);
         go_left = !go_left;
     }
     private void Moving(int direction_value)
