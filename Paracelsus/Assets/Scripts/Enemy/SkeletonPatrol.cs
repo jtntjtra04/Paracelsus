@@ -35,25 +35,28 @@ public class SkeletonPatrol : MonoBehaviour
 
         if (chasing_player)
         {
-            //float direction = Mathf.Sign(player_location.position.x - enemy.position.x);
-            //body.velocity = new Vector2(speed * direction * 2, body.velocity.y);
+            float tolerance = 0.1f;
 
-            if (enemy.position.x > player_location.position.x)
+            if (Mathf.Abs(enemy.position.x - player_location.position.x) > tolerance)
             {
-                anim.SetBool("Walk", true);
-                enemy.localScale = new Vector3(-0.23f, 0.23f, 0.23f);
-                body.velocity = new Vector2(-speed * 1.3f, 1);
+                if (enemy.position.x > player_location.position.x)
+                {
+                    anim.SetBool("Walk", true);
+                    enemy.localScale = new Vector3(-0.23f, 0.23f, 0.23f);
+                    body.velocity = new Vector2(-speed * 1.3f, 1);
+                }
+                else if (enemy.position.x < player_location.position.x)
+                {
+                    anim.SetBool("Walk", true);
+                    enemy.localScale = new Vector3(0.23f, 0.23f, 0.23f);
+                    body.velocity = new Vector2(speed * 1.3f, 1);
+                }
             }
-            if (enemy.position.x < player_location.position.x)
+            else
             {
-                anim.SetBool("Walk", true);
-                enemy.localScale = new Vector3(0.23f, 0.23f, 0.23f);
-                body.velocity = new Vector2(speed * 1.3f, 1);
+                body.velocity = new Vector2(0, 1);
+                anim.SetBool("Walk", false);
             }
-            //if (enemy.position.x == player_location.position.x)
-            //{
-            //    body.velocity = new Vector2(0, 1);
-            //}
         }
         else
         {

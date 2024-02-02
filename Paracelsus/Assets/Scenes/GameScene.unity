@@ -22031,7 +22031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 659586165}
   - component: {fileID: 659586166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyWeakness
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -22280,7 +22280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 728327513}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: groundDetector
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -23834,7 +23834,7 @@ GameObject:
   - component: {fileID: 1160970009}
   - component: {fileID: 1160970012}
   - component: {fileID: 1160970010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FireSkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
