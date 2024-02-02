@@ -28,6 +28,9 @@ public class GameController : MonoBehaviour
     public bool dash = false; // dash locked
     public bool stomp = false; // stomp locked
 
+    // UI
+    public GameObject DeathUI;
+
     // References
     private Animator anim;
     private PlayerMovement player_movement;
@@ -56,7 +59,7 @@ public class GameController : MonoBehaviour
 
         if (currHP == 0)
         {
-            Respawn();
+            Death();
         }
     }
 
@@ -151,19 +154,12 @@ public class GameController : MonoBehaviour
         checkpointPosition = transform.position;
     }
 
-    void Respawn()
+    void Death()
     {
         StartCoroutine(DeathAnimation(respawn_timer));
     }
-    private IEnumerator DeathAnimation(float wait_time)
+    void Respawn()
     {
-        player_movement.enabled = false; //stop player for moving
-        body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation; // freeze player position x and rotation
-
-        anim.SetTrigger("defeat"); // play defeat animation
-
-        yield return new WaitForSeconds(respawn_timer); // death animation delay
-
         if (checkpointPosition != Vector2.zero) // Check if a checkpoint is set
         {
             transform.position = checkpointPosition; // Respawn at the checkpoint
@@ -178,6 +174,26 @@ public class GameController : MonoBehaviour
         player_movement.enabled = true; // player can move again
 
         anim.Play("Idle"); // play and set to default animation
+
+        DeathUI.SetActive(false);
+    }    
+    private IEnumerator DeathAnimation(float wait_time)
+    {
+        player_movement.enabled = false; //stop player for moving
+        body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation; // freeze player position x and rotation
+
+        anim.SetTrigger("defeat"); // play defeat animation
+
+        yield return new WaitForSeconds(respawn_timer); // death animation delay
+
+        DeathUI.SetActive(true);
+
+        while(!Input.GetMouseButtonDown(0))
+        {
+            yield return null;
+        }
+
+        Respawn();
     }
 }
 
