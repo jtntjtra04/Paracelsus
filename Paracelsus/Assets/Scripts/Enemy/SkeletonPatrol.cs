@@ -94,6 +94,6 @@ public class SkeletonPatrol : MonoBehaviour
         // Direction
         enemy.localScale = new Vector3(Mathf.Abs(origin_scale.x) * direction_value, origin_scale.y, origin_scale.z);
         // Move to waypoint
-        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * direction_value * speed, enemy.position.y, enemy.position.z);
+        body.velocity = new Vector2(direction_value * speed, body.velocity.y);
     }
 }
