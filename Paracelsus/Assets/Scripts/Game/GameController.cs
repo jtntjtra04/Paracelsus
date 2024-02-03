@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     [SerializeField] private float respawn_timer;
     public float currHP { get; private set; }
 
+    // HP Potion
+    private float hpPotion = 3;
+
     // Spawn Positions
     private Vector2 startPosition;
     private Vector2 checkpointPosition;
@@ -35,6 +38,9 @@ public class GameController : MonoBehaviour
     private Animator anim;
     private PlayerMovement player_movement;
     private Rigidbody2D body;
+
+    // Death System
+    private bool isDeathInProgress = false;
 
     private void Start()
     {
@@ -126,7 +132,18 @@ public class GameController : MonoBehaviour
             {
                 currHP = 3;
             }
+
+            if(hpPotion < 3)
+            {
+                hpPotion = 3;
+            }
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Heal();
+        }
+
         else if (wind_spirit && Input.GetKeyDown(KeyCode.F) && !double_jump)
         {
             double_jump = true;
@@ -149,6 +166,15 @@ public class GameController : MonoBehaviour
         }
     }
 
+    void Heal()
+    {
+        if (hpPotion > 0)
+        {
+            currHP += 1;
+        }
+        hpPotion -= 1;
+    }
+
     void SetCheckpoint()
     {
         checkpointPosition = transform.position;
@@ -156,10 +182,15 @@ public class GameController : MonoBehaviour
 
     void Death()
     {
-        StartCoroutine(DeathAnimation(respawn_timer));
+        if (!isDeathInProgress)
+        {
+            StartCoroutine(DeathAnimation(respawn_timer));
+        }
     }
     void Respawn()
     {
+        isDeathInProgress = false;
+
         if (checkpointPosition != Vector2.zero) // Check if a checkpoint is set
         {
             transform.position = checkpointPosition; // Respawn at the checkpoint
@@ -179,16 +210,17 @@ public class GameController : MonoBehaviour
     }    
     private IEnumerator DeathAnimation(float wait_time)
     {
-        player_movement.enabled = false; //stop player for moving
-        body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation; // freeze player position x and rotation
+        isDeathInProgress = true; // Set the flag when the death animation starts
 
-        anim.SetTrigger("defeat"); // play defeat animation
+        player_movement.enabled = false;
+        body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+        anim.SetTrigger("defeat");
 
-        yield return new WaitForSeconds(respawn_timer); // death animation delay
+        yield return new WaitForSeconds(respawn_timer);
 
         DeathUI.SetActive(true);
 
-        while(!Input.GetMouseButtonDown(0))
+        while (!Input.GetMouseButtonDown(0))
         {
             yield return null;
         }
