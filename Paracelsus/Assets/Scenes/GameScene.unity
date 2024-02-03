@@ -605,8 +605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f4ef9d3d19e7d419dca2b0e69a65f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upspeed: 3
-  downspeed: 10
+  upspeed: 4
+  downspeed: 12
   up: {fileID: 1845621492}
   down: {fileID: 1042569659}
 --- !u!61 &176553311
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b82878a15be7fa4ba38c5d70680c0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftspeed: 10
+  leftspeed: 7
   rightspeed: 3
   left: {fileID: 1944107933}
   right: {fileID: 886061824}
