@@ -37,6 +37,7 @@ public class GameController : MonoBehaviour
     // References
     private Animator anim;
     private PlayerMovement player_movement;
+    private PlayerAttack player_attack;
     private Rigidbody2D body;
 
     // Death System
@@ -55,6 +56,7 @@ public class GameController : MonoBehaviour
         currHP = startHP;
         anim = GetComponent<Animator>();
         player_movement = GetComponent<PlayerMovement>();
+        player_attack = GetComponent<PlayerAttack>();
         body = GetComponent<Rigidbody2D>();
     }
 
@@ -203,6 +205,7 @@ public class GameController : MonoBehaviour
 
         body.constraints &= ~RigidbodyConstraints2D.FreezePositionX; // unfreeze player position x
         player_movement.enabled = true; // player can move again
+        player_attack.enabled = true; // player can attack again
 
         anim.Play("Idle"); // play and set to default animation
 
@@ -212,7 +215,8 @@ public class GameController : MonoBehaviour
     {
         isDeathInProgress = true; // Set the flag when the death animation starts
 
-        player_movement.enabled = false;
+        player_movement.enabled = false; // player can't move
+        player_attack.enabled = false; // player can't attack
         body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         anim.SetTrigger("defeat");
 
