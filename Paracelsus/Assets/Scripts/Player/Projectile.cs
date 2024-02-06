@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
     private float direction;
     private float life_time;
     private Rigidbody2D body;
+    public float damage;
 
     private void Awake()
     {
@@ -38,6 +39,71 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.tag);
+
+        EnemyHPSystem enemy_hp = collision.GetComponent<EnemyHPSystem>();
+
+        if (enemy_hp != null)
+        {
+            string projectile_tag = gameObject.tag;
+
+            if (collision.CompareTag("FireEnemy") && projectile_tag == "Water") // checking Skeleton
+            {
+                enemy_hp.EnemyTakeDamage(damage * 1.5f);
+            }
+            else if (collision.CompareTag("FireEnemy") && projectile_tag == "Fire")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 0.75f);
+            }
+            else if (collision.CompareTag("WindEnemy") && projectile_tag == "Fire")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 1.5f);
+            }
+            else if (collision.CompareTag("WindEnemy") && projectile_tag == "Wind")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 0.75f);
+            }
+            else if (collision.CompareTag("WaterEnemy") && projectile_tag == "Wind")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 1.5f);
+            }
+            else if (collision.CompareTag("WaterEnemy") && projectile_tag == "Water")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 0.75f);
+            }
+            else if (collision.CompareTag("FireSlime") && projectile_tag == "Water")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 1.5f);
+            }
+            else if (collision.CompareTag("FireSlime") && projectile_tag == "Fire")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 0.75f);
+            }
+            else if (collision.CompareTag("WindSlime") && projectile_tag == "Fire")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 1.5f);
+            }
+            else if (collision.CompareTag("WindSlime") && projectile_tag == "Wind")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 0.75f);
+            }
+            else if (collision.CompareTag("WaterSlime") && projectile_tag == "Wind")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 1.5f);
+            }
+            else if (collision.CompareTag("WaterSlime") && projectile_tag == "Water")
+            {
+                enemy_hp.EnemyTakeDamage(damage * 0.75f);
+            }
+            else if (projectile_tag == "Earth")
+            {
+                enemy_hp.EnemyTakeDamage(damage + 20f);
+            }
+            else
+            {
+                enemy_hp.EnemyTakeDamage(damage);
+            } 
+        }
         hit = true;
         BoxCollider.enabled = false;
         anim.SetTrigger("explode");

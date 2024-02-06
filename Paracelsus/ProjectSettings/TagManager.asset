@@ -20,6 +20,14 @@ TagManager:
   - WaterSpirit
   - FireSpirit
   - EarthSpirit
+  - FireEnemy
+  - WindEnemy
+  - WaterEnemy
+  - EarthEnemy
+  - WindSlime
+  - WaterSlime
+  - FireSlime
+  - EarthSlime
   layers:
   - Default
   - TransparentFX

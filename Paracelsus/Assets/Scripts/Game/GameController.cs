@@ -78,6 +78,10 @@ public class GameController : MonoBehaviour
         {
             TakeDamage(1); // Player hitting obstacle
         }
+        else if (collision.CompareTag("WindSlime"))
+        {
+            TakeDamage(1); // Player hitting wind slime
+        }
         else if (collision.CompareTag("Checkpoint"))
         {
             canSetCheckpoint = true; // Allow setting checkpoint
