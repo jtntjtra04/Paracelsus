@@ -5,11 +5,19 @@ using UnityEngine;
 public class EnemyHPSystem : MonoBehaviour
 {
     public float health;
+    public float curr_health;
+    public EnemyHealthBar hp_bar;
+    private void Start()
+    {
+        curr_health = health;
+        hp_bar.SetHealth(curr_health, health);
+    }
     public void EnemyTakeDamage(float damage)
     {
-        health -= damage;
+        curr_health -= damage;
+        hp_bar.SetHealth(curr_health, health);
 
-        if (health <= 0)
+        if (curr_health <= 0)
         {
             Die();
         }
