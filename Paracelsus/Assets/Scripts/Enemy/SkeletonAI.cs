@@ -16,10 +16,13 @@ public class SkeletonAI : MonoBehaviour
     //references
     private Animator anim;
     private GameController player_HP;
+    private SwitchSkills barrier;
+    
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        barrier = FindObjectOfType<SwitchSkills>();
     }
     private void Update()
     {
@@ -34,6 +37,8 @@ public class SkeletonAI : MonoBehaviour
                 CD_timer = 0;
                 anim.SetBool("Walk", false);
                 anim.SetTrigger("SkeletonAttack");
+
+                DamagePlayer();
             }
         }
     }
@@ -55,9 +60,13 @@ public class SkeletonAI : MonoBehaviour
     }
     private void DamagePlayer()
     {
-        if (PlayerDetected() && player_HP.currHP != 0) //Player still in range or still hit the box 
+        if (PlayerDetected() && player_HP.currHP != 0 && barrier.barrierPrefabInstance == null) //&& barrier.IsBarrierActive() == false) //Player still in range or still hit the box 
         {
             player_HP.TakeDamage(damage);
+
+            Debug.Log(" " + barrier.IsBarrierActive());
         }
+
+        
     }
 }
