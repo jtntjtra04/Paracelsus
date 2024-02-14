@@ -7,9 +7,14 @@ public class SwitchSkills : MonoBehaviour
 
     public GameObject barrierPrefab;
     public GameObject barrierPrefabInstance;
+    public GameObject tornadoPrefab;
+    public GameObject tornadoPrefabInstance;
     private int current_element = 0;
     public bool isBarrierActive = false;
-    private float barrierTime = 0f;
+    public float barrierTime = 5f;
+    public float tornadoSpeed = 100f;
+    public float tornadoTime = 1f;
+    [SerializeField] private Transform firepoint;
     void Update()
     {
         ElementSwitching switch_element = GetComponent<ElementSwitching>();
@@ -29,9 +34,16 @@ public class SwitchSkills : MonoBehaviour
             {
                 UpdateWaterBarrierPosition();
             }
+        }else if(current_element == 1)
+        {
+           if(Input.GetMouseButtonDown(1))
+            {
+                CastTornado();
+                
+            } 
         }
         
-     //    Debug.Log(" " + IsBarrierActive());
+         //Debug.Log(" " + IsBarrierActive());
     }
 
     private void CastBarrier()
@@ -47,7 +59,7 @@ public class SwitchSkills : MonoBehaviour
 
             isBarrierActive = true;
             // Destroy the water barrier after 5 seconds
-            Destroy(barrierPrefabInstance, 5f);
+            Destroy(barrierPrefabInstance, barrierTime);
             
             if(barrierTime == 5f)
             {
@@ -63,15 +75,30 @@ public class SwitchSkills : MonoBehaviour
         barrierPrefabInstance.transform.position = transform.position + offset;
     }
 
-    public bool IsBarrierActive()
+    
+    private void CastTornado()
     {
-         // Check if the barrier prefab instance exists and the barrier time is less than 5 seconds
-    if (barrierPrefabInstance != null && barrierTime < 5f)
-    {
-        return true;
-    }
+        if(tornadoPrefabInstance == null)
+        {
+            tornadoPrefabInstance = Instantiate(tornadoPrefab, firepoint.position, Quaternion.identity);
+            Rigidbody2D tornadoRigidbody = tornadoPrefabInstance.GetComponent<Rigidbody2D>();
 
-    // Otherwise, return false
-    return false;
+             
+
+        float playerScaleX = transform.localScale.x;
+        Vector2 playerDirection = (playerScaleX < 0) ? -transform.right : transform.right; // Assuming the tornado should move to the right relative to the player's facing direction
+
+
+        // Apply force to the tornado in the calculated direction
+            tornadoRigidbody.AddForce(playerDirection * tornadoSpeed);
+
+            // Destroy the tornado after 1 second
+            Destroy(tornadoPrefabInstance, tornadoTime);
+            
+        }
+       
+
+       
+
     }
 }

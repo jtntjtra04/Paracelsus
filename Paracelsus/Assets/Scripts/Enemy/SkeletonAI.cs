@@ -10,24 +10,32 @@ public class SkeletonAI : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D BoxCollider;
     [SerializeField] private LayerMask player_layer;
+    [SerializeField] private float suspensionForce = 10000000000f;
 
     private float CD_timer = 100;
-    
+    private Rigidbody2D body;
     //references
     private Animator anim;
     private GameController player_HP;
     private SwitchSkills barrier;
+    private float suspendedGravityScale = 0.5f;
+    private float suspensionDuration = 1f;
+    private bool isSuspended = false;
+    private float suspensionTimer = 0f;
     
 
     private void Awake()
     {
+        body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         barrier = FindObjectOfType<SwitchSkills>();
+        
+        
     }
     private void Update()
     {
         CD_timer += Time.deltaTime;
-
+    
         // attack when player gets detected
         if (PlayerDetected())
         {
@@ -39,6 +47,21 @@ public class SkeletonAI : MonoBehaviour
                 anim.SetTrigger("SkeletonAttack");
 
                 DamagePlayer();
+            }
+        }
+         if (isSuspended)
+        {
+            // Adjust gravity scale while suspended
+            body.gravityScale = suspendedGravityScale;
+            suspensionTimer += Time.deltaTime;
+            body.constraints = RigidbodyConstraints2D.FreezePositionX;
+            if (suspensionTimer >= suspensionDuration)
+            {
+                // Revert gravity scale after suspension duration
+                body.gravityScale = 30f;
+                isSuspended = false;
+                suspensionTimer = 0f;
+                body.constraints = RigidbodyConstraints2D.None;
             }
         }
     }
@@ -60,13 +83,25 @@ public class SkeletonAI : MonoBehaviour
     }
     private void DamagePlayer()
     {
-        if (PlayerDetected() && player_HP.currHP != 0 && barrier.barrierPrefabInstance == null) //&& barrier.IsBarrierActive() == false) //Player still in range or still hit the box 
+        if (PlayerDetected() && player_HP.currHP != 0 && barrier.barrierPrefabInstance == null) //Player still in range or still hit the box 
         {
             player_HP.TakeDamage(damage);
 
-            Debug.Log(" " + barrier.IsBarrierActive());
+           
         }
 
         
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log(other.tag);
+       if (other.gameObject.CompareTag("WindSkill"))
+    {   
+         body.AddForce(Vector2.up * suspensionForce);
+         isSuspended = true;
+        
+    }
+    }
+    
 }

@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     // HP
     [SerializeField] private float startHP;
     [SerializeField] private float respawn_timer;
+
+    
     public float currHP { get; private set; }
 
     // HP Potion
@@ -39,6 +41,7 @@ public class GameController : MonoBehaviour
     private PlayerMovement player_movement;
     private PlayerAttack player_attack;
     private Rigidbody2D body;
+    private SwitchSkills barrier;
 
     // Death System
     private bool isDeathInProgress = false;
@@ -58,6 +61,11 @@ public class GameController : MonoBehaviour
         player_movement = GetComponent<PlayerMovement>();
         player_attack = GetComponent<PlayerAttack>();
         body = GetComponent<Rigidbody2D>();
+        if (barrier == null)
+        {
+            Debug.Log("Barrier GameObject is null in GameController!");
+        }
+        
     }
 
     public void TakeDamage(float damage)
@@ -76,11 +84,24 @@ public class GameController : MonoBehaviour
     {
         if (collision.CompareTag("Obstacles"))
         {
-            TakeDamage(1); // Player hitting obstacle
+                 TakeDamage(1); // Player hitting wind slime
+                 Debug.Log("HIT");
+                if(barrier.barrierPrefabInstance == null)
+                {
+                    Debug.Log("Barrier is null");
+                }
+           
         }
         else if (collision.CompareTag("WindSlime"))
         {
-            TakeDamage(1); // Player hitting wind slime
+            
+                 TakeDamage(1); // Player hitting wind slime
+                 Debug.Log("HIT");
+                  if(barrier.barrierPrefabInstance == null)
+                {
+                    Debug.Log("Barrier is null");
+                }
+   
         }
         else if (collision.CompareTag("Checkpoint"))
         {
