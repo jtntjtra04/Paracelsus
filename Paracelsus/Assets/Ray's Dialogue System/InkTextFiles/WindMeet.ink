@@ -1,3 +1,6 @@
+EXTERNAL delay(seconds)
+
+~ delay(1)
 "A small green fairy is floating in the air." #layout:blank
 
 "Excuse me... Are you Sylph, one of the four elemental spirits?" #layout:no #speaker:Celsus

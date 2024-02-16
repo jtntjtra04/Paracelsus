@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
 
     private const string LAYOUT_TAG = "layout";
 
-
+    
 
     private void Awake()
     {
@@ -59,6 +59,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
            instance = this;
+       
 
         audioSource = this.gameObject.AddComponent<AudioSource>();
     }
@@ -102,6 +103,12 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
+        currentStory.BindExternalFunction("delay", (int seconds) =>
+        {
+            Debug.Log(seconds);
+        });
+        
+
         displayNameText.text = "???";
         portraitAnimator.Play("default");
         layoutAnimator.Play("blank");
@@ -122,6 +129,7 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
 
+        currentStory.UnbindExternalFunction("delay");
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -137,6 +145,8 @@ public class DialogueManager : MonoBehaviour
             }
 
             displayLineCoroutine =  StartCoroutine(DisplayLine(currentStory.Continue()));
+
+            
 
             HandleTags(currentStory.currentTags);
         }
