@@ -178,7 +178,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wind_tornado_sheet_0: -5235742502102852406
+      wind_tornado_sheet_1: 1278892234840644382
+      wind_tornado_sheet_2: -3933812392390173292
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

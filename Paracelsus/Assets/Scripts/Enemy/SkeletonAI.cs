@@ -23,6 +23,9 @@ public class SkeletonAI : MonoBehaviour
     private bool isSuspended = false;
     private float suspensionTimer = 0f;
     
+    //audio
+    public AudioSource SkeletonAudio;
+    public AudioClip SkeletonAttack, SkeletonHurt;
 
     private void Awake()
     {
@@ -47,6 +50,8 @@ public class SkeletonAI : MonoBehaviour
                 anim.SetTrigger("SkeletonAttack");
 
                 DamagePlayer();
+                SkeletonAudio.clip = SkeletonAttack;
+                SkeletonAudio.Play();
             }
         }
          if (isSuspended)

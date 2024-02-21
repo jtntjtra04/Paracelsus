@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      water_shield_sheet_0: -2248064111767882730
+      water_shield_sheet_1: -2002603508120469026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -46,6 +46,10 @@ public class GameController : MonoBehaviour
     // Death System
     private bool isDeathInProgress = false;
 
+    //audio
+    public AudioSource PlayerAudio;
+    public AudioClip CelsusDeath;
+
     private void Start()
     {
         // Respawn point
@@ -76,6 +80,8 @@ public class GameController : MonoBehaviour
         if (currHP == 0)
         {
             Death();
+            PlayerAudio.clip = CelsusDeath;
+            PlayerAudio.Play();
         }
     }
 
