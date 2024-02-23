@@ -25778,7 +25778,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.044, y: 10.478, z: 0.13310361}
-  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1975020435}
@@ -31657,6 +31657,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1747518239150280462, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_GravityScale
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6687766984488025394, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
       propertyPath: AudioSource
       value: 
@@ -31671,7 +31675,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2fea052b1883b6f43bf8ba64a0f6b3c0, type: 3}
     - target: {fileID: 6687766984488025394, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
       propertyPath: suspensionForce
-      value: 100
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 6985254128193023190, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
       propertyPath: m_LocalPosition.x
