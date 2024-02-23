@@ -28,12 +28,19 @@ public class SlimeAI : MonoBehaviour
     }
 
     void TakeTurn()
-        {
-            Vector3 currRot = transform.eulerAngles;
-            currRot.z += wayPoints[nextWaypoint].transform.eulerAngles.z;
-            transform.eulerAngles = currRot;
-            ChooseNextWaypoint();
-        }
+    {
+        Vector3 currRot = transform.eulerAngles;
+        currRot.z += wayPoints[nextWaypoint].transform.eulerAngles.z;
+        transform.eulerAngles = currRot;
+        Vector3 scale = transform.localScale;
+
+        // Flip the X scale
+        scale.x *= -1;
+
+        // Apply the new scale
+        transform.localScale = scale;
+        ChooseNextWaypoint();
+    }
 
     void ChooseNextWaypoint()
         {

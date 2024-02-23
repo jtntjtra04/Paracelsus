@@ -44,6 +44,8 @@ public class SkeletonAI : MonoBehaviour
             {
                 //attack
                 CD_timer = 0;
+                SkeletonAudio.clip = SkeletonAttack;
+                SkeletonAudio.Play();
                 anim.SetBool("Walk", false);
                 anim.SetTrigger("SkeletonAttack");
                 Debug.Log("Skeleton Attack");
@@ -58,7 +60,7 @@ public class SkeletonAI : MonoBehaviour
             if (suspensionTimer >= suspensionDuration)
             {
                 // Revert gravity scale after suspension duration
-                body.gravityScale = 30f;
+                body.gravityScale = 50f;
                 isSuspended = false;
                 suspensionTimer = 0f;
                 body.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
@@ -85,10 +87,7 @@ public class SkeletonAI : MonoBehaviour
     {
         if (PlayerDetected() && player_HP.currHP != 0 && barrier.barrierPrefabInstance == null) //Player still in range or still hit the box 
         {
-            SkeletonAudio.clip = SkeletonAttack;
-            SkeletonAudio.Play();
             player_HP.TakeDamage(damage);
-
         }
     }
 

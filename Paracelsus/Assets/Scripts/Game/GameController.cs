@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
         player_movement = GetComponent<PlayerMovement>();
         player_attack = GetComponent<PlayerAttack>();
         body = GetComponent<Rigidbody2D>();
+        barrier = GetComponent<SwitchSkills>();
         if (barrier == null)
         {
             Debug.Log("Barrier GameObject is null in GameController!");
@@ -90,23 +91,22 @@ public class GameController : MonoBehaviour
     {
         if (collision.CompareTag("Obstacles"))
         {
-                 TakeDamage(1); // Player hitting wind slime
-                 Debug.Log("HIT");
-                if(barrier.barrierPrefabInstance == null)
-                {
-                    Debug.Log("Barrier is null");
-                }
+            // Player hitting wind slime
+            if(barrier.barrierPrefabInstance == null)
+            {
+                Debug.Log("Barrier is null");
+                TakeDamage(1);
+            }
            
         }
         else if (collision.CompareTag("WindSlime"))
         {
-            
-                 TakeDamage(1); // Player hitting wind slime
-                 Debug.Log("HIT");
-                  if(barrier.barrierPrefabInstance == null)
-                {
-                    Debug.Log("Barrier is null");
-                }
+            // Player hitting wind slime
+            if(barrier.barrierPrefabInstance == null)
+            {
+                Debug.Log("Barrier is null");
+                TakeDamage(1);
+            }
    
         }
         else if (collision.CompareTag("Checkpoint"))
