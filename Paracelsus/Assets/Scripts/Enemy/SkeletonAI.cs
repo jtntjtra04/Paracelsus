@@ -10,7 +10,7 @@ public class SkeletonAI : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D BoxCollider;
     [SerializeField] private LayerMask player_layer;
-    [SerializeField] private float suspensionForce = 10000000000f;
+    [SerializeField] private float suspensionForce;
 
     private float CD_timer = 100;
     private Rigidbody2D body;
@@ -32,8 +32,6 @@ public class SkeletonAI : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         barrier = FindObjectOfType<SwitchSkills>();
-        
-        
     }
     private void Update()
     {
@@ -48,25 +46,22 @@ public class SkeletonAI : MonoBehaviour
                 CD_timer = 0;
                 anim.SetBool("Walk", false);
                 anim.SetTrigger("SkeletonAttack");
-
-                DamagePlayer();
-                SkeletonAudio.clip = SkeletonAttack;
-                SkeletonAudio.Play();
+                Debug.Log("Skeleton Attack");
             }
         }
-         if (isSuspended)
+        if (isSuspended)
         {
             // Adjust gravity scale while suspended
             body.gravityScale = suspendedGravityScale;
             suspensionTimer += Time.deltaTime;
-            body.constraints = RigidbodyConstraints2D.FreezePositionX;
+            body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             if (suspensionTimer >= suspensionDuration)
             {
                 // Revert gravity scale after suspension duration
                 body.gravityScale = 30f;
                 isSuspended = false;
                 suspensionTimer = 0f;
-                body.constraints = RigidbodyConstraints2D.None;
+                body.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
             }
         }
     }
@@ -90,23 +85,21 @@ public class SkeletonAI : MonoBehaviour
     {
         if (PlayerDetected() && player_HP.currHP != 0 && barrier.barrierPrefabInstance == null) //Player still in range or still hit the box 
         {
+            SkeletonAudio.clip = SkeletonAttack;
+            SkeletonAudio.Play();
             player_HP.TakeDamage(damage);
 
-           
         }
-
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
-       if (other.gameObject.CompareTag("WindSkill"))
-    {   
-         body.AddForce(Vector2.up * suspensionForce);
-         isSuspended = true;
-        
-    }
+        if (other.gameObject.CompareTag("WindSkill"))
+        {   
+            body.AddForce(Vector2.up * suspensionForce);
+            isSuspended = true;
+        }
     }
     
 }
