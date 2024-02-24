@@ -1,91 +1,61 @@
 fileFormatVersion: 2
-guid: 3a6f81ee7a586ef4daf813848eb48bb5
+guid: 603677c5b3359084dbeded6a78c40c94
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1272652442893740173
-    second: default_projectile_0
+      213: 8557051006287575768
+    second: default_explosion_0
   - first:
-      213: -7497370136553650387
-    second: default_projectile_1
+      213: 3528128973854724037
+    second: default_explosion_1
   - first:
-      213: -3103898849147437276
-    second: default_projectile_2
+      213: -3536123355810315701
+    second: default_explosion_2
   - first:
-      213: -8568310216602922968
-    second: default_projectile_3
+      213: 4488953387571384704
+    second: default_explosion_3
   - first:
-      213: -5994886433242328454
-    second: default_projectile_4
+      213: -4973014682370338276
+    second: default_explosion_4
   - first:
-      213: 4107747238973775965
-    second: default_projectile_5
+      213: -1773054355604453649
+    second: default_explosion_5
   - first:
-      213: 315788396957735051
-    second: default_projectile_6
+      213: 6236819526984866329
+    second: default_explosion_6
   - first:
-      213: 732936730645124317
-    second: default_projectile_7
+      213: 4567889273363729413
+    second: default_explosion_7
   - first:
-      213: -2743947700442987706
-    second: default_projectile_8
+      213: -524134675192044695
+    second: default_explosion_8
   - first:
-      213: 4694137800249961067
-    second: default_projectile_9
+      213: -1460177281923150162
+    second: default_explosion_9
   - first:
-      213: -214287917346154321
-    second: default_projectile_10
+      213: 2159142554639778867
+    second: default_explosion_10
   - first:
-      213: -1269331503910174178
-    second: default_projectile_11
+      213: -1978749120961376415
+    second: default_explosion_11
   - first:
-      213: 1073215693434886400
-    second: default_projectile_12
+      213: -1431451191974204214
+    second: default_explosion_12
   - first:
-      213: -1445532444108389886
-    second: default_projectile_13
+      213: -9030654229053254012
+    second: default_explosion_13
   - first:
-      213: -894310434153501787
-    second: default_projectile_14
+      213: -2906961287003865878
+    second: default_explosion_14
   - first:
-      213: 5109470860699184251
-    second: default_projectile_15
+      213: -6058005604093971038
+    second: default_explosion_15
   - first:
-      213: -706001852109973240
-    second: default_projectile_16
+      213: 1341336894911138788
+    second: default_explosion_16
   - first:
-      213: -3527181998451780655
-    second: default_projectile_17
-  - first:
-      213: -1780585176833698221
-    second: default_projectile_18
-  - first:
-      213: -6247349578247880103
-    second: default_projectile_19
-  - first:
-      213: 4807285659315932234
-    second: default_projectile_20
-  - first:
-      213: 3701953913351242850
-    second: default_projectile_21
-  - first:
-      213: -3850930043783569450
-    second: default_projectile_22
-  - first:
-      213: 9142944221640318255
-    second: default_projectile_23
-  - first:
-      213: -4797522106782663248
-    second: default_projectile_24
-  - first:
-      213: -7673593825671268502
-    second: default_projectile_25
-  - first:
-      213: 4586353495008636110
-    second: default_projectile_26
-  - first:
-      213: 944433286905716792
-    second: default_projectile_27
+      213: -6875290132629798949
+    second: default_explosion_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -181,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: default_projectile_0
+      name: default_explosion_0
       rect:
         serializedVersion: 2
         x: 0
@@ -195,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cbf2d3822f00134ebbf71aba3aea7ce
-      internalID: -1367793365
+      spriteID: 2ec79787713014d4abbf11e766470816
+      internalID: -902012175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: default_projectile_1
+      name: default_explosion_1
       rect:
         serializedVersion: 2
         x: 500
@@ -216,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c54abd659be58640a71011cd6ed92f7
-      internalID: 915745156
+      spriteID: bdf5508b251ca6a45b4f14ab93643f8f
+      internalID: -1190237035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: default_projectile_2
+      name: default_explosion_2
       rect:
         serializedVersion: 2
         x: 1000
@@ -237,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91a9aeebb0c84d144be5d93790bdeca1
-      internalID: 1332338387
+      spriteID: bd1a92c542b9a1a4b90b7f3d8aea38e0
+      internalID: 1073522108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: default_projectile_3
+      name: default_explosion_3
       rect:
         serializedVersion: 2
         x: 1500
@@ -258,8 +228,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1cdaaae5f873e649a5ca54115a8340a
-      internalID: 261642080
+      spriteID: 296c518db68dc134a8c895e82c1daff0
+      internalID: -1072981479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: default_explosion_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dae0b9477796324a95fc465e3c35d28
+      internalID: 1266317478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: default_explosion_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e9b4bb36ba9ff4d91c491237dabdeb
+      internalID: 2085597996
       vertices: []
       indices: 
       edges: []
@@ -267,7 +279,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 18a7b0a0751bc8e42bbba8cface81bf8
+    spriteID: b66971321ad2bd443a2677a56db01861
     internalID: 0
     vertices: []
     indices: 
@@ -275,10 +287,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      default_projectile_0: -1367793365
-      default_projectile_1: 915745156
-      default_projectile_2: 1332338387
-      default_projectile_3: 261642080
+      default_explosion_0: -902012175
+      default_explosion_1: -1190237035
+      default_explosion_2: 1073522108
+      default_explosion_3: -1072981479
+      default_explosion_4: 1266317478
+      default_explosion_5: 2085597996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
