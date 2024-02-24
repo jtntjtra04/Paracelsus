@@ -3,7 +3,7 @@ guid: 68f5ffe7d7dea124b9cebfe14734ce76
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skeleton_fire_idle_sheet_0
+      name: skeleton_fire_idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 657
+        width: 667
         height: 667
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9053b9cae0b0c6842be6181d7f14d4ad
-      internalID: 397775710
+      spriteID: 3939f3a65857b4e4bbcb45edfeaf77a0
+      internalID: 2049960146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_fire_idle_sheet_1
+      name: skeleton_fire_idle_1
       rect:
         serializedVersion: 2
-        x: 657
+        x: 667
         y: 0
-        width: 657
+        width: 667
         height: 667
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 597a90ca686e3f244acaabb48ea69674
-      internalID: 1387892011
+      spriteID: f8f05336de88fc7449268e3dfc5f33bc
+      internalID: -791904235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_fire_idle_sheet_2
+      name: skeleton_fire_idle_2
       rect:
         serializedVersion: 2
-        x: 1314
+        x: 1334
         y: 0
-        width: 657
+        width: 667
         height: 667
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7c4f7008cb465342879025327b96a66
-      internalID: -253601237
+      spriteID: 14f306c10c295dd42837c3da2230f8cf
+      internalID: -600574963
       vertices: []
       indices: 
       edges: []
@@ -196,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skeleton_fire_idle_sheet_0: 397775710
-      skeleton_fire_idle_sheet_1: 1387892011
-      skeleton_fire_idle_sheet_2: -253601237
+      skeleton_fire_idle_0: 2049960146
+      skeleton_fire_idle_1: -791904235
+      skeleton_fire_idle_2: -600574963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

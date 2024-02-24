@@ -3,7 +3,7 @@ guid: 03648a29f7f1345498b0d68059576dd8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -128,10 +128,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 750
+        width: 895
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: skeleton_fire_attack_sheet_1
       rect:
         serializedVersion: 2
-        x: 750
+        x: 895
         y: 0
-        width: 750
+        width: 915
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: skeleton_fire_attack_sheet_2
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1876
         y: 0
-        width: 750
+        width: 902
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: skeleton_fire_attack_sheet_3
       rect:
         serializedVersion: 2
-        x: 2250
+        x: 2814
         y: 0
-        width: 750
+        width: 869
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: skeleton_fire_attack_sheet_4
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 3752
         y: 0
-        width: 750
+        width: 935
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: skeleton_fire_attack_sheet_5
       rect:
         serializedVersion: 2
-        x: 3750
+        x: 4690
         y: 0
-        width: 750
+        width: 938
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,27 +244,6 @@ TextureImporter:
       bones: []
       spriteID: edd91274ec77354468f6fef689c461ba
       internalID: 847692046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton_fire_attack_sheet_6
-      rect:
-        serializedVersion: 2
-        x: 4500
-        y: 0
-        width: 750
-        height: 667
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c78f5853065f3ce4bbd31a9dcf1dc46e
-      internalID: 1654984871
       vertices: []
       indices: 
       edges: []
@@ -286,7 +265,6 @@ TextureImporter:
       skeleton_fire_attack_sheet_3: 306630035
       skeleton_fire_attack_sheet_4: -1514306933
       skeleton_fire_attack_sheet_5: 847692046
-      skeleton_fire_attack_sheet_6: 1654984871
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

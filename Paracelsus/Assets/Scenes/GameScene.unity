@@ -31934,6 +31934,22 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4499433698935877937, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499433698935877937, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499433698935877937, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499433698935877937, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6687766984488025394, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
       propertyPath: AudioSource
       value: 
@@ -31992,6 +32008,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7791739072077134933, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135053805623031796, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_Size.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135053805623031796, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_Size.y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135053805623031796, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2049960146, guid: 68f5ffe7d7dea124b9cebfe14734ce76, type: 3}
+    - target: {fileID: 9135053805623031796, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
