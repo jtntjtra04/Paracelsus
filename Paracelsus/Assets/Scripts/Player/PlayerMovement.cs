@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
     private int extra_jump = 1; // double jump
     private float initial_gravity; // glide
 
+    //audio
+    public AudioSource PlayerAudio;
+    public AudioClip CelsusJump;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -118,6 +122,8 @@ public class PlayerMovement : MonoBehaviour
         
         anim.SetTrigger("jump");
         body.velocity = new Vector2(body.velocity.x, jump_power);
+        PlayerAudio.clip = CelsusJump;
+        PlayerAudio.Play();
     }
     private void ReleaseJump()
     {

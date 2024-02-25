@@ -826,7 +826,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shadow_projectile_0: -4685333409322186932
+      shadow_projectile_1: -623388565837476902
+      shadow_projectile_10: -5156455305043687272
+      shadow_projectile_11: 4944237349500496225
+      shadow_projectile_12: -7190736406391313523
+      shadow_projectile_13: -4193778959528207258
+      shadow_projectile_14: -1999599442430853840
+      shadow_projectile_15: 5702813591535059371
+      shadow_projectile_16: -6690644725948798125
+      shadow_projectile_17: 3349174983274212427
+      shadow_projectile_18: 3460731084004524548
+      shadow_projectile_19: -5355042212783103235
+      shadow_projectile_2: 5764885024588124680
+      shadow_projectile_20: -1984440445502999148
+      shadow_projectile_21: -5603551809798951331
+      shadow_projectile_22: 3961699981704981235
+      shadow_projectile_23: 1268199323463700059
+      shadow_projectile_24: -158334171197472839
+      shadow_projectile_25: -3326236817645408775
+      shadow_projectile_26: -176684551939907297
+      shadow_projectile_27: -1780614532507189958
+      shadow_projectile_28: -2054908957957544242
+      shadow_projectile_29: 1703105634096953849
+      shadow_projectile_3: 1558643243620928924
+      shadow_projectile_4: -9118255903377051355
+      shadow_projectile_5: 810556483042319257
+      shadow_projectile_6: -3097376246428175764
+      shadow_projectile_7: 6230129740346062984
+      shadow_projectile_8: -4563519445377130577
+      shadow_projectile_9: -1551216286900120266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,6 +14,11 @@ public class EnemyHPSystem : MonoBehaviour
     private SkeletonPatrol skeleton_movement;
     public EnemyHealthBar hp_bar;
     private Animator anim;
+
+    //audio
+    public AudioSource SkeletonAudio;
+    public AudioClip SkeletonDie, SkeletonHurt;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -33,6 +38,9 @@ public class EnemyHPSystem : MonoBehaviour
     }
     public void EnemyTakeDamage(float damage)
     {
+        SkeletonAudio.clip = SkeletonHurt;
+        SkeletonAudio.Play();
+
         if (!isDefeat)
         {
             curr_health -= damage;
@@ -48,6 +56,9 @@ public class EnemyHPSystem : MonoBehaviour
     {
         isDefeat = true;
         anim.SetTrigger("Defeat");
+
+        SkeletonAudio.clip = SkeletonDie;
+        SkeletonAudio.Play();
 
         hp_bar.gameObject.SetActive(false);
 

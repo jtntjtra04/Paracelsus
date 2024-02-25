@@ -13,6 +13,11 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject[] elements;
     private GameObject loop_fire;
+
+    //audio
+    public AudioSource PlayerAudio;
+    public AudioClip CelsusAttack;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -43,7 +48,8 @@ public class PlayerAttack : MonoBehaviour
     private void attack()
     {
         anim.SetTrigger("attack");
-
+        PlayerAudio.clip = CelsusAttack;
+        PlayerAudio.Play();
         cooldown_timer = 0;
 
         //Instantiate(elements, firepoint.position, firepoint.rotation);

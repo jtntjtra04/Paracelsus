@@ -14,6 +14,7 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D body;
     public float damage;
 
+
     private void Awake()
     {
         BoxCollider = GetComponent<BoxCollider2D>();

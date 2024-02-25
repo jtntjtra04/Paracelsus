@@ -47,8 +47,8 @@ public class GameController : MonoBehaviour
     private bool isDeathInProgress = false;
 
     //audio
-    public AudioSource PlayerAudio;
-    public AudioClip CelsusDeath;
+    public AudioSource MusicPlayer, PlayerAudio;
+    public AudioClip CelsusDeath, CelsusHurt, WindMusic;
 
     private void Start()
     {
@@ -77,12 +77,11 @@ public class GameController : MonoBehaviour
     {
         // Damage calculations
         currHP = Mathf.Clamp(currHP - damage, 0, startHP);
-
+        PlayerAudio.clip = CelsusHurt;
+        PlayerAudio.Play();
         if (currHP == 0)
         {
             Death();
-            PlayerAudio.clip = CelsusDeath;
-            PlayerAudio.Play();
         }
     }
 
@@ -96,8 +95,9 @@ public class GameController : MonoBehaviour
             {
                 Debug.Log("Barrier is null");
                 TakeDamage(1);
+                
             }
-           
+
         }
         else if (collision.CompareTag("WindSlime"))
         {
@@ -106,8 +106,9 @@ public class GameController : MonoBehaviour
             {
                 Debug.Log("Barrier is null");
                 TakeDamage(1);
+                
             }
-   
+
         }
         else if (collision.CompareTag("Checkpoint"))
         {
@@ -215,6 +216,8 @@ public class GameController : MonoBehaviour
 
     void Death()
     {
+        MusicPlayer.clip = CelsusDeath;
+        MusicPlayer.Play();
         if (!isDeathInProgress)
         {
             StartCoroutine(DeathAnimation(respawn_timer));
@@ -223,6 +226,8 @@ public class GameController : MonoBehaviour
     void Respawn()
     {
         isDeathInProgress = false;
+
+        
 
         if (checkpointPosition != Vector2.zero) // Check if a checkpoint is set
         {
@@ -239,6 +244,9 @@ public class GameController : MonoBehaviour
         player_attack.enabled = true; // player can attack again
 
         anim.Play("Idle"); // play and set to default animation
+
+        MusicPlayer.clip = WindMusic;
+        MusicPlayer.Play();
 
         DeathUI.SetActive(false);
     }    

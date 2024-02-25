@@ -25,7 +25,7 @@ public class SkeletonAI : MonoBehaviour
     
     //audio
     public AudioSource SkeletonAudio;
-    public AudioClip SkeletonAttack, SkeletonHurt;
+    public AudioClip SkeletonAttack;
 
     private void Awake()
     {
