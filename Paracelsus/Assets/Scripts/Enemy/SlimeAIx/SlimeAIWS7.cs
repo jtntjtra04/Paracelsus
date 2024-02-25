@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeAITesting : MonoBehaviour
+public class SlimeAIWS7 : MonoBehaviour
 {
     public float moveSpeed;
     public GameObject[] wayPoints;
@@ -61,6 +61,6 @@ public class SlimeAITesting : MonoBehaviour
     
     bool ShouldFlipYAxis()
     {
-        return nextWaypoint == 5 || nextWaypoint == wayPoints.Length - 1;
+        return nextWaypoint == 6 || nextWaypoint == wayPoints.Length - 1;
     }
 }
