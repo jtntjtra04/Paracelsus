@@ -3,19 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 
-public class InkExternalFunctions
+public class InkExternalFunctions :MonoBehaviour
 {
-    public void Bind(Story story, Animator flashScreen)
+    public void Bind(Story story)
     {
-        story.BindExternalFunction("delay", (int seconds) =>
-        {
-            Debug.Log(seconds);
-        });
+      //  story.BindExternalFunction("audio test", (string name) => {  } );
+        
     }
 
     public void Unbind(Story story)
     {
-        
+      //  story.UnbindExternalFunction("Wait");
     }
+
+
+
+    // public void PlayEmote(string emoteName, Animator emoteAnimator)
+    //  {
+    //Debug.Log(seconds);
+    //  }
+
+
+  
+
 }
 

@@ -23603,7 +23603,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -28535,7 +28535,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -29861,7 +29861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1657102096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32539,8 +32539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -10, y: 10}
-  m_SizeDelta: {x: 25, y: 25}
+  m_AnchoredPosition: {x: -20.300049, y: 10.5}
+  m_SizeDelta: {x: 22.2997, y: 11.026}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &2039405302
 MonoBehaviour:
@@ -32562,7 +32562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa1c49e68f7061242ad8ab2fc3011391, type: 3}
+  m_Sprite: {fileID: 3523361294036016019, guid: b302cbd49a99d8b478acbf885d845103, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33014,8 +33014,8 @@ MonoBehaviour:
   dialogueText: {fileID: 649886320}
   displayNameText: {fileID: 1475982908}
   portraitAnimator: {fileID: 405275195}
-  dialogueTypingSoundClip: {fileID: 0}
-  stopAudioSource: 0
+  dialogueTypingSoundClip: {fileID: 8300000, guid: 732953fde58852548b0dd87339c7040c, type: 3}
+  stopAudioSource: 1
 --- !u!4 &2143287730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7910108165530406532, guid: 98677899a901dec4490bfcc75b657f90, type: 3}

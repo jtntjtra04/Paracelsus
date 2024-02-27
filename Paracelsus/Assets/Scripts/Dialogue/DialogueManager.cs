@@ -50,6 +50,7 @@ public class DialogueManager : MonoBehaviour
 
     private const string LAYOUT_TAG = "layout";
 
+    private InkExternalFunctions inkExternalFunctions;
     
 
     private void Awake()
@@ -60,7 +61,7 @@ public class DialogueManager : MonoBehaviour
         }
            instance = this;
        
-
+     //   inkExternalFunctions = new InkExternalFunctions();
         audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
@@ -103,11 +104,8 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        currentStory.BindExternalFunction("delay", (int seconds) =>
-        {
-            Debug.Log(seconds);
-        });
-        
+        inkExternalFunctions.Bind(currentStory);
+
 
         displayNameText.text = "???";
         portraitAnimator.Play("default");
@@ -128,8 +126,9 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
+       // inkExternalFunctions.Unbind(currentStory);
+       
 
-        currentStory.UnbindExternalFunction("delay");
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -145,8 +144,6 @@ public class DialogueManager : MonoBehaviour
             }
 
             displayLineCoroutine =  StartCoroutine(DisplayLine(currentStory.Continue()));
-
-            
 
             HandleTags(currentStory.currentTags);
         }

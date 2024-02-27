@@ -1,6 +1,4 @@
-EXTERNAL delay(seconds)
 
-~ delay(1)
 
 We have to cook, RIGHT NOW! #speaker:Mr.White #portrait:mr_white #layout:add
 
