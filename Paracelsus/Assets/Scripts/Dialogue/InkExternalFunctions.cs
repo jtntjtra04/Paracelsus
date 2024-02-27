@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 
-public class InkExternalFunctions :MonoBehaviour
+public class InkExternalFunctions 
 {
     public void Bind(Story story)
     {

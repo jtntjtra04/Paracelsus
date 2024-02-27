@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        inkExternalFunctions.Bind(currentStory);
+       // inkExternalFunctions.Bind(currentStory);
 
 
         displayNameText.text = "???";
