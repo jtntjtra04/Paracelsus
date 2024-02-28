@@ -216,8 +216,7 @@ public class GameController : MonoBehaviour
 
     void Death()
     {
-        MusicPlayer.clip = CelsusDeath;
-        MusicPlayer.Play();
+        
         if (!isDeathInProgress)
         {
             StartCoroutine(DeathAnimation(respawn_timer));
@@ -258,6 +257,9 @@ public class GameController : MonoBehaviour
         player_attack.enabled = false; // player can't attack
         body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         anim.SetTrigger("defeat");
+
+        MusicPlayer.clip = CelsusDeath;
+        MusicPlayer.Play();
 
         yield return new WaitForSeconds(respawn_timer);
 
