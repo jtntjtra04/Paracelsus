@@ -70,7 +70,10 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Barrier GameObject is null in GameController!");
         }
-        
+
+        MusicPlayer.clip = WindMusic; //might need to place this somewhere else
+        MusicPlayer.Play();
+
     }
 
     public void TakeDamage(float damage)
