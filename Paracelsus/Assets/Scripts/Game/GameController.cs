@@ -79,7 +79,8 @@ public class GameController : MonoBehaviour
         currHP = Mathf.Clamp(currHP - damage, 0, startHP);
         PlayerAudio.clip = CelsusHurt;
         PlayerAudio.Play();
-        if (currHP == 0)
+        Debug.Log("Current HP: " + currHP); // Add this line
+        if (currHP <= 0)
         {
             Death();
         }
@@ -175,8 +176,12 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Heal();
+            if(currHP < 3)
+            {
+                Heal();
+            }
         }
+
 
         else if (wind_spirit && Input.GetKeyDown(KeyCode.F) && !double_jump)
         {
@@ -216,8 +221,8 @@ public class GameController : MonoBehaviour
 
     void Death()
     {
-        MusicPlayer.clip = CelsusDeath;
-        MusicPlayer.Play();
+        // MusicPlayer.clip = CelsusDeath;
+        // MusicPlayer.Play();
         if (!isDeathInProgress)
         {
             StartCoroutine(DeathAnimation(respawn_timer));
@@ -271,5 +276,3 @@ public class GameController : MonoBehaviour
         Respawn();
     }
 }
-
-
