@@ -224,7 +224,6 @@ public class GameController : MonoBehaviour
 
     void Death()
     {
-        
         if (!isDeathInProgress)
         {
             StartCoroutine(DeathAnimation(respawn_timer));
@@ -232,9 +231,7 @@ public class GameController : MonoBehaviour
     }
     void Respawn()
     {
-        isDeathInProgress = false;
-
-        
+        isDeathInProgress = false;  
 
         if (checkpointPosition != Vector2.zero) // Check if a checkpoint is set
         {

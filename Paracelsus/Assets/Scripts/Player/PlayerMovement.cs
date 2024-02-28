@@ -85,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-0.46f, 0.46f, 0.46f);
         }
+
         if (Input.GetKey(KeyCode.Space) && body.velocity.y <= 0 && ability.glide)  // if glide unlocked
         {
             anim.SetTrigger("glide");
