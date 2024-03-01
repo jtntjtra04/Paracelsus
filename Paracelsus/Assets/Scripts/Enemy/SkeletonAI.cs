@@ -17,11 +17,12 @@ public class SkeletonAI : MonoBehaviour
     //references
     private Animator anim;
     private GameController player_HP;
-    private SwitchSkills barrier;
+    private SwitchSkills skills;
     private float suspendedGravityScale = 0.5f;
     private float suspensionDuration = 1f;
     private bool isSuspended = false;
     private float suspensionTimer = 0f;
+    public Transform pillarPosition;
     
     //audio
     public AudioSource SkeletonAudio;
@@ -31,7 +32,7 @@ public class SkeletonAI : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        barrier = FindObjectOfType<SwitchSkills>();
+        skills = FindFirstObjectByType<SwitchSkills>();
     }
     private void Update()
     {
@@ -66,6 +67,17 @@ public class SkeletonAI : MonoBehaviour
                 body.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
             }
         }
+        if(skills.earthFunc == true)
+        {
+            if(skills.pillarPrefabInstance == null)
+            {
+                skills.pillarPrefabInstance = Instantiate(skills.pillarPrefab, pillarPosition.position, Quaternion.identity);
+                Destroy(skills.pillarPrefabInstance, 0.45f);
+        //      skills.earthFunc = false;
+            }
+           
+        }
+           
     }
     private bool PlayerDetected()
     {
@@ -85,7 +97,7 @@ public class SkeletonAI : MonoBehaviour
     }
     private void DamagePlayer()
     {
-        if (PlayerDetected() && player_HP.currHP != 0 && barrier.barrierPrefabInstance == null) //Player still in range or still hit the box 
+        if (PlayerDetected() && player_HP.currHP != 0 && skills.barrierPrefabInstance == null) //Player still in range or still hit the box 
         {
             player_HP.TakeDamage(damage);
         }

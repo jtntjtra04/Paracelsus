@@ -74893,7 +74893,7 @@ Transform:
   m_GameObject: {fileID: 599306660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.24, y: -9.1, z: 0}
+  m_LocalPosition: {x: 39.9, y: -1.1, z: 0}
   m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -75086,11 +75086,17 @@ MonoBehaviour:
   barrierPrefabInstance: {fileID: 0}
   tornadoPrefab: {fileID: 653581038486779072, guid: 295c96836faf4f643b2ff0cfcf932031, type: 3}
   tornadoPrefabInstance: {fileID: 0}
+  pillarPrefab: {fileID: 1140851240009068747, guid: 7cb4c78e7011bb84cb1d38ff88ec97e4, type: 3}
+  pillarPrefabInstance: {fileID: 0}
+  pillarSpeed: 1000
+  Enemy: {fileID: 1893426963}
   isBarrierActive: 0
   barrierTime: 5
   tornadoSpeed: 1000
   tornadoTime: 1
+  earthFunc: 0
   firepoint: {fileID: 598809956}
+  pillarPosition: {fileID: 860467432}
 --- !u!1 &601013481
 GameObject:
   m_ObjectHideFlags: 0
@@ -99462,6 +99468,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564485035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &860467431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860467432}
+  m_Layer: 6
+  m_Name: pillarPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860467432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860467431}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.16, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1160970008}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864866593
 GameObject:
   m_ObjectHideFlags: 0
@@ -109216,6 +109253,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885195375}
   m_CullTransparentMesh: 1
+--- !u!1 &1893426963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1600186849003007699, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+  m_PrefabInstance: {fileID: 3538302757276055035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1894251855
 GameObject:
   m_ObjectHideFlags: 0
@@ -110938,6 +110980,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1747518239150280462, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747518239150280462, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
       propertyPath: m_GravityScale
       value: 50
       objectReference: {fileID: 0}
@@ -110973,6 +111019,10 @@ PrefabInstance:
       propertyPath: SkeletonAttack
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6687766984488025394, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      propertyPath: pillarPosition
+      value: 
+      objectReference: {fileID: 860467432}
     - target: {fileID: 6687766984488025394, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
       propertyPath: suspensionForce
       value: 100000
@@ -111040,6 +111090,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6985254128193023190, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 860467432}
     - targetCorrespondingSourceObject: {fileID: 3082147439482517470, guid: 28f121eb3f1f48d4f80b8feaa2d456db, type: 3}
       insertIndex: -1
       addedObject: {fileID: 991334980}
