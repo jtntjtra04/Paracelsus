@@ -12,34 +12,28 @@ public class EnemyHPSystem : MonoBehaviour
     private Rigidbody2D body;
     private SkeletonAI skeleton_attack;
     private SkeletonPatrol skeleton_movement;
+    private SlimeAI slime_movement;
     public EnemyHealthBar hp_bar;
     private Animator anim;
 
     //audio
-    public AudioSource SkeletonAudio;
-    public AudioClip SkeletonDie, SkeletonHurt;
+    public AudioSource EnemyAudio;
+    public AudioClip EnemyDie, EnemyHurt;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         skeleton_attack = GetComponent<SkeletonAI>();
         skeleton_movement = GetComponentInParent<SkeletonPatrol>();
+        slime_movement = GetComponent<SlimeAI>();
         curr_health = health;
         hp_bar.SetHealth(curr_health, health);
         body = GetComponent<Rigidbody2D>();
-        if(skeleton_movement == null)
-        {
-            Debug.Log("Movement null raaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        }
-        if(skeleton_attack == null) 
-        {
-            Debug.Log("Attack null raaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        }
     }
     public void EnemyTakeDamage(float damage)
     {
-        SkeletonAudio.clip = SkeletonHurt;
-        SkeletonAudio.Play();
+        EnemyAudio.clip = EnemyHurt;
+        EnemyAudio.Play();
 
         if (!isDefeat)
         {
@@ -57,8 +51,8 @@ public class EnemyHPSystem : MonoBehaviour
         isDefeat = true;
         anim.SetTrigger("Defeat");
 
-        SkeletonAudio.clip = SkeletonDie;
-        SkeletonAudio.Play();
+        EnemyAudio.clip = EnemyDie;
+        EnemyAudio.Play();
 
         hp_bar.gameObject.SetActive(false);
 
@@ -72,6 +66,11 @@ public class EnemyHPSystem : MonoBehaviour
         {
             Debug.Log("Disables attack");
             skeleton_attack.enabled = false;
+        }
+        if (slime_movement != null)
+        {
+            Debug.Log("Disabled slime movement");
+            slime_movement.enabled = false;
         }
         
         yield return new WaitForSeconds(1.5f);
