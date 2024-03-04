@@ -12,6 +12,8 @@ public class SwitchSkills : MonoBehaviour
     public GameObject tornadoPrefabInstance;
     public GameObject pillarPrefab;
     public GameObject pillarPrefabInstance;
+    public GameObject pelletPrefab;
+    public GameObject pelletPrefabInstance;
 
     public float pillarSpeed = 1000f;
     private bool isPillarActive = false;
@@ -23,6 +25,11 @@ public class SwitchSkills : MonoBehaviour
     public float tornadoTime = 1f;
     public bool earthFunc = false;
     [SerializeField] private Transform firepoint;
+    public int amountOfBullets = 7;
+    public float pelletSpeed = 100f;
+    public float range = 10f;
+    public float pelletTime = 0.5f;
+  
     void Update()
     {
         ElementSwitching switch_element = GetComponent<ElementSwitching>();
@@ -54,6 +61,13 @@ public class SwitchSkills : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 CastPillar();
+
+            }
+        }else if(current_element == 3)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                CastShotgun();
 
             }
         }
@@ -153,6 +167,27 @@ public class SwitchSkills : MonoBehaviour
         if(pillar != null)
         {
             Destroy(pillar);
+        }
+    }
+
+    private void CastShotgun()
+    {
+        for(int i = 0; i < amountOfBullets; i++)
+        {
+            float localScaleX = transform.localScale.x;
+           
+        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+            pelletPrefabInstance = Instantiate(pelletPrefab, firepoint.position, Quaternion.identity);
+            Rigidbody2D pelletRb = pelletPrefabInstance.GetComponent<Rigidbody2D>();
+
+            float playerScaleX = transform.localScale.x;
+            
+            Vector2 playerDirection = (playerScaleX < 0) ? -transform.right : transform.right;
+            Vector2 dir = transform.rotation * playerDirection;
+            Vector2 pdir = Vector2.Perpendicular(dir) * Random.Range(-range, range);
+            pelletRb.velocity = (dir + pdir) * pelletSpeed;
+
+            Destroy(pelletPrefabInstance, pelletTime);
         }
     }
 }

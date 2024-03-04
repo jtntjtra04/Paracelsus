@@ -33,11 +33,12 @@ public class SkeletonAI : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         skills = FindFirstObjectByType<SwitchSkills>();
+       
     }
     private void Update()
     {
         CD_timer += Time.deltaTime;
-    
+       
         // attack when player gets detected
         if (PlayerDetected())
         {
@@ -69,12 +70,7 @@ public class SkeletonAI : MonoBehaviour
         }
         if(skills.earthFunc == true)
         {
-            if(skills.pillarPrefabInstance == null)
-            {
-                skills.pillarPrefabInstance = Instantiate(skills.pillarPrefab, pillarPosition.position, Quaternion.identity);
-                Destroy(skills.pillarPrefabInstance, 0.45f);
-        //      skills.earthFunc = false;
-            }
+            
            
         }
            
@@ -105,12 +101,32 @@ public class SkeletonAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.tag);
+        
         if (other.gameObject.CompareTag("WindSkill"))
         {   
             body.AddForce(Vector2.up * suspensionForce);
             isSuspended = true;
         }
+        EnemyHPSystem enemy_hp = other.GetComponent<EnemyHPSystem>();
+          
+       
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+       Collider2D otherCollider = other.collider;
+        EnemyHPSystem enemy_hp = otherCollider.GetComponent<EnemyHPSystem>();
+       
+            if(enemy_hp != null)
+            {
+                if (other.gameObject.CompareTag("FireSkill"))
+                {
+                    Debug.Log("ahhh fire");
+                    enemy_hp.EnemyTakeDamage(100 * 1.5f);
+                }
+            }
+            
+        
+        
     }
     
 }
