@@ -54,6 +54,10 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("run", false);
             return;
         }
+        if(PauseMenu.game_paused)
+        {
+            return;
+        }
 
         if (currently_dash)
         {

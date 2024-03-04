@@ -36,6 +36,10 @@ public class PlayerAttack : MonoBehaviour
         {
             return;
         }
+        if(PauseMenu.game_paused)
+        {
+            return;
+        }
 
         // switch element
         ElementSwitching switch_element = GetComponent<ElementSwitching>();
