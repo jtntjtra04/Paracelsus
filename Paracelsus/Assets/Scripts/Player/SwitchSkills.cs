@@ -123,9 +123,9 @@ public class SwitchSkills : MonoBehaviour
         earthFunc = true;
         if(pillarPrefabInstance == null)
         {
-            Vector2 enemyPosition = Enemy.pillarPosition.position;
-            pillarPrefabInstance = Instantiate(pillarPrefab, enemyPosition, Quaternion.identity);
-            Destroy(pillarPrefabInstance, 1f);
+            // Vector2 enemyPosition = Enemy.pillarPosition.position;
+            //pillarPrefabInstance = Instantiate(pillarPrefab, enemyPosition, Quaternion.identity);
+            //Destroy(pillarPrefabInstance, 1f);
         }
         
         StartCoroutine(MovePillarTowardsPlayer());

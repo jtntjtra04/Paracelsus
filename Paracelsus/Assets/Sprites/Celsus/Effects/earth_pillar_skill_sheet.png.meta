@@ -346,7 +346,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      earth_pillar_skill_sheet_0: -4238595437642260309
+      earth_pillar_skill_sheet_1: -4119400819667294090
+      earth_pillar_skill_sheet_2: -6898585933291210444
+      earth_pillar_skill_sheet_3: 788800794536491438
+      earth_pillar_skill_sheet_4: 2562522063877129856
+      earth_pillar_skill_sheet_5: -8475415348104006449
+      earth_pillar_skill_sheet_6: 6590271622680192702
+      earth_pillar_skill_sheet_7: -6791055497359216881
+      earth_pillar_skill_sheet_8: 4674525931369087984
+      earth_pillar_skill_sheet_9: -3928091524358412683
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
