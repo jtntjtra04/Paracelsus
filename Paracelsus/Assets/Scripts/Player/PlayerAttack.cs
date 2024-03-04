@@ -18,6 +18,8 @@ public class PlayerAttack : MonoBehaviour
     public AudioSource PlayerAudio;
     public AudioClip CelsusAttack;
 
+    
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -25,6 +27,11 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Update()
     {
+        if (DialogueManager.CutscenePlay == true)
+        {
+            return;
+        }
+
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
             return;

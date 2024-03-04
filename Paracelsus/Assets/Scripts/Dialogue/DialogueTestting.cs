@@ -22,14 +22,16 @@ public class DialogueTestting : MonoBehaviour
     }
    IEnumerator WaitaBit()
    {
+        DialogueManager.CutscenePlay = true;
+
        DialogueManager.GetInstance().EnterDialogueMode(waittest1);
 
-        
         yield return new WaitForSeconds(5);
-        
 
         DialogueManager.GetInstance().EnterDialogueMode(waittest2);
-        
+
+        DialogueManager.CutscenePlay = false;
+
     }
 
 
