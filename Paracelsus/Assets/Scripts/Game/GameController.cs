@@ -83,9 +83,16 @@ public class GameController : MonoBehaviour
         PlayerAudio.clip = CelsusHurt;
         PlayerAudio.Play();
         Debug.Log("Current HP: " + currHP); // Add this line
+
         if (currHP <= 0)
         {
             Death();
+        }
+        else
+        {
+            //push player when taking damage
+            body.velocity = new Vector2(-100f, body.velocity.y);
+            Debug.Log("Player Pushed");
         }
     }
 
