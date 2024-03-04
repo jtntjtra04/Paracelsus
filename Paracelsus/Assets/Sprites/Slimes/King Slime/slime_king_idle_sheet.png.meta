@@ -1,9 +1,18 @@
 fileFormatVersion: 2
-guid: 4f364bc5243d1bc4bbad8e6e7045ac83
+guid: 9574aca48531ae742ba1b4f334c5e995
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5069549433203186068
+    second: slime_king_idle_sheet_0
+  - first:
+      213: -3697420130774191421
+    second: slime_king_idle_sheet_1
+  - first:
+      213: 42646896616036834
+    second: slime_king_idle_sheet_2
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -93,81 +102,68 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SlimeW1
+      name: slime_king_idle_sheet_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 300
-        height: 230
-      alignment: 9
-      pivot: {x: 0.5, y: 0.016282039}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4963183326cf91549b51da9c3526f31e
-      internalID: -491307016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeW2
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 0
-        width: 300
-        height: 200
+        width: 610
+        height: 580
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5d090cdf84b96d744ab02ecd0705bf40
-      internalID: 686669341
+      spriteID: c6624ae66a755a9b0800000000000000
+      internalID: -5069549433203186068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlimeW3
+      name: slime_king_idle_sheet_1
       rect:
         serializedVersion: 2
-        x: 650
+        x: 640
         y: 0
-        width: 300
-        height: 210
+        width: 600
+        height: 560
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9b24363e5e131d943a9dd22f9fcc2c16
-      internalID: 1906390078
+      spriteID: 3c273d71bff10bcc0800000000000000
+      internalID: -3697420130774191421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_king_idle_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 600
+        height: 570
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e952936023879000800000000000000
+      internalID: 42646896616036834
       vertices: []
       indices: 
       edges: []
@@ -175,7 +171,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 85de50228f5dc814daf47ca4e2c7ca7a
     internalID: 0
     vertices: []
     indices: 
@@ -183,9 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SlimeW1: -491307016
-      SlimeW2: 686669341
-      SlimeW3: 1906390078
+      slime_king_idle_sheet_0: -5069549433203186068
+      slime_king_idle_sheet_1: -3697420130774191421
+      slime_king_idle_sheet_2: 42646896616036834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

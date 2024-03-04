@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1016590067763851000}
   - component: {fileID: 304955033583898709}
   - component: {fileID: 1319262952292760821}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shadowball
   m_TagString: Neutral
   m_Icon: {fileID: 0}

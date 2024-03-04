@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5608458153076345463}
   - component: {fileID: 9163243199184656415}
   - component: {fileID: 654120324222140018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Neutralball
   m_TagString: Neutral
   m_Icon: {fileID: 0}

@@ -28,6 +28,7 @@ TagManager:
   - WaterSlime
   - FireSlime
   - EarthSlime
+  - WindSkill
   layers:
   - Default
   - TransparentFX
@@ -38,8 +39,8 @@ TagManager:
   - Ground
   - Enemy
   - Test
-  - 
-  - 
+  - CameraBounds
+  - PlayerProjectile
   - 
   - 
   - 

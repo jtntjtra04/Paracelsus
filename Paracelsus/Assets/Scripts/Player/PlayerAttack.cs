@@ -52,8 +52,6 @@ public class PlayerAttack : MonoBehaviour
         PlayerAudio.Play();
         cooldown_timer = 0;
 
-        //Instantiate(elements, firepoint.position, firepoint.rotation);
-
         loop_fire = Instantiate(elements[current_element], firepoint.position, Quaternion.identity);
         loop_fire.GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
