@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      undine_stand_0: 1240963573349883039
+      undine_stand_1: 8046123429956198983
+      undine_stand_2: -9007144456860294699
+      undine_stand_3: 2028485341618563769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -41,6 +41,8 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueIsPlaying { get; private set; }
 
+    public static bool CutscenePlay = false;
+
 
     private static DialogueManager instance;
 

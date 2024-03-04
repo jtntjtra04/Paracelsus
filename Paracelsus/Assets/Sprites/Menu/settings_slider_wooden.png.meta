@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 4f364bc5243d1bc4bbad8e6e7045ac83
+guid: 8d15c1916bbd6e0488224beafc40fd36
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8595932488692826536
+    second: settings_slider_wooden_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -34,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,81 +96,26 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SlimeW1
+      name: settings_slider_wooden_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 300
-        height: 230
-      alignment: 9
-      pivot: {x: 0.5, y: 0.016282039}
+        width: 220
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4963183326cf91549b51da9c3526f31e
-      internalID: -491307016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeW2
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 1
-        width: 300
-        height: 200
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d090cdf84b96d744ab02ecd0705bf40
-      internalID: 686669341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeW3
-      rect:
-        serializedVersion: 2
-        x: 650
-        y: 0
-        width: 300
-        height: 210
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b24363e5e131d943a9dd22f9fcc2c16
-      internalID: 1906390078
+      spriteID: 8a186c52e03ea4770800000000000000
+      internalID: 8595932488692826536
       vertices: []
       indices: 
       edges: []
@@ -175,7 +123,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -183,9 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SlimeW1: -491307016
-      SlimeW2: 686669341
-      SlimeW3: 1906390078
+      settings_slider_wooden_0: 8595932488692826536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

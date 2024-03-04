@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sylph_float_0: -8068373032374678506
+      sylph_float_1: 1194451011879014973
+      sylph_float_2: -9004864625186614539
+      sylph_float_3: 5509282120049275829
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

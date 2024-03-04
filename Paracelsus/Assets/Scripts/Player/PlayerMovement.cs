@@ -41,6 +41,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (DialogueManager.CutscenePlay == true)
+           {
+            body.velocity = new Vector2(0, body.velocity.y);
+            anim.SetBool("run", false);
+            return;
+        }
+
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
             body.velocity = new Vector2(0, body.velocity.y);
