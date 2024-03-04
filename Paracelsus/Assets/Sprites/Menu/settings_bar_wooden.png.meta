@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      settings_bar_wooden_0: -5881973038282269492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

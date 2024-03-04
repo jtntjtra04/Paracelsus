@@ -22,7 +22,7 @@ public class UIFade : MonoBehaviour
         }
     }
 
-    public IEnumerator FadeBlackOutSquare(bool fadetoblack =  true, int fadeSpeed = 5)
+    public IEnumerator FadeBlackOutSquare(bool fadetoblack =  true, int fadeSpeed = 2)
     {
         Color objectColor = blackOutSquare.GetComponent<Image>().color;
         float fadeAmount;
