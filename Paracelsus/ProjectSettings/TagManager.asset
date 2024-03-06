@@ -29,6 +29,7 @@ TagManager:
   - FireSlime
   - EarthSlime
   - WindSkill
+  - FireSkill
   layers:
   - Default
   - TransparentFX
