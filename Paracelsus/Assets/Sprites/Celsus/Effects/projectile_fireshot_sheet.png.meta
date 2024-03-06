@@ -226,7 +226,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      projectile_fireshot_sheet_0: 970487654003964319
+      projectile_fireshot_sheet_1: -4480030512908942308
+      projectile_fireshot_sheet_2: 6280377456571060890
+      projectile_fireshot_sheet_3: 3638794923946459670
+      projectile_fireshot_sheet_4: 6939574250075519057
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
