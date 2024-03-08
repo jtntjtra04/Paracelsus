@@ -28,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
     private float initial_gravity; // glide
 
     //audio
-    public AudioSource PlayerAudio;
-    public AudioClip CelsusJump;
+    //public AudioSource PlayerAudio;
+    //public AudioClip CelsusJump;
 
     private void Awake()
     {
@@ -137,8 +137,7 @@ public class PlayerMovement : MonoBehaviour
         
         anim.SetTrigger("jump");
         body.velocity = new Vector2(body.velocity.x, jump_power);
-        PlayerAudio.clip = CelsusJump;
-        PlayerAudio.Play();
+        AudioManager.instance.PlaySFX("CelsusJump");
     }
     private void ReleaseJump()
     {

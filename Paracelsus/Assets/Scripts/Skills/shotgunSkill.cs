@@ -20,12 +20,11 @@ public class shotgunSkill : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-        {
-          
-            EnemyHPSystem enemy_hp = collision.GetComponent<EnemyHPSystem>();
+    {
+        EnemyHPSystem enemy_hp = collision.GetComponent<EnemyHPSystem>();
             
-              if (enemy_hp != null)
-            {
+        if (enemy_hp != null)
+        {
             if (collision.CompareTag("FireEnemy"))
             {
                 enemy_hp.EnemyTakeDamage(damage * 0.75f);
@@ -34,6 +33,6 @@ public class shotgunSkill : MonoBehaviour
             {
                 enemy_hp.EnemyTakeDamage(damage * 1.5f);
             }
-            }
-        } 
+        }
+    } 
 }

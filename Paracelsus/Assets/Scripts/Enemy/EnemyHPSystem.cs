@@ -23,8 +23,8 @@ public class EnemyHPSystem : MonoBehaviour
     private Animator anim;
 
     //audio
-    public AudioSource EnemyAudio;
-    public AudioClip EnemyDie, EnemyHurt;
+    //public AudioSource EnemyAudio;
+    //public AudioClip EnemyDie, EnemyHurt;
 
     private void Start()
     {
@@ -44,8 +44,7 @@ public class EnemyHPSystem : MonoBehaviour
     }
     public void EnemyTakeDamage(float damage)
     {
-        EnemyAudio.clip = EnemyHurt;
-        EnemyAudio.Play();
+        AudioManager.instance.PlaySFX("EnemyHit");
 
         if (!isDefeat)
         {
@@ -63,13 +62,11 @@ public class EnemyHPSystem : MonoBehaviour
         isDefeat = true;
         anim.SetTrigger("Defeat");
 
-        EnemyAudio.clip = EnemyDie;
-        EnemyAudio.Play();
-
         hp_bar.gameObject.SetActive(false);
 
         if (skeleton_movement != null)
         {
+            AudioManager.instance.PlaySFX("SkeletonDeath");
             Debug.Log("Disabled movement");
             skeleton_movement.enabled = false;
             body.constraints = RigidbodyConstraints2D.FreezePositionX;
@@ -83,31 +80,37 @@ public class EnemyHPSystem : MonoBehaviour
         {
             slime_movement.enabled = false;
             box_collider.enabled = false;
+            AudioManager.instance.PlaySFX("SlimeDeath");
         }
         if (slime_movement_2 != null)
         {
             slime_movement_2.enabled = false;
             box_collider.enabled = false;
+            AudioManager.instance.PlaySFX("SlimeDeath");
         }
         if (slime_movement_4 != null)
         {
             slime_movement_4.enabled = false;
             box_collider.enabled = false;
+            AudioManager.instance.PlaySFX("SlimeDeath");
         }
         if (slime_movement_5 != null)
         {
             slime_movement_5.enabled = false;
             box_collider.enabled = false;
+            AudioManager.instance.PlaySFX("SlimeDeath");
         }
         if (slime_movement_7 != null)
         {
             slime_movement_7.enabled = false;
             box_collider.enabled = false;
+            AudioManager.instance.PlaySFX("SlimeDeath");
         }
         if (slime_movement_8 != null)
         {
             slime_movement_8.enabled = false;
             box_collider.enabled = false;
+            AudioManager.instance.PlaySFX("SlimeDeath");
         }
 
         yield return new WaitForSeconds(1.5f);

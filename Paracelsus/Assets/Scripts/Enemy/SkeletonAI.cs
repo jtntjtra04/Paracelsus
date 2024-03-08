@@ -25,8 +25,8 @@ public class SkeletonAI : MonoBehaviour
     public Transform pillarPosition;
     
     //audio
-    public AudioSource SkeletonAudio;
-    public AudioClip SkeletonAttack;
+    //public AudioSource SkeletonAudio;
+    //public AudioClip SkeletonAttack;
 
     private void Awake()
     {
@@ -46,8 +46,6 @@ public class SkeletonAI : MonoBehaviour
             {
                 //attack
                 CD_timer = 0;
-                SkeletonAudio.clip = SkeletonAttack;
-                SkeletonAudio.Play();
                 anim.SetBool("Walk", false);
                 anim.SetTrigger("SkeletonAttack");
                 Debug.Log("Skeleton Attack");

@@ -15,8 +15,8 @@ public class PlayerAttack : MonoBehaviour
     private GameObject loop_fire;
 
     //audio
-    public AudioSource PlayerAudio;
-    public AudioClip CelsusAttack;
+    //public AudioSource PlayerAudio;
+    //public AudioClip CelsusAttack;
 
     
 
@@ -59,8 +59,6 @@ public class PlayerAttack : MonoBehaviour
     private void attack()
     {
         anim.SetTrigger("attack");
-        PlayerAudio.clip = CelsusAttack;
-        PlayerAudio.Play();
         cooldown_timer = 0;
 
         loop_fire = Instantiate(elements[current_element], firepoint.position, Quaternion.identity);

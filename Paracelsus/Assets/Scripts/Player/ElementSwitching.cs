@@ -154,6 +154,7 @@ public class ElementSwitching : MonoBehaviour
     }
     private void SwitchElement(int current_index)
     {
+        AudioManager.instance.PlaySFX("ClickSound");
         Debug.Log("Switch Element to Index : " + current_index);
         current_element = current_index;
     }
@@ -162,24 +163,28 @@ public class ElementSwitching : MonoBehaviour
         fire_element = true; // set element to active
         fire_timer = fire_duration; // store the duration to reduce 
         Debug.Log("Fire Element Unlocked!"); // print debugging
+        AudioManager.instance.PlaySFX("TemporaryElement");
     }
     public void UnlockWind() // unlock wind element
     {
         wind_element = true;
         wind_timer = wind_duration;
         Debug.Log("Wind Element Unlocked!");
+        AudioManager.instance.PlaySFX("TemporaryElement");
     }
     public void UnlockWater() // unlock water element
     {
         water_element = true;
         water_timer = water_duration;
         Debug.Log("Water Element Unlocked!");
+        AudioManager.instance.PlaySFX("TemporaryElement");
     }
     public void UnlockEarth() // unlock earth element
     {
         earth_element = true;
         earth_timer = earth_duration;
         Debug.Log("Earth Element Unlocked!");
+        AudioManager.instance.PlaySFX("TemporaryElement");
     }
     public int GetCurrentElement()
     {

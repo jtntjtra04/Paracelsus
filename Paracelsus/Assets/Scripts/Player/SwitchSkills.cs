@@ -176,7 +176,7 @@ public class SwitchSkills : MonoBehaviour
         {
             float localScaleX = transform.localScale.x;
            
-        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
             pelletPrefabInstance = Instantiate(pelletPrefab, firepoint.position, Quaternion.identity);
             Rigidbody2D pelletRb = pelletPrefabInstance.GetComponent<Rigidbody2D>();
 

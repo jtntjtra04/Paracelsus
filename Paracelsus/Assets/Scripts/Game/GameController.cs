@@ -71,8 +71,8 @@ public class GameController : MonoBehaviour
             Debug.Log("Barrier GameObject is null in GameController!");
         }
 
-        MusicPlayer.clip = WindMusic; //might need to place this somewhere else
-        MusicPlayer.Play();
+        //MusicPlayer.clip = WindMusic; //might need to place this somewhere else
+        //MusicPlayer.Play();
 
     }
 
@@ -80,8 +80,7 @@ public class GameController : MonoBehaviour
     {
         // Damage calculations
         currHP = Mathf.Clamp(currHP - damage, 0, startHP);
-        PlayerAudio.clip = CelsusHurt;
-        PlayerAudio.Play();
+        AudioManager.instance.PlaySFX("CelsusHurt");
         Debug.Log("Current HP: " + currHP); // Add this line
 
         if (currHP <= 0)
@@ -172,6 +171,7 @@ public class GameController : MonoBehaviour
         if (canSetCheckpoint && Input.GetKeyDown(KeyCode.F))
         {
             SetCheckpoint();
+            AudioManager.instance.PlaySFX("Checkpoint");
             
             if(currHP < 3)
             {
@@ -197,21 +197,25 @@ public class GameController : MonoBehaviour
         {
             double_jump = true;
             Debug.Log("Double Jump Ability Unlocked");
+            AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
         else if (water_spirit && Input.GetKeyDown(KeyCode.F) && !glide)
         {
             glide = true;
             Debug.Log("Glide Ability Unlocked");
+            AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
         else if (fire_spirit && Input.GetKeyDown(KeyCode.F) && !dash)
         {
             dash = true;
             Debug.Log("Dash Ability Unlocked");
+            AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
         else if (earth_spirit && Input.GetKeyDown(KeyCode.F) && !stomp)
         {
             stomp = true;
             Debug.Log("Stomp Ability Unlocked");
+            AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
     }
 
@@ -256,8 +260,7 @@ public class GameController : MonoBehaviour
 
         anim.Play("Idle"); // play and set to default animation
 
-        MusicPlayer.clip = WindMusic;
-        MusicPlayer.Play();
+        AudioManager.instance.PlayMusic("Theme");
 
         DeathUI.SetActive(false);
     }    
@@ -270,8 +273,8 @@ public class GameController : MonoBehaviour
         body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         anim.SetTrigger("defeat");
 
-        MusicPlayer.clip = CelsusDeath;
-        MusicPlayer.Play();
+        AudioManager.instance.music_source.Stop();
+        AudioManager.instance.PlaySFX("CelsusDeath");
 
         yield return new WaitForSeconds(respawn_timer);
 
