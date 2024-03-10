@@ -1,0 +1,498 @@
+fileFormatVersion: 2
+guid: 3e6ce3cc1e8f60a41bfc6fe1be42d27c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6604825810863917808
+    second: Water_Gate_Spritesheet_0
+  - first:
+      213: 7571105262350092217
+    second: Water_Gate_Spritesheet_1
+  - first:
+      213: 5837155261723757622
+    second: Water_Gate_Spritesheet_2
+  - first:
+      213: -2124472107073710218
+    second: Water_Gate_Spritesheet_3
+  - first:
+      213: -1755740464054047074
+    second: Water_Gate_Spritesheet_4
+  - first:
+      213: -6287707208568143497
+    second: Water_Gate_Spritesheet_5
+  - first:
+      213: 7431139588697711576
+    second: Water_Gate_Spritesheet_6
+  - first:
+      213: -4970020538328239784
+    second: Water_Gate_Spritesheet_7
+  - first:
+      213: 3190168653154388702
+    second: Water_Gate_Spritesheet_8
+  - first:
+      213: 7747952440660281043
+    second: Water_Gate_Spritesheet_9
+  - first:
+      213: 7602303898633081662
+    second: Water_Gate_Spritesheet_10
+  - first:
+      213: 4760833183210505544
+    second: Water_Gate_Spritesheet_11
+  - first:
+      213: 4049463809107028362
+    second: Water_Gate_Spritesheet_12
+  - first:
+      213: -5815219148971869951
+    second: Water_Gate_Spritesheet_13
+  - first:
+      213: -5364089661138770958
+    second: Water_Gate_Spritesheet_14
+  - first:
+      213: 6658475023502033428
+    second: Water_Gate_Spritesheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 362
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 015ff1c3be1f654a0800000000000000
+      internalID: -6604825810863917808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 362
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7c7776f18f11960800000000000000
+      internalID: 7571105262350092217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 0
+        width: 362
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63cc8d1b8cdb10150800000000000000
+      internalID: 5837155261723757622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 0
+        width: 362
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67755a2efdb5482e0800000000000000
+      internalID: -2124472107073710218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 167
+        width: 362
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e674aa95b52a7e0800000000000000
+      internalID: -1755740464054047074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 179
+        width: 362
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77102a58b939db8a0800000000000000
+      internalID: -6287707208568143497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 197
+        width: 362
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d36ba48516b02760800000000000000
+      internalID: 7431139588697711576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2699
+        y: 233
+        width: 362
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851bc8617a0f60bb0800000000000000
+      internalID: -4970020538328239784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 3083
+        y: 275
+        width: 362
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda8ad0ec71c54c20800000000000000
+      internalID: 3190168653154388702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 3467
+        y: 329
+        width: 362
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d64d22c1b1468b60800000000000000
+      internalID: 7747952440660281043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 0
+        width: 362
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e339798fd1fc08960800000000000000
+      internalID: 7602303898633081662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 0
+        width: 362
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84587206e80e11240800000000000000
+      internalID: 4760833183210505544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 0
+        width: 362
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a89ef9021e5923830800000000000000
+      internalID: 4049463809107028362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2699
+        y: 0
+        width: 362
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1097b7e8ef03c4fa0800000000000000
+      internalID: -5815219148971869951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3083
+        y: 0
+        width: 362
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f36a749fdcee85b0800000000000000
+      internalID: -5364089661138770958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3467
+        y: 0
+        width: 362
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41246a971c7a76c50800000000000000
+      internalID: 6658475023502033428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
