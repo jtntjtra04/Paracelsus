@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      musical-note_0: 6424517657538943787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

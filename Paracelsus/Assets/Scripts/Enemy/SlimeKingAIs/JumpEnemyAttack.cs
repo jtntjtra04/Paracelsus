@@ -43,9 +43,20 @@ public class JumpEnemyAttack : MonoBehaviour
         checkingWall = Physics2D.OverlapCircle(wallCheckPoint.position, circleRadius, groundLayer);
         isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0, groundLayer);
         canSeePlayer = Physics2D.OverlapBox(transform.position, lineOfSite, 0, playerLayer);
-        Patrolling();
+        //RaycastHit2D hit = Physics2D.Raycast(transform.position, player.position - transform.position,
+        //                                       lineOfSite.x, playerLayer);
+        //Collider2D hitCollider = Physics2D.OverlapCapsule(transform.position, lineOfSite,
+        //                                                  CapsuleDirection2D.Vertical, 0, playerLayer);
+        if(!canSeePlayer && isGrounded)
+        {
+             Patrolling();
+        }
+        else if (canSeePlayer && isGrounded)
+        {
+            JumpAttack(); 
+        }
+       
     }
-
     void Patrolling()
     {
         if(!checkingGround || checkingWall)
