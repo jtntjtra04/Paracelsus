@@ -14,6 +14,8 @@ public class SkeletonAI : MonoBehaviour
 
     private float CD_timer = 100;
     private Rigidbody2D body;
+    public Transform player;
+    public float stoppingDistance = 1f;
     //references
     private Animator anim;
     private GameController player_HP;
@@ -23,6 +25,8 @@ public class SkeletonAI : MonoBehaviour
     private bool isSuspended = false;
     private float suspensionTimer = 0f;
     public Transform pillarPosition;
+    public bool isBeingPushed;
+    public float pillarForce = 10000f;
     
     //audio
     //public AudioSource SkeletonAudio;
@@ -68,10 +72,28 @@ public class SkeletonAI : MonoBehaviour
         }
         if(skills.earthFunc == true)
         {
+            Vector2 enemyDirection = (transform.localScale.x < 0) ? -transform.right : transform.right;
+            StartCoroutine(MoveTowardsPlayer());
             
-           
+            skills.earthFunc = false;
+            isBeingPushed = true;
         }
+        
+
            
+    }
+
+    private IEnumerator MoveTowardsPlayer()
+    {
+        while (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+        {
+            Vector3 direction = (player.position - transform.position).normalized;
+            body.AddForce(direction * pillarForce, ForceMode2D.Force);
+           
+            
+            Debug.Log(Vector2.Distance(transform.position, player.position));
+            yield return null;
+        }
     }
     private bool PlayerDetected()
     {

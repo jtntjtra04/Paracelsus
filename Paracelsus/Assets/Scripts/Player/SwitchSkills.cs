@@ -16,7 +16,6 @@ public class SwitchSkills : MonoBehaviour
     public GameObject pelletPrefabInstance;
 
     public float pillarSpeed = 1000f;
-    private bool isPillarActive = false;
     public GameObject Enemy;
     private int current_element = 0;
     public bool isBarrierActive = false;
@@ -29,6 +28,8 @@ public class SwitchSkills : MonoBehaviour
     public float pelletSpeed = 100f;
     public float range = 10f;
     public float pelletTime = 0.5f;
+    public SpriteRenderer pillarFlip;
+    public float pillarDistance = 5f;
   
     void Update()
     {
@@ -69,6 +70,10 @@ public class SwitchSkills : MonoBehaviour
             {
                 CastShotgun();
 
+            }
+            if (pillarPrefabInstance != null)
+            {
+                UpdatePillarDirection();
             }
         }
         
@@ -133,42 +138,43 @@ public class SwitchSkills : MonoBehaviour
 
     private void CastPillar()
     {
-      
+        pillarFlip.flipX = false;
         earthFunc = true;
+        GameObject FireEnemy = GameObject.FindWithTag("FireEnemy");
+        Vector2 EnemyScale = FireEnemy.transform.localScale;
+
+        // Vector2 pillarprefabInstance.localScale = (EnemyScale < 0) ? -transform.right : transform.right;
+
         if(pillarPrefabInstance == null)
         {
-            // Vector2 enemyPosition = Enemy.pillarPosition.position;
-            //pillarPrefabInstance = Instantiate(pillarPrefab, enemyPosition, Quaternion.identity);
-            //Destroy(pillarPrefabInstance, 1f);
+            Vector2 enemyPosition = FireEnemy.transform.position - FireEnemy.transform.forward * pillarDistance;
+            pillarPrefabInstance = Instantiate(pillarPrefab, enemyPosition, Quaternion.identity);
+            Destroy(pillarPrefabInstance, 1f);
+            Rigidbody2D enemyRb= FireEnemy.GetComponent<Rigidbody2D>();
+            enemyRb.AddForce(FireEnemy.transform.forward * pillarSpeed);
+           
+        
         }
-        
-        StartCoroutine(MovePillarTowardsPlayer());
-        StartCoroutine(DestroyPillarAfterDelay(pillarPrefabInstance));
-        
-    }
-    private IEnumerator MovePillarTowardsPlayer()
-{
-    Transform playerTransform = transform;
 
-    while (Vector2.Distance(Enemy.transform.position, playerTransform.position) > 0.1f)
-    {
-        Enemy.transform.position = Vector2.MoveTowards(Enemy.transform.position, transform.position, Time.deltaTime * pillarSpeed);
-        yield return null;
+       
     }
 
-    Destroy(pillarPrefabInstance);
-    isPillarActive = false;
-}
-
-    private IEnumerator DestroyPillarAfterDelay(GameObject pillar)
+    private void UpdatePillarDirection()
     {
-        yield return new WaitForSeconds(1f);
-
-        if(pillar != null)
+        GameObject FireEnemy = GameObject.FindWithTag("FireEnemy");
+        Vector2 EnemyScale = FireEnemy.transform.localScale;
+        if(FireEnemy.transform.localScale.x < 0)
         {
-            Destroy(pillar);
+            Debug.Log(EnemyScale);
+            pillarFlip.flipX = true;
+        }
+        else
+        {
+            Debug.Log(EnemyScale);
+            pillarFlip.flipX = false;
         }
     }
+   
 
     private void CastShotgun()
     {
