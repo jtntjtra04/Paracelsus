@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JumpEnemyAttack : MonoBehaviour
 {
@@ -36,7 +37,6 @@ public class JumpEnemyAttack : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-   
     void FixedUpdate()
     {
         checkingGround = Physics2D.OverlapCircle(groundCheckPoint.position, circleRadius, groundLayer);
@@ -55,7 +55,6 @@ public class JumpEnemyAttack : MonoBehaviour
         {
             JumpAttack(); 
         }
-       
     }
     void Patrolling()
     {

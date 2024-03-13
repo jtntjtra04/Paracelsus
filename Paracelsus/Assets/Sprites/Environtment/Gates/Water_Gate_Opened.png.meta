@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 1e9b4f996a2b43044b9dc87eefc25f3a
+guid: 55256d14bff20b64dbbcf79debf86122
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2504911767063266250
-    second: Wind_Dungeon_Gate_Resized_0
+      213: -8562963074711209929
+    second: Water_Gate_Opened_0
+  - first:
+      213: -8357685462532792881
+    second: Water_Gate_Opened_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wind_Dungeon_Gate_Resized_0
+      name: Water_Gate_Opened_0
       rect:
         serializedVersion: 2
         x: 7
-        y: 0
+        y: 187
         width: 242
-        height: 253
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +117,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63c7f7af404cc3dd0800000000000000
-      internalID: -2504911767063266250
+      spriteID: 7383d0bb37e3a2980800000000000000
+      internalID: -8562963074711209929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Gate_Opened_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 242
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd594d4a59830c80800000000000000
+      internalID: -8357685462532792881
       vertices: []
       indices: 
       edges: []
@@ -130,8 +154,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wind_Dungeon_Gate_Resized_0: -2504911767063266250
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

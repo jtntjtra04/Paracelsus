@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Blue_Boulder_Resized_0: -7085547119041376294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

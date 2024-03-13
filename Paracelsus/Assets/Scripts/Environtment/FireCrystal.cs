@@ -6,6 +6,7 @@ public class FireCrystal : MonoBehaviour
 {
     [SerializeField] private GameObject Crystal;
     [SerializeField] private GameObject Door;
+    [SerializeField] private Animator door_animator;
 
     private PolygonCollider2D polygon_collider;
     private Animator anim;
@@ -26,7 +27,15 @@ public class FireCrystal : MonoBehaviour
         {
             if (Door != null)
             {
-                Destroy(Door); // the door is destroy
+                if (door_animator != null)
+                {
+                    door_animator.SetTrigger("Open"); // play animation
+                }
+                Collider2D door_collider = Door.GetComponent<Collider2D>(); //Take Reference from box collider
+                if (door_collider != null)
+                {
+                    door_collider.enabled = false; // disable box collider
+                }
             }
 
             polygon_collider.enabled = false;

@@ -40,9 +40,8 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-
         EnemyHPSystem enemy_hp = collision.GetComponent<EnemyHPSystem>();
+        BossHPSystem boss_hp = collision.GetComponent<BossHPSystem>();
 
         if (enemy_hp != null)
         {
@@ -105,6 +104,16 @@ public class Projectile : MonoBehaviour
                 enemy_hp.EnemyTakeDamage(damage);
             } 
         }
+        else if(boss_hp != null)
+        {
+            string projectile_tag = gameObject.tag;
+
+            if(collision.CompareTag("SlimeKing"))
+            {
+                boss_hp.BossTakeDamage(damage);
+            }
+        }
+
         hit = true;
         BoxCollider.enabled = false;
         anim.SetTrigger("explode");

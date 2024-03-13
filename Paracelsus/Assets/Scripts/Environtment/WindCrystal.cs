@@ -7,6 +7,7 @@ public class WindCrystal : MonoBehaviour
 {
     [SerializeField] private GameObject Crystal;
     [SerializeField] private GameObject Door;
+    [SerializeField] private Animator door_animator;
 
     private PolygonCollider2D polygon_collider;
     private Animator anim;
@@ -27,7 +28,15 @@ public class WindCrystal : MonoBehaviour
         {
             if (Door != null)
             {
-                Destroy(Door); // the door is destroy
+                if(door_animator != null)
+                {
+                    door_animator.SetTrigger("Open");
+                }
+                Collider2D door_collider = Door.GetComponent<Collider2D>();
+                if (door_collider != null)
+                {
+                    door_collider.enabled = false;
+                }
             }
 
             polygon_collider.enabled = false;

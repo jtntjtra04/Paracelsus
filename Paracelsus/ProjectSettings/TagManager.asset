@@ -30,6 +30,7 @@ TagManager:
   - EarthSlime
   - WindSkill
   - FireSkill
+  - SlimeKing
   layers:
   - Default
   - TransparentFX
