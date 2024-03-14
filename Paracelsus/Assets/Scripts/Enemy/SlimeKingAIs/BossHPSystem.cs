@@ -13,11 +13,13 @@ public class BossHPSystem : MonoBehaviour
     private Rigidbody2D body;
     private BoxCollider2D box_collider;
     private Animator anim;
+    private JumpEnemyAttack boss_movement;
     private void Start()
     {
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         box_collider = GetComponent<BoxCollider2D>();
+        boss_movement = GetComponent<JumpEnemyAttack>();
     }
     private void Update()
     {
@@ -25,7 +27,7 @@ public class BossHPSystem : MonoBehaviour
     }
     public void BossTakeDamage(float damage)
     {
-        AudioManager.instance.PlaySFX("Enemyhit");
+        AudioManager.instance.PlaySFX("EnemyHit");
         if (!boss_defeat)
         {
             health -= damage;
@@ -38,7 +40,16 @@ public class BossHPSystem : MonoBehaviour
     private IEnumerator BossDefeat()
     {
         boss_defeat = true;
-        boss_healthbar.gameObject.SetActive(false); 
+        anim.SetTrigger("Defeat");
+        boss_healthbar.gameObject.SetActive(false);
+        AudioManager.instance.PlaySFX("BossKilled");
+
+        if (boss_movement != null)
+        {
+            Debug.Log("Disable boss movement");
+            boss_movement.enabled = false;
+            body.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
         yield return new WaitForSeconds(3f);
 
         BossDie();
