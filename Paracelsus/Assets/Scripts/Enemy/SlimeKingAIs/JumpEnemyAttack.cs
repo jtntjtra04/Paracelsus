@@ -91,6 +91,7 @@ public class JumpEnemyAttack : MonoBehaviour
             body.AddForce(new Vector2(distance, jump_height), ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
         }
+        speed = 10f;
     }
     void FlipTowardsPlayer()
     {

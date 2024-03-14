@@ -89415,7 +89415,7 @@ GameObject:
   - component: {fileID: 425834600}
   - component: {fileID: 425834599}
   - component: {fileID: 425834601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SLIME KING
   m_TagString: SlimeKing
   m_Icon: {fileID: 0}
@@ -89507,7 +89507,7 @@ Transform:
   m_GameObject: {fileID: 425834594}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.71, y: -4.12, z: -1.8270621}
+  m_LocalPosition: {x: 7.44, y: -4.12, z: -1.8270621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -89555,7 +89555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a14227a6e168947aa6e09632ba763d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
   groundCheckPoint: {fileID: 49895955}
   wallCheckPoint: {fileID: 619392381}
   radius: 0.2
@@ -89566,7 +89566,7 @@ MonoBehaviour:
   player: {fileID: 599306662}
   ground_check: {fileID: 1001320672}
   box_radius: {x: 5.12, y: 0.2}
-  boss_sight: {x: 44, y: 6.54}
+  boss_sight: {x: 26.4, y: 6.54}
   player_layer:
     serializedVersion: 2
     m_Bits: 8
