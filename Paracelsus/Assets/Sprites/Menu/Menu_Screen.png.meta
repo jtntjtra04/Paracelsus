@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 55256d14bff20b64dbbcf79debf86122
+guid: db26e2d0bbd6b444da05011f6dfec52f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8562963074711209929
-    second: Water_Gate_Opened_0
-  - first:
-      213: -8357685462532792881
-    second: Water_Gate_Opened_1
+      213: -2020564518004106396
+    second: Menu_Screen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,34 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water_Gate_Opened_0
+      name: Menu_Screen_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 187
-        width: 242
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7383d0bb37e3a2980800000000000000
-      internalID: -8562963074711209929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Water_Gate_Opened_1
-      rect:
-        serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 242
-        height: 33
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fcd594d4a59830c80800000000000000
-      internalID: -8357685462532792881
+      spriteID: 46b5b9ab64385f3e0800000000000000
+      internalID: -2020564518004106396
       vertices: []
       indices: 
       edges: []
@@ -147,16 +123,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Water_Gate_Opened_0: -8562963074711209929
-      Water_Gate_Opened_1: -8357685462532792881
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

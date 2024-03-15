@@ -47,13 +47,13 @@ public class GameController : MonoBehaviour
     private PlayerAttack player_attack;
     private Rigidbody2D body;
     private SwitchSkills barrier;
+    [SerializeField] private GameObject boss;
+    public BossHPSystem boss_hp;
+    public JumpEnemyAttack boss_movement;
+
 
     // Death System
     private bool isDeathInProgress = false;
-
-    //audio
-    public AudioSource MusicPlayer, PlayerAudio;
-    public AudioClip CelsusDeath, CelsusHurt, WindMusic;
 
     private void Start()
     {
@@ -295,7 +295,15 @@ public class GameController : MonoBehaviour
     }
     void Respawn()
     {
-        isDeathInProgress = false;  
+        isDeathInProgress = false;
+        boss_hp.boss_healthbar.gameObject.SetActive(false);
+
+        if (boss != null)
+        {
+            boss.transform.position = boss_movement.original_position;
+            boss.transform.rotation = quaternion.Euler(0, 0, 0);
+            boss_movement.speed = 0;
+        }
 
         if (checkpointPosition != Vector2.zero) // Check if a checkpoint is set
         {

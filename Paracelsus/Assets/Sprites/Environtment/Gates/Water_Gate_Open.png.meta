@@ -139,10 +139,10 @@ TextureImporter:
       name: Water_Gate_Open_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 367
-        width: 242
-        height: 401
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: Water_Gate_Open_1
       rect:
         serializedVersion: 2
-        x: 263
-        y: 379
-        width: 242
-        height: 389
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: Water_Gate_Open_2
       rect:
         serializedVersion: 2
-        x: 519
-        y: 391
-        width: 242
-        height: 377
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: Water_Gate_Open_3
       rect:
         serializedVersion: 2
-        x: 775
-        y: 619
-        width: 242
-        height: 149
+        x: 768
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: Water_Gate_Open_4
       rect:
         serializedVersion: 2
-        x: 775
-        y: 403
-        width: 242
-        height: 222
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: Water_Gate_Open_5
       rect:
         serializedVersion: 2
-        x: 7
-        y: 159
-        width: 242
-        height: 206
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: Water_Gate_Open_6
       rect:
         serializedVersion: 2
-        x: 263
-        y: 167
-        width: 242
-        height: 186
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: Water_Gate_Open_7
       rect:
         serializedVersion: 2
-        x: 519
-        y: 175
-        width: 242
-        height: 166
+        x: 768
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: Water_Gate_Open_8
       rect:
         serializedVersion: 2
-        x: 775
-        y: 187
-        width: 242
-        height: 142
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: Water_Gate_Open_9
       rect:
         serializedVersion: 2
-        x: 7
+        x: 256
         y: 0
-        width: 242
-        height: 61
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: Water_Gate_Open_10
       rect:
         serializedVersion: 2
-        x: 263
+        x: 512
         y: 0
-        width: 242
-        height: 53
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: Water_Gate_Open_11
       rect:
         serializedVersion: 2
-        x: 519
+        x: 768
         y: 0
-        width: 242
-        height: 45
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,31 +387,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Water_Gate_Open_12
-      rect:
-        serializedVersion: 2
-        x: 775
-        y: 0
-        width: 242
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a71526ad92a90e20800000000000000
-      internalID: 3317361398516094882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 44e3521556860544aba712dba10498da
     internalID: 0
     vertices: []
     indices: 
@@ -423,7 +402,6 @@ TextureImporter:
       Water_Gate_Open_1: -7060121207182521291
       Water_Gate_Open_10: 5417413932421820602
       Water_Gate_Open_11: 6064406505124743403
-      Water_Gate_Open_12: 3317361398516094882
       Water_Gate_Open_2: -1525109123524936662
       Water_Gate_Open_3: -4087825759631155267
       Water_Gate_Open_4: 1572001433988052925

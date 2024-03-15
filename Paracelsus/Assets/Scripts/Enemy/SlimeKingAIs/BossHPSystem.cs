@@ -7,13 +7,21 @@ public class BossHPSystem : MonoBehaviour
 {
     public float health;
     public Slider boss_healthbar;
-    private bool boss_defeat;
+    public bool boss_defeat;
+    public Color low_hp;
+    public Color high_hp;
 
     // References
     private Rigidbody2D body;
     private BoxCollider2D box_collider;
     private Animator anim;
     private JumpEnemyAttack boss_movement;
+
+    // Boss Gate
+    [SerializeField] private GameObject EntryBossGate;
+    [SerializeField] private GameObject ExitBossGate;
+    [SerializeField] private Animator EntryBossGate_anim;
+    [SerializeField] private Animator ExitBossGate_anim;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -31,6 +39,7 @@ public class BossHPSystem : MonoBehaviour
         if (!boss_defeat)
         {
             health -= damage;
+            boss_healthbar.fillRect.GetComponent<Image>().color = Color.Lerp(low_hp, high_hp, boss_healthbar.normalizedValue);
             if (health <= 0)
             {
                 StartCoroutine(BossDefeat());
@@ -40,6 +49,11 @@ public class BossHPSystem : MonoBehaviour
     private IEnumerator BossDefeat()
     {
         boss_defeat = true;
+        EntryBossGate_anim.SetBool("BossDefeat", true);
+        ExitBossGate_anim.SetBool("BossDefeat", true);
+        //Destroy(EntryBossGate);
+        //Destroy(ExitBossGate_anim);
+        
         anim.SetTrigger("Defeat");
         boss_healthbar.gameObject.SetActive(false);
         AudioManager.instance.PlaySFX("BossKilled");
@@ -48,9 +62,11 @@ public class BossHPSystem : MonoBehaviour
         {
             Debug.Log("Disable boss movement");
             boss_movement.enabled = false;
-            body.constraints = RigidbodyConstraints2D.FreezePositionX;
+            body.isKinematic = true;
+            body.constraints = RigidbodyConstraints2D.FreezeAll;
+            box_collider.enabled = false;
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(7.2f);
 
         BossDie();
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class JumpEnemyAttack : MonoBehaviour
 {
     [Header("For Patrolling")]
-    [SerializeField] float speed;
+    public float speed;
     private float direction = 1;
     private bool facing_right = true;
 
@@ -32,36 +32,56 @@ public class JumpEnemyAttack : MonoBehaviour
     [Header("Other")]
     private Rigidbody2D body;
     private Animator anim;
+    private BossHPSystem boss_hp;
+    public GameController player_hp;
+    public Vector3 original_position;
+
+    [Header("BossGate")]
+    [SerializeField] private GameObject EntryBossGate;
+    [SerializeField] private GameObject ExitBossGate;
+    [SerializeField] private Animator EntryBossGate_anim;
+    [SerializeField] private Animator ExitBossGate_anim;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        boss_hp = GetComponent<BossHPSystem>();
+        original_position = transform.position;
     }
-
     void FixedUpdate()
     {
         check_ground = Physics2D.OverlapCircle(groundCheckPoint.position, radius, ground_layer);
         check_wall = Physics2D.OverlapCircle(wallCheckPoint.position, radius, ground_layer);
         grounded = Physics2D.OverlapBox(ground_check.position, box_radius, 0, ground_layer);
         player_detected = Physics2D.OverlapBox(transform.position, boss_sight, 0, player_layer);
-        /*Vector2 distance = player.position - transform.position;
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boss_sight, 0f, distance, distance.magnitude, player_layer);
 
-        if(hit.collider != null && hit.collider.CompareTag("Player")) 
-        {
-            player_detected = true;
-        }
-        else
-        {
-            player_detected = false;
-        }*/
-        anim.SetBool("PlayerDetected", player_detected);
+        anim.SetBool("PlayerDetected", player_detected && player_hp.currHP > 0);
         anim.SetBool("Grounded", grounded);
 
         if (!player_detected && grounded)
         {
             Patrolling();
+        }
+        if (player_detected)
+        {
+            if(player_hp.currHP <= 0)
+            {
+                Debug.Log("Disable boss HP bar");
+                boss_hp.boss_healthbar.gameObject.SetActive(false);
+                EntryBossGate_anim.SetTrigger("Rise");
+                ExitBossGate_anim.SetTrigger("Rise");
+                speed = 0;
+            }
+            else
+            {
+                if (!boss_hp.boss_defeat)
+                {
+                    boss_hp.boss_healthbar.gameObject.SetActive(true);
+                    EntryBossGate_anim.SetTrigger("Fall");
+                    ExitBossGate_anim.SetTrigger("Fall");
+                }
+            }
         }
     }
     void Patrolling()
@@ -90,7 +110,7 @@ public class JumpEnemyAttack : MonoBehaviour
             body.AddForce(new Vector2(distance, jump_height), ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
         }
-        speed = 10f;
+        speed = 10;
     }
     void FlipTowardsPlayer()
     {

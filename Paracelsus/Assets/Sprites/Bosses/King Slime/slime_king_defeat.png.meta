@@ -1,136 +1,136 @@
 fileFormatVersion: 2
-guid: b62d35b47a92f304f9d28941a7a3103d
+guid: 0f251ef4912167244ae6b90a8ac2769b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5360309377684167798
-    second: slime_king_defeat_sheet_updated_0
+      213: -2765554480168688
+    second: slime_king_defeat_0
   - first:
-      213: 2913929206467863983
-    second: slime_king_defeat_sheet_updated_1
+      213: -9065958636506725380
+    second: slime_king_defeat_1
   - first:
-      213: -3937996464669583775
-    second: slime_king_defeat_sheet_updated_2
+      213: 8781799527955784103
+    second: slime_king_defeat_2
   - first:
-      213: -8428638608407039264
-    second: slime_king_defeat_sheet_updated_3
+      213: -6389096307704678768
+    second: slime_king_defeat_3
   - first:
-      213: -410582317512418370
-    second: slime_king_defeat_sheet_updated_4
+      213: -5201611410934046596
+    second: slime_king_defeat_4
   - first:
-      213: -3726982988624659746
-    second: slime_king_defeat_sheet_updated_5
+      213: 4639665705279777200
+    second: slime_king_defeat_5
   - first:
-      213: -3973642453313288799
-    second: slime_king_defeat_sheet_updated_6
+      213: -605106607918163651
+    second: slime_king_defeat_6
   - first:
-      213: -3430628701561968330
-    second: slime_king_defeat_sheet_updated_7
+      213: 3824202453933134197
+    second: slime_king_defeat_7
   - first:
-      213: -4356806257317218915
-    second: slime_king_defeat_sheet_updated_8
+      213: -5697093247263288706
+    second: slime_king_defeat_8
   - first:
-      213: -8439696484088042576
-    second: slime_king_defeat_sheet_updated_9
+      213: 5889348471350313541
+    second: slime_king_defeat_9
   - first:
-      213: 1212503191460019421
-    second: slime_king_defeat_sheet_updated_10
+      213: -6524971014589101715
+    second: slime_king_defeat_10
   - first:
-      213: -6812688152758121790
-    second: slime_king_defeat_sheet_updated_11
+      213: 9136542183658647868
+    second: slime_king_defeat_11
   - first:
-      213: -5854460485027429212
-    second: slime_king_defeat_sheet_updated_12
+      213: -6673819506002441538
+    second: slime_king_defeat_12
   - first:
-      213: -8147185756607906880
-    second: slime_king_defeat_sheet_updated_13
+      213: -8118887962098460315
+    second: slime_king_defeat_13
   - first:
-      213: -5899241247689663311
-    second: slime_king_defeat_sheet_updated_14
+      213: -1291368054872188742
+    second: slime_king_defeat_14
   - first:
-      213: -5300705785534550450
-    second: slime_king_defeat_sheet_updated_15
+      213: 2052373962398518068
+    second: slime_king_defeat_15
   - first:
-      213: 3405893199169801360
-    second: slime_king_defeat_sheet_updated_16
+      213: 2343285720472248920
+    second: slime_king_defeat_16
   - first:
-      213: -6164223104549129558
-    second: slime_king_defeat_sheet_updated_17
+      213: -3493212077672289362
+    second: slime_king_defeat_17
   - first:
-      213: -7831610039618541885
-    second: slime_king_defeat_sheet_updated_18
+      213: 6190540285300715256
+    second: slime_king_defeat_18
   - first:
-      213: 24297825918014261
-    second: slime_king_defeat_sheet_updated_19
+      213: 8457011566816425855
+    second: slime_king_defeat_19
   - first:
-      213: -1007604602448035377
-    second: slime_king_defeat_sheet_updated_20
+      213: 3027297714054611133
+    second: slime_king_defeat_20
   - first:
-      213: -2777169912402094225
-    second: slime_king_defeat_sheet_updated_21
+      213: 8049073496682366373
+    second: slime_king_defeat_21
   - first:
-      213: 6198678236672750491
-    second: slime_king_defeat_sheet_updated_22
+      213: -1619839838678788913
+    second: slime_king_defeat_22
   - first:
-      213: -2706542995046085776
-    second: slime_king_defeat_sheet_updated_23
+      213: -2993498954147732517
+    second: slime_king_defeat_23
   - first:
-      213: -7507263405195445693
-    second: slime_king_defeat_sheet_updated_24
+      213: 1134767415599080991
+    second: slime_king_defeat_24
   - first:
-      213: -7400229703929847152
-    second: slime_king_defeat_sheet_updated_25
+      213: -3543995821091002527
+    second: slime_king_defeat_25
   - first:
-      213: 244229294227039672
-    second: slime_king_defeat_sheet_updated_26
+      213: 240522717836964429
+    second: slime_king_defeat_26
   - first:
-      213: -2128197135123334598
-    second: slime_king_defeat_sheet_updated_27
+      213: -7174036248270831597
+    second: slime_king_defeat_27
   - first:
-      213: -8628823514672271517
-    second: slime_king_defeat_sheet_updated_28
+      213: 5272418470201365907
+    second: slime_king_defeat_28
   - first:
-      213: 8870757982980576019
-    second: slime_king_defeat_sheet_updated_29
+      213: 4464260957973570458
+    second: slime_king_defeat_29
   - first:
-      213: 7496806244018480925
-    second: slime_king_defeat_sheet_updated_30
+      213: 1071981982714172232
+    second: slime_king_defeat_30
   - first:
-      213: -6129919543932845656
-    second: slime_king_defeat_sheet_updated_31
+      213: -1336518296259960604
+    second: slime_king_defeat_31
   - first:
-      213: 2576408736882580038
-    second: slime_king_defeat_sheet_updated_32
+      213: -4913839707028955718
+    second: slime_king_defeat_32
   - first:
-      213: -3883324944599862900
-    second: slime_king_defeat_sheet_updated_33
+      213: -4362315729727103348
+    second: slime_king_defeat_33
   - first:
-      213: 5299738968020135372
-    second: slime_king_defeat_sheet_updated_34
+      213: 7838977210302551339
+    second: slime_king_defeat_34
   - first:
-      213: 2903687276208630453
-    second: slime_king_defeat_sheet_updated_35
+      213: -8408998826172119693
+    second: slime_king_defeat_35
   - first:
-      213: 5159509526299521750
-    second: slime_king_defeat_sheet_updated_36
+      213: -2546157549224941408
+    second: slime_king_defeat_36
   - first:
-      213: -4333359366159570696
-    second: slime_king_defeat_sheet_updated_37
+      213: -3606390999611465394
+    second: slime_king_defeat_37
   - first:
-      213: 7259731698607427624
-    second: slime_king_defeat_sheet_updated_38
+      213: 1021591798903500454
+    second: slime_king_defeat_38
   - first:
-      213: 6040251348794597546
-    second: slime_king_defeat_sheet_updated_39
+      213: 3053453590204640077
+    second: slime_king_defeat_39
   - first:
-      213: 5713381131470913034
-    second: slime_king_defeat_sheet_updated_40
+      213: -3101131770075622934
+    second: slime_king_defeat_40
   - first:
-      213: -1021794199667117605
-    second: slime_king_defeat_sheet_updated_41
+      213: 4605737571445789857
+    second: slime_king_defeat_41
   - first:
-      213: 7357182486032998182
-    second: slime_king_defeat_sheet_updated_42
+      213: -2186077144886195639
+    second: slime_king_defeat_42
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -226,12 +226,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_0
+      name: slime_king_defeat_0
       rect:
         serializedVersion: 2
         x: 0
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -240,19 +240,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12a4d35ebf9cc2a47b6a5b5b8679e783
-      internalID: 1334626493
+      spriteID: 355b3aa4e3e409a4f82a650f2419aed2
+      internalID: 1947186672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_1
+      name: slime_king_defeat_1
       rect:
         serializedVersion: 2
-        x: 1281
+        x: 1280
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -261,19 +261,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35c3c29791f8ed24eb34608c66845bfd
-      internalID: -757537746
+      spriteID: 6e90fbb74c13b8347a81730418b87914
+      internalID: -1300292096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_2
+      name: slime_king_defeat_2
       rect:
         serializedVersion: 2
-        x: 2562
+        x: 2560
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -282,19 +282,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 971fd8341ad7f95438bb6ca9a561a4b8
-      internalID: -1866174063
+      spriteID: 6b571fe8a17b2d047a21b4389e1dee07
+      internalID: -1499095362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_3
+      name: slime_king_defeat_3
       rect:
         serializedVersion: 2
-        x: 3843
+        x: 3840
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -303,19 +303,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48bb48a137e99ef4599b65ac66819b3d
-      internalID: -805258800
+      spriteID: 1a539b07c4d0eb74ea0a429f44c54186
+      internalID: 2123345571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_4
+      name: slime_king_defeat_4
       rect:
         serializedVersion: 2
-        x: 5124
+        x: 5120
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -324,19 +324,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e277a0b1f832da44827e1346165b075
-      internalID: 1003679863
+      spriteID: 5022e01873f2c0545b24ae3829b94b16
+      internalID: 355716189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_5
+      name: slime_king_defeat_5
       rect:
         serializedVersion: 2
-        x: 6405
+        x: 6400
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -345,19 +345,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc75d648fd9389f429d655760c527205
-      internalID: 314311025
+      spriteID: e7f01b73168dd8144834c31fc53d9a63
+      internalID: -1485580017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_6
+      name: slime_king_defeat_6
       rect:
         serializedVersion: 2
-        x: 7686
+        x: 7680
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -366,19 +366,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 258f45b0a5be0bc41beb9acb3a2cb2b3
-      internalID: -2047189458
+      spriteID: 61959ed3044782846a39c075d8c53e5f
+      internalID: 272068461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_7
+      name: slime_king_defeat_7
       rect:
         serializedVersion: 2
-        x: 8967
+        x: 8960
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -387,19 +387,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca70ec8a70f17fc419eb12b6cbc24879
-      internalID: -1359700182
+      spriteID: df01c36da91a3854e991e2a26cb2704f
+      internalID: 674328547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_8
+      name: slime_king_defeat_8
       rect:
         serializedVersion: 2
-        x: 10248
+        x: 10240
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -408,19 +408,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a27b44500ae233b4fbba0e132a8cb490
-      internalID: -1109292605
+      spriteID: abac39237bfc6bc4babf504eba007fc8
+      internalID: -1910092151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_9
+      name: slime_king_defeat_9
       rect:
         serializedVersion: 2
-        x: 11529
+        x: 11520
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -429,19 +429,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc875fe4dcecb874099dce37a2d3f09e
-      internalID: 544955203
+      spriteID: ea53fda8983c27c43984bbf84dd5c602
+      internalID: -974774252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_10
+      name: slime_king_defeat_10
       rect:
         serializedVersion: 2
-        x: 12810
+        x: 12800
         y: 640
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -450,19 +450,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcc6264b62871e04ca403e394af19cea
-      internalID: 1305349831
+      spriteID: 4d6eede828a7e7c4fbf3885d1bf12a98
+      internalID: 1056180556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_11
+      name: slime_king_defeat_11
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -471,19 +471,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d77ab7793a100d4fa8eca713e279680
-      internalID: -451541722
+      spriteID: 46c3b0a83c45dcc4e8b7342605bd87e6
+      internalID: -1177522831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_12
+      name: slime_king_defeat_12
       rect:
         serializedVersion: 2
-        x: 1281
+        x: 1280
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -492,19 +492,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45fd83efc74ab894f9df4933a5a561ec
-      internalID: 878894657
+      spriteID: 9ae2bd40909600c4b960995bbec1b45c
+      internalID: 1524239840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_13
+      name: slime_king_defeat_13
       rect:
         serializedVersion: 2
-        x: 2562
+        x: 2560
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -513,19 +513,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d0720b1f669e6a4ea25fbe1eb4ad577
-      internalID: -458945793
+      spriteID: 6cd19943cd92e6b4f9c335bd5abf7702
+      internalID: 830521236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_14
+      name: slime_king_defeat_14
       rect:
         serializedVersion: 2
-        x: 3843
+        x: 3840
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -534,19 +534,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79b067a9f20bf684091975c72d29b3d7
-      internalID: 1835872902
+      spriteID: d96a3ec7002e82e4ebb586c35bdc110f
+      internalID: -562117782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_15
+      name: slime_king_defeat_15
       rect:
         serializedVersion: 2
-        x: 5124
+        x: 5120
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -555,19 +555,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4eddabc70bc3394f8a39a3d5ad5d650
-      internalID: 1437017135
+      spriteID: 277a19d949cacf6469bf6189ed24d413
+      internalID: -350558770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_16
+      name: slime_king_defeat_16
       rect:
         serializedVersion: 2
-        x: 6405
+        x: 6400
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -576,19 +576,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41977c83756810b4facee61d254bba54
-      internalID: 330127210
+      spriteID: fa529a1934b2f0545b2eb462e6765304
+      internalID: -1680388609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_17
+      name: slime_king_defeat_17
       rect:
         serializedVersion: 2
-        x: 7686
+        x: 7680
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -597,19 +597,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d307d0b304688f0459c9b4322c49c8c4
-      internalID: 38205458
+      spriteID: 8bd4c6229a70e454ea924ea37e3356f6
+      internalID: 851017616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_18
+      name: slime_king_defeat_18
       rect:
         serializedVersion: 2
-        x: 8967
+        x: 8960
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -618,19 +618,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 179c14639f6483f46b4d08d255ba1a1a
-      internalID: -118139889
+      spriteID: 12ebcdb88071e5f4da78fdc962108604
+      internalID: -618969734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_19
+      name: slime_king_defeat_19
       rect:
         serializedVersion: 2
-        x: 10248
+        x: 10240
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -639,19 +639,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0e60aa232a915042b5524a3b495002a
-      internalID: 1617436812
+      spriteID: 10c35e8dc953959498f46324d789e323
+      internalID: 1231026617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_20
+      name: slime_king_defeat_20
       rect:
         serializedVersion: 2
-        x: 11529
+        x: 11520
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -660,19 +660,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acb6814813772ef4682f0f9c6490090c
-      internalID: 1017726555
+      spriteID: 686bf6d4bf1feac4f8f806e0c3d1b480
+      internalID: 1625693850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_king_defeat_sheet_updated_21
+      name: slime_king_defeat_21
       rect:
         serializedVersion: 2
-        x: 12810
+        x: 12800
         y: 0
-        width: 1281
+        width: 1280
         height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -681,8 +681,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8e4a915e8c4198458fed1fc755591df
-      internalID: 1507096052
+      spriteID: cfb439f9ba1799d48894baba392e9fcb
+      internalID: 1466770308
       vertices: []
       indices: 
       edges: []
@@ -690,7 +690,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cd04bc5abb34ede42baf09c4c93d8a58
+    spriteID: 9b55359617420974780de17eb6384c7c
     internalID: 0
     vertices: []
     indices: 
@@ -698,28 +698,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slime_king_defeat_sheet_updated_0: 1334626493
-      slime_king_defeat_sheet_updated_1: -757537746
-      slime_king_defeat_sheet_updated_10: 1305349831
-      slime_king_defeat_sheet_updated_11: -451541722
-      slime_king_defeat_sheet_updated_12: 878894657
-      slime_king_defeat_sheet_updated_13: -458945793
-      slime_king_defeat_sheet_updated_14: 1835872902
-      slime_king_defeat_sheet_updated_15: 1437017135
-      slime_king_defeat_sheet_updated_16: 330127210
-      slime_king_defeat_sheet_updated_17: 38205458
-      slime_king_defeat_sheet_updated_18: -118139889
-      slime_king_defeat_sheet_updated_19: 1617436812
-      slime_king_defeat_sheet_updated_2: -1866174063
-      slime_king_defeat_sheet_updated_20: 1017726555
-      slime_king_defeat_sheet_updated_21: 1507096052
-      slime_king_defeat_sheet_updated_3: -805258800
-      slime_king_defeat_sheet_updated_4: 1003679863
-      slime_king_defeat_sheet_updated_5: 314311025
-      slime_king_defeat_sheet_updated_6: -2047189458
-      slime_king_defeat_sheet_updated_7: -1359700182
-      slime_king_defeat_sheet_updated_8: -1109292605
-      slime_king_defeat_sheet_updated_9: 544955203
+      slime_king_defeat_0: 1947186672
+      slime_king_defeat_1: -1300292096
+      slime_king_defeat_10: 1056180556
+      slime_king_defeat_11: -1177522831
+      slime_king_defeat_12: 1524239840
+      slime_king_defeat_13: 830521236
+      slime_king_defeat_14: -562117782
+      slime_king_defeat_15: -350558770
+      slime_king_defeat_16: -1680388609
+      slime_king_defeat_17: 851017616
+      slime_king_defeat_18: -618969734
+      slime_king_defeat_19: 1231026617
+      slime_king_defeat_2: -1499095362
+      slime_king_defeat_20: 1625693850
+      slime_king_defeat_21: 1466770308
+      slime_king_defeat_3: 2123345571
+      slime_king_defeat_4: 355716189
+      slime_king_defeat_5: -1485580017
+      slime_king_defeat_6: 272068461
+      slime_king_defeat_7: 674328547
+      slime_king_defeat_8: -1910092151
+      slime_king_defeat_9: -974774252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
