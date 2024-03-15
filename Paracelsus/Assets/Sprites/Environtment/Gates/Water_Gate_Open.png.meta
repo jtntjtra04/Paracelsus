@@ -418,7 +418,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Water_Gate_Open_0: 8791556488074775346
+      Water_Gate_Open_1: -7060121207182521291
+      Water_Gate_Open_10: 5417413932421820602
+      Water_Gate_Open_11: 6064406505124743403
+      Water_Gate_Open_12: 3317361398516094882
+      Water_Gate_Open_2: -1525109123524936662
+      Water_Gate_Open_3: -4087825759631155267
+      Water_Gate_Open_4: 1572001433988052925
+      Water_Gate_Open_5: 1096351269864270630
+      Water_Gate_Open_6: -9009501833917482828
+      Water_Gate_Open_7: 5429542212971298555
+      Water_Gate_Open_8: 2406119266277019175
+      Water_Gate_Open_9: 9062640076406738776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

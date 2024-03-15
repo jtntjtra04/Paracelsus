@@ -16,9 +16,11 @@ public class EnemyHPSystem : MonoBehaviour
     private SlimeAI slime_movement; // slime movement 1, 3
     private SlimeAI2wp slime_movement_2; // slime movement 2, 6
     private SlimeAIWS4 slime_movement_4; // slime movement 4
-    private SlimeAIWS5 slime_movement_5; // slime movement 5
+    private SlimeAIWS5 slime_movement_5; // slime movement 5 , 15
     private SlimeAIWS7 slime_movement_7; // slime movement 7
     private SlimeAIWS8 slime_movement_8; // slime movement 8
+    private SlimeAIWF13 slime_movement_13; // slime movement 13
+    private SlimeAIWrS16 slime_movement_16; // slime movement 16
     public EnemyHealthBar hp_bar;
     private Animator anim;
 
@@ -37,6 +39,9 @@ public class EnemyHPSystem : MonoBehaviour
         slime_movement_5 = GetComponent<SlimeAIWS5>();
         slime_movement_7 = GetComponent<SlimeAIWS7>();
         slime_movement_8 = GetComponent<SlimeAIWS8>();
+        slime_movement_13 = GetComponent<SlimeAIWF13>();
+        slime_movement_16 = GetComponent<SlimeAIWrS16>();
+        
         curr_health = health;
         hp_bar.SetHealth(curr_health, health);
         body = GetComponent<Rigidbody2D>();
@@ -109,6 +114,18 @@ public class EnemyHPSystem : MonoBehaviour
         if (slime_movement_8 != null)
         {
             slime_movement_8.enabled = false;
+            box_collider.enabled = false;
+            AudioManager.instance.PlaySFX("SlimeDeath");
+        }
+        if (slime_movement_13 != null)
+        {
+            slime_movement_13.enabled = false;
+            box_collider.enabled = false;
+            AudioManager.instance.PlaySFX("SlimeDeath");
+        }
+        if (slime_movement_16 != null)
+        {
+            slime_movement_16.enabled = false;
             box_collider.enabled = false;
             AudioManager.instance.PlaySFX("SlimeDeath");
         }

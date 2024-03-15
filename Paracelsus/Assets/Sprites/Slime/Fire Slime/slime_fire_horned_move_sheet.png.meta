@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 55256d14bff20b64dbbcf79debf86122
+guid: 2f60beb14bed94d4eb4e580f869a87d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8562963074711209929
-    second: Water_Gate_Opened_0
+      213: 8336535664344951744
+    second: slime_fire_horned_move_sheet_0
   - first:
-      213: -8357685462532792881
-    second: Water_Gate_Opened_1
+      213: -6798540419908147863
+    second: slime_fire_horned_move_sheet_1
+  - first:
+      213: -2969250517775319177
+    second: slime_fire_horned_move_sheet_2
+  - first:
+      213: 1200834533540994911
+    second: slime_fire_horned_move_sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,43 +109,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water_Gate_Opened_0
+      name: slime_fire_horned_move_sheet_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 187
-        width: 242
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 311
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7383d0bb37e3a2980800000000000000
-      internalID: -8562963074711209929
+      spriteID: 0cbe7a2940351b370800000000000000
+      internalID: 8336535664344951744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Opened_1
+      name: slime_fire_horned_move_sheet_1
       rect:
         serializedVersion: 2
-        x: 7
+        x: 319
         y: 0
-        width: 242
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 312
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fcd594d4a59830c80800000000000000
-      internalID: -8357685462532792881
+      spriteID: 9656d30228bb6a1a0800000000000000
+      internalID: -6798540419908147863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_fire_horned_move_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 302
+        height: 221
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f7bd6c26a1bc6d0800000000000000
+      internalID: -2969250517775319177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_fire_horned_move_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 0
+        width: 302
+        height: 201
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f9bbd55a83aa010800000000000000
+      internalID: 1200834533540994911
       vertices: []
       indices: 
       edges: []
@@ -147,7 +195,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ca81545d463bcdc409fc7f5309c24747
     internalID: 0
     vertices: []
     indices: 
@@ -155,8 +203,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Water_Gate_Opened_0: -8562963074711209929
-      Water_Gate_Opened_1: -8357685462532792881
+      slime_fire_horned_move_sheet_0: 8336535664344951744
+      slime_fire_horned_move_sheet_1: -6798540419908147863
+      slime_fire_horned_move_sheet_2: -2969250517775319177
+      slime_fire_horned_move_sheet_3: 1200834533540994911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
