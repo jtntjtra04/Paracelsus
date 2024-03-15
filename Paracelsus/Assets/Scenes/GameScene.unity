@@ -80433,7 +80433,7 @@ Transform:
   m_GameObject: {fileID: 126762328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -108.82318, y: 16.9441, z: -0.007137011}
+  m_LocalPosition: {x: -125.431305, y: 16.9441, z: -0.007137011}
   m_LocalScale: {x: 21.08854, y: 23.55379, z: 21.08854}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90198,7 +90198,7 @@ Transform:
   m_GameObject: {fileID: 422877689}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -95.3361, y: 16.9441, z: -0.007137011}
+  m_LocalPosition: {x: -103.64034, y: 16.9441, z: -0.007137011}
   m_LocalScale: {x: 21.08854, y: 23.55379, z: 21.08854}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90510,7 +90510,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -90841,7 +90841,7 @@ Transform:
   m_GameObject: {fileID: 461983443}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.783859, y: 0.8347, z: -1.1867}
+  m_LocalPosition: {x: -14.856129, y: 0.8347, z: -1.1867}
   m_LocalScale: {x: 12.30069, y: 12.30069, z: 12.30069}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -92635,7 +92635,7 @@ GameObject:
   - component: {fileID: 504429728}
   m_Layer: 6
   m_Name: WS6x
-  m_TagString: Obstacles
+  m_TagString: EarthSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93051,7 +93051,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.514545, y: -9.0079565, z: -10.025671}
+  m_LocalPosition: {x: -71.76772, y: 30.490562, z: -10.025671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93535,7 +93535,7 @@ Transform:
   m_GameObject: {fileID: 551847508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -86.343994, y: 16.9441, z: -0.007137011}
+  m_LocalPosition: {x: -89.112236, y: 16.9441, z: -0.007137011}
   m_LocalScale: {x: 21.088537, y: 23.553787, z: 21.088537}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94351,7 +94351,7 @@ Transform:
   m_GameObject: {fileID: 599306660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.33, y: -2.06, z: 0}
+  m_LocalPosition: {x: -79.5, y: 36.2, z: 0}
   m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -94469,6 +94469,11 @@ MonoBehaviour:
   glide: 0
   dash: 0
   stomp: 0
+  knockback_force: 20
+  knockback_counter: 0
+  knockback_time: 0.15
+  KnockFromRight: 0
+  KnockFromLeft: 0
   DeathUI: {fileID: 756666557}
   MusicPlayer: {fileID: 1743403738}
   PlayerAudio: {fileID: 2077713151}
@@ -123198,7 +123203,7 @@ Transform:
   m_GameObject: {fileID: 728473272}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -122.31153, y: 16.9441, z: -0.007137011}
+  m_LocalPosition: {x: -147.22409, y: 16.9441, z: -0.007137011}
   m_LocalScale: {x: 21.08854, y: 23.55379, z: 21.08854}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123985,7 +123990,7 @@ GameObject:
   - component: {fileID: 781114612}
   m_Layer: 0
   m_Name: ES12x
-  m_TagString: Untagged
+  m_TagString: EarthSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130478,7 +130483,7 @@ GameObject:
   - component: {fileID: 1134411340}
   m_Layer: 0
   m_Name: WrS14
-  m_TagString: Untagged
+  m_TagString: WaterSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130513,7 +130518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 400
   curr_health: 0
-  hp_bar: {fileID: 0}
+  hp_bar: {fileID: 1805061531}
 --- !u!95 &1134411342
 Animator:
   serializedVersion: 7
@@ -130764,7 +130769,7 @@ GameObject:
   - component: {fileID: 1147901199}
   m_Layer: 6
   m_Name: WS5y
-  m_TagString: WindSlime
+  m_TagString: WaterSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130974,7 +130979,7 @@ Transform:
   m_GameObject: {fileID: 1148152889}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.775515, y: 0.8347, z: -1.1867}
+  m_LocalPosition: {x: -29.383953, y: 0.8347, z: -1.1867}
   m_LocalScale: {x: 12.30069, y: 12.30069, z: 12.30069}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -131884,7 +131889,7 @@ Transform:
   m_GameObject: {fileID: 1206634715}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.2796, y: 0.8347, z: -1.1867}
+  m_LocalPosition: {x: -22.119928, y: 0.8347, z: -1.1867}
   m_LocalScale: {x: 12.30069, y: 12.30069, z: 12.30069}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132816,7 +132821,7 @@ GameObject:
   - component: {fileID: 1286892268}
   m_Layer: 0
   m_Name: WrS16y
-  m_TagString: Untagged
+  m_TagString: WaterSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134333,7 +134338,7 @@ Transform:
   m_GameObject: {fileID: 1416608341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -117.81527, y: 16.9441, z: -0.007137011}
+  m_LocalPosition: {x: -139.95984, y: 16.9441, z: -0.007137011}
   m_LocalScale: {x: 21.08854, y: 23.55379, z: 21.08854}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -135530,7 +135535,7 @@ Transform:
   m_GameObject: {fileID: 1500728340}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -99.83097, y: 16.9441, z: -0.007137011}
+  m_LocalPosition: {x: -110.90279, y: 16.9441, z: -0.007137011}
   m_LocalScale: {x: 21.08854, y: 23.55379, z: 21.08854}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136121,7 +136126,7 @@ GameObject:
   - component: {fileID: 1525379659}
   m_Layer: 0
   m_Name: FS13y
-  m_TagString: Untagged
+  m_TagString: FireSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136232,7 +136237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 400
   curr_health: 0
-  hp_bar: {fileID: 0}
+  hp_bar: {fileID: 1307807813}
 --- !u!114 &1525379660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136281,7 +136286,7 @@ Transform:
   m_GameObject: {fileID: 1530433144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7122672, y: 0.8347, z: -1.1867}
+  m_LocalPosition: {x: -7.591935, y: 0.8347, z: -1.1867}
   m_LocalScale: {x: 12.30069, y: 12.30069, z: 12.30069}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136911,7 +136916,7 @@ GameObject:
   - component: {fileID: 1601051352}
   m_Layer: 6
   m_Name: WS4y
-  m_TagString: WindSlime
+  m_TagString: FireSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139923,7 +139928,7 @@ Transform:
   m_GameObject: {fileID: 1678327682}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.208084, y: 0.8347, z: -1.1867}
+  m_LocalPosition: {x: -0.32802793, y: 0.8347, z: -1.1867}
   m_LocalScale: {x: 12.30069, y: 12.30069, z: 12.30069}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -142398,7 +142403,7 @@ Transform:
   m_GameObject: {fileID: 1864067312}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.514545, y: -9.0079565, z: -10.025671}
+  m_LocalPosition: {x: -72.31545, y: 29.252045, z: -10.025671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -142648,7 +142653,7 @@ Transform:
   m_GameObject: {fileID: 1894251855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -104.24834, y: 16.9441, z: -0.007137011}
+  m_LocalPosition: {x: -118.088745, y: 16.9441, z: -0.007137011}
   m_LocalScale: {x: 21.08854, y: 23.55379, z: 21.08854}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -145134,7 +145139,7 @@ Transform:
   m_GameObject: {fileID: 2101190344}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.704072, y: 0.8347, z: -1.1867}
+  m_LocalPosition: {x: 6.9360323, y: 0.8347, z: -1.1867}
   m_LocalScale: {x: 12.30069, y: 12.30069, z: 12.30069}
   m_ConstrainProportionsScale: 0
   m_Children: []

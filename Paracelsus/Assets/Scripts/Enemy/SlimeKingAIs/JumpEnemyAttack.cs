@@ -61,7 +61,6 @@ public class JumpEnemyAttack : MonoBehaviour
 
         if (!player_detected && grounded)
         {
-            Debug.Log("Patrolling");
             Patrolling();
         }
     }

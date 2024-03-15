@@ -9,8 +9,6 @@ public class GameController : MonoBehaviour
     // HP
     [SerializeField] private float startHP;
     [SerializeField] private float respawn_timer;
-
-    
     public float currHP { get; private set; }
 
     // HP Potion
@@ -32,6 +30,13 @@ public class GameController : MonoBehaviour
     public bool glide = false; // glide locked
     public bool dash = false; // dash locked
     public bool stomp = false; // stomp locked
+
+    // Knockback Effect
+    public float knockback_force;
+    public float knockback_counter = 0;
+    public float knockback_time;
+    public bool KnockFromRight;
+    public bool KnockFromLeft;
 
     // UI
     public GameObject DeathUI;
@@ -75,7 +80,6 @@ public class GameController : MonoBehaviour
         //MusicPlayer.Play();
 
     }
-
     public void TakeDamage(float damage)
     {
         // Damage calculations
@@ -87,12 +91,6 @@ public class GameController : MonoBehaviour
         {
             Death();
         }
-        else
-        {
-            //push player when taking damage
-            body.velocity = new Vector2(-100f, body.velocity.y);
-            Debug.Log("Player Pushed");
-        }
     }
 
     // Hitting an Obstacle or Checkpoint or Pillar
@@ -103,22 +101,41 @@ public class GameController : MonoBehaviour
             // Player hitting wind slime
             if(barrier.barrierPrefabInstance == null)
             {
-                Debug.Log("Barrier is null");
-                TakeDamage(1);
-                
+                if (currHP > 0)
+                {
+                    knockback_counter = knockback_time; // set the counter to do decrement
+                    if (collision.transform.position.x <= transform.position.x) // player got touch from left
+                    {
+                        KnockFromLeft = true;
+                    }
+                    else if (collision.transform.position.x > transform.position.x) // player got touch from right
+                    {
+                        KnockFromRight = true;
+                    }
+                    TakeDamage(1);
+                }
             }
-
         }
-        else if (collision.CompareTag("WindSlime"))
+        else if (collision.CompareTag("WindSlime") || collision.CompareTag("EarthSlime") || collision.CompareTag("WaterSlime") || collision.CompareTag("FireSlime"))
         {
-            // Player hitting wind slime
+            // Player hitting normal slime
             if(barrier.barrierPrefabInstance == null)
             {
                 Debug.Log("Barrier is null");
-                TakeDamage(1);
-                
+                if(currHP > 0)
+                {
+                    knockback_counter = knockback_time; // set the counter to do decrement
+                    if (collision.transform.position.x <= transform.position.x) // player got touch from left
+                    {
+                        KnockFromLeft = true;
+                    }
+                    else if (collision.transform.position.x > transform.position.x) // player got touch from right
+                    {
+                        KnockFromRight = true;
+                    }
+                    TakeDamage(1);
+                }
             }
-
         }
         else if (collision.CompareTag("Checkpoint"))
         {
@@ -165,9 +182,50 @@ public class GameController : MonoBehaviour
             earth_spirit = false;
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "SlimeKing")
+        {
+            // Player hitting boss slime
+            if (barrier.barrierPrefabInstance == null)
+            {
+                Debug.Log("Barrier is null");
+                if(currHP > 0)
+                {
+                    knockback_counter = knockback_time; // set the counter to do decrement
+                    if (collision.transform.position.x <= transform.position.x) // player got touch from left
+                    {
+                        KnockFromLeft = true;
+                    }
+                    if (collision.transform.position.x > transform.position.x) // player got touch from right
+                    {
+                        KnockFromRight = true;
+                    }
+                    TakeDamage(1);
+                }
+            }   
+        }
+    }
     private void Update()
     {
+        if(knockback_counter > 0)
+        {
+            if (KnockFromRight)
+            {
+                body.velocity = new Vector2(-knockback_force, body.velocity.y);
+            }
+            if (KnockFromLeft)
+            {
+                body.velocity = new Vector2(knockback_force, body.velocity.y);
+            }
+            knockback_counter -= Time.deltaTime;
+        }
+        else
+        {
+            KnockFromRight = false;
+            KnockFromLeft = false;
+        }
+
         if (canSetCheckpoint && Input.GetKeyDown(KeyCode.F))
         {
             SetCheckpoint();
@@ -191,8 +249,6 @@ public class GameController : MonoBehaviour
                 Heal();
             }
         }
-
-
         else if (wind_spirit && Input.GetKeyDown(KeyCode.F) && !double_jump)
         {
             double_jump = true;
@@ -218,7 +274,6 @@ public class GameController : MonoBehaviour
             AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
     }
-
     void Heal()
     {
         if (hpPotion > 0)
@@ -227,12 +282,10 @@ public class GameController : MonoBehaviour
         }
         hpPotion -= 1;
     }
-
     void SetCheckpoint()
     {
         checkpointPosition = transform.position;
     }
-
     void Death()
     {
         if (!isDeathInProgress)

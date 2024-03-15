@@ -54,11 +54,14 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("run", false);
             return;
         }
-        if(PauseMenu.game_paused)
+        if (PauseMenu.game_paused)
         {
             return;
         }
-
+        if (ability.knockback_counter > 0) // if the player got knockback, the player can't move
+        {
+            return;
+        }
         if (currently_dash)
         {
             return;
