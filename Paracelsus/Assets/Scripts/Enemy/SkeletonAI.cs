@@ -78,11 +78,7 @@ public class SkeletonAI : MonoBehaviour
             skills.earthFunc = false;
             isBeingPushed = true;
         }
-        
-
-           
     }
-
     private IEnumerator MoveTowardsPlayer()
     {
         while (Vector2.Distance(transform.position, player.position) > stoppingDistance)
@@ -115,21 +111,22 @@ public class SkeletonAI : MonoBehaviour
     {
         if (PlayerDetected() && player_HP.currHP != 0 && skills.barrierPrefabInstance == null) //Player still in range or still hit the box 
         {
+            // Get the direction from the player to the skeleton
+            Vector2 knockback_direction = (player_HP.transform.position - transform.position).normalized;
+
+            // Apply knockback to the player
+            player_HP.KnockBack(knockback_direction);
             player_HP.TakeDamage(damage);
         }
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.gameObject.CompareTag("WindSkill"))
         {   
             body.AddForce(Vector2.up * suspensionForce);
             isSuspended = true;
         }
         EnemyHPSystem enemy_hp = other.GetComponent<EnemyHPSystem>();
-          
-       
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -144,9 +141,6 @@ public class SkeletonAI : MonoBehaviour
                     enemy_hp.EnemyTakeDamage(100 * 1.5f);
                 }
             }
-            
-        
-        
     }
     
 }

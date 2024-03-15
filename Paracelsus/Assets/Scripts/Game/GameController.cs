@@ -340,4 +340,17 @@ public class GameController : MonoBehaviour
 
         Respawn();
     }
+    public void KnockBack(Vector2 knockback_direction)
+    {
+        knockback_counter = knockback_time;
+
+        if (knockback_direction.x < 0)
+        {
+            KnockFromRight = true;
+        }
+        else
+        {
+            KnockFromLeft = true;
+        }
+    }
 }
