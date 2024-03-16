@@ -1,46 +1,46 @@
 fileFormatVersion: 2
-guid: 297a3ea094168e1429d61a56afa4763e
+guid: 0d1aac5b8df204145b4fbd747b32c378
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8791556488074775346
-    second: Water_Gate_Open_0
+      213: 4845551656866577585
+    second: Water_Gate_Wind_Open_0
   - first:
-      213: -7060121207182521291
-    second: Water_Gate_Open_1
+      213: 1000478544226514977
+    second: Water_Gate_Wind_Open_1
   - first:
-      213: -1525109123524936662
-    second: Water_Gate_Open_2
+      213: 1013104149615115100
+    second: Water_Gate_Wind_Open_2
   - first:
-      213: -4087825759631155267
-    second: Water_Gate_Open_3
+      213: 4349627532811209696
+    second: Water_Gate_Wind_Open_3
   - first:
-      213: 1572001433988052925
-    second: Water_Gate_Open_4
+      213: -6907291251036107822
+    second: Water_Gate_Wind_Open_4
   - first:
-      213: 1096351269864270630
-    second: Water_Gate_Open_5
+      213: 3492894369831751409
+    second: Water_Gate_Wind_Open_5
   - first:
-      213: -9009501833917482828
-    second: Water_Gate_Open_6
+      213: 2271144346222582764
+    second: Water_Gate_Wind_Open_6
   - first:
-      213: 5429542212971298555
-    second: Water_Gate_Open_7
+      213: -2631800890512267038
+    second: Water_Gate_Wind_Open_7
   - first:
-      213: 2406119266277019175
-    second: Water_Gate_Open_8
+      213: 5878736717218194311
+    second: Water_Gate_Wind_Open_8
   - first:
-      213: 9062640076406738776
-    second: Water_Gate_Open_9
+      213: 6908892993275326725
+    second: Water_Gate_Wind_Open_9
   - first:
-      213: 5417413932421820602
-    second: Water_Gate_Open_10
+      213: -8828487108007345730
+    second: Water_Gate_Wind_Open_10
   - first:
-      213: 6064406505124743403
-    second: Water_Gate_Open_11
+      213: -7714673958645715727
+    second: Water_Gate_Wind_Open_11
   - first:
-      213: 3317361398516094882
-    second: Water_Gate_Open_12
+      213: -7093068756258395762
+    second: Water_Gate_Wind_Open_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water_Gate_Open_0
+      name: Water_Gate_Wind_Open_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,16 +148,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 23b4a76db02e10a70800000000000000
-      internalID: 8791556488074775346
+      spriteID: 406a693519d79b74584b6f959d1921f1
+      internalID: 1425492685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_1
+      name: Water_Gate_Wind_Open_1
       rect:
         serializedVersion: 2
         x: 256
@@ -169,16 +169,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 53c0fae0b29650e90800000000000000
-      internalID: -7060121207182521291
+      spriteID: 2aee102f64d2f0743ae31611a4b505cc
+      internalID: 354740201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_2
+      name: Water_Gate_Wind_Open_2
       rect:
         serializedVersion: 2
         x: 512
@@ -190,16 +190,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a2cb6902559b5dae0800000000000000
-      internalID: -1525109123524936662
+      spriteID: 3731e8aa0e520d349b63d99aaa441771
+      internalID: -13895328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_3
+      name: Water_Gate_Wind_Open_3
       rect:
         serializedVersion: 2
         x: 768
@@ -211,16 +211,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dbf5e7d31202547c0800000000000000
-      internalID: -4087825759631155267
+      spriteID: 2a49bf2997faaf544911d415b900d1c8
+      internalID: 1321230540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_4
+      name: Water_Gate_Wind_Open_4
       rect:
         serializedVersion: 2
         x: 0
@@ -232,16 +232,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: db73343b9fed0d510800000000000000
-      internalID: 1572001433988052925
+      spriteID: 8561624d7791a444999539823a623a4c
+      internalID: -1039077455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_5
+      name: Water_Gate_Wind_Open_5
       rect:
         serializedVersion: 2
         x: 256
@@ -253,16 +253,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62bee45dba5073f00800000000000000
-      internalID: 1096351269864270630
+      spriteID: 8d10ecbed1bbc634bb03428866a49a06
+      internalID: -1477439564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_6
+      name: Water_Gate_Wind_Open_6
       rect:
         serializedVersion: 2
         x: 512
@@ -274,16 +274,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b83e1201d1d7f280800000000000000
-      internalID: -9009501833917482828
+      spriteID: f9f0ee7dafbf8d94497e0ed29f7433b0
+      internalID: -1542683596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_7
+      name: Water_Gate_Wind_Open_7
       rect:
         serializedVersion: 2
         x: 768
@@ -295,16 +295,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bfe742130eb995b40800000000000000
-      internalID: 5429542212971298555
+      spriteID: 26bc791212afe824ea4e22cb532a4fca
+      internalID: -798209848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_8
+      name: Water_Gate_Wind_Open_8
       rect:
         serializedVersion: 2
         x: 0
@@ -316,16 +316,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 72e4aa979b0446120800000000000000
-      internalID: 2406119266277019175
+      spriteID: 6927dd01d6dc51b45835876bd6214c9f
+      internalID: -815774393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_9
+      name: Water_Gate_Wind_Open_9
       rect:
         serializedVersion: 2
         x: 256
@@ -337,16 +337,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85f41713227f4cd70800000000000000
-      internalID: 9062640076406738776
+      spriteID: 184a0d1e791d1d548b44dda6c41218e5
+      internalID: -1175930322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_10
+      name: Water_Gate_Wind_Open_10
       rect:
         serializedVersion: 2
         x: 512
@@ -358,16 +358,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ab03143d4458e2b40800000000000000
-      internalID: 5417413932421820602
+      spriteID: 40e969749fd8d404b9a35c6d860397f5
+      internalID: 1200181410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_11
+      name: Water_Gate_Wind_Open_11
       rect:
         serializedVersion: 2
         x: 768
@@ -379,10 +379,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: be84787f599192450800000000000000
-      internalID: 6064406505124743403
+      spriteID: f711eeb1048fe104a8fae6aa534fed9c
+      internalID: -1304778292
       vertices: []
       indices: 
       edges: []
@@ -390,7 +390,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 44e3521556860544aba712dba10498da
+    spriteID: 436fe973c5c3be146830aec38259d65c
     internalID: 0
     vertices: []
     indices: 
@@ -398,18 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Water_Gate_Open_0: 8791556488074775346
-      Water_Gate_Open_1: -7060121207182521291
-      Water_Gate_Open_10: 5417413932421820602
-      Water_Gate_Open_11: 6064406505124743403
-      Water_Gate_Open_2: -1525109123524936662
-      Water_Gate_Open_3: -4087825759631155267
-      Water_Gate_Open_4: 1572001433988052925
-      Water_Gate_Open_5: 1096351269864270630
-      Water_Gate_Open_6: -9009501833917482828
-      Water_Gate_Open_7: 5429542212971298555
-      Water_Gate_Open_8: 2406119266277019175
-      Water_Gate_Open_9: 9062640076406738776
+      Water_Gate_Wind_Open_0: 1425492685
+      Water_Gate_Wind_Open_1: 354740201
+      Water_Gate_Wind_Open_10: 1200181410
+      Water_Gate_Wind_Open_11: -1304778292
+      Water_Gate_Wind_Open_2: -13895328
+      Water_Gate_Wind_Open_3: 1321230540
+      Water_Gate_Wind_Open_4: -1039077455
+      Water_Gate_Wind_Open_5: -1477439564
+      Water_Gate_Wind_Open_6: -1542683596
+      Water_Gate_Wind_Open_7: -798209848
+      Water_Gate_Wind_Open_8: -815774393
+      Water_Gate_Wind_Open_9: -1175930322
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

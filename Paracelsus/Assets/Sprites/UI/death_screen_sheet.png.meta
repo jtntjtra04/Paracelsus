@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 55256d14bff20b64dbbcf79debf86122
+guid: 21e9d5a936e8811429d100c295ad162a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8562963074711209929
-    second: Water_Gate_Opened_0
-  - first:
-      213: -8357685462532792881
-    second: Water_Gate_Opened_1
+      213: -8160154555277676325
+    second: death_screen_sheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,43 +100,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water_Gate_Opened_0
+      name: death_screen_sheet_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 187
-        width: 242
-        height: 69
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7383d0bb37e3a2980800000000000000
-      internalID: -8562963074711209929
+      spriteID: 8587b823c7bc8134a8b0ea892ff1050e
+      internalID: 1725371220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Opened_1
+      name: death_screen_sheet_1
       rect:
         serializedVersion: 2
-        x: 7
+        x: 1920
         y: 0
-        width: 242
-        height: 33
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fcd594d4a59830c80800000000000000
-      internalID: -8357685462532792881
+      spriteID: 98d927e0df618e945bceca1df53c6298
+      internalID: 2037271142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_screen_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd42102dc3d07954bbbc438f22a5e9ef
+      internalID: -1635825776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_screen_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd924bd259ff4c54eb66d0f0be70346d
+      internalID: -2091432460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_screen_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5bb3fccda8f184ca8e4ab32ed7ee4b
+      internalID: -563874891
       vertices: []
       indices: 
       edges: []
@@ -147,7 +207,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f31a68a78c0ecd54c824608b088b5403
     internalID: 0
     vertices: []
     indices: 
@@ -155,8 +215,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Water_Gate_Opened_0: -8562963074711209929
-      Water_Gate_Opened_1: -8357685462532792881
+      death_screen_sheet_0: 1725371220
+      death_screen_sheet_1: 2037271142
+      death_screen_sheet_2: -1635825776
+      death_screen_sheet_3: -2091432460
+      death_screen_sheet_4: -563874891
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,46 +1,46 @@
 fileFormatVersion: 2
-guid: 297a3ea094168e1429d61a56afa4763e
+guid: 17ca00b6fd2a9884b88786aa3b44dd7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8791556488074775346
-    second: Water_Gate_Open_0
+      213: -7307609713927985570
+    second: Water_Gate_Earth_Open_0
   - first:
-      213: -7060121207182521291
-    second: Water_Gate_Open_1
+      213: 8006334063784498000
+    second: Water_Gate_Earth_Open_1
   - first:
-      213: -1525109123524936662
-    second: Water_Gate_Open_2
+      213: -7765001627911267978
+    second: Water_Gate_Earth_Open_2
   - first:
-      213: -4087825759631155267
-    second: Water_Gate_Open_3
+      213: -2468323068471003157
+    second: Water_Gate_Earth_Open_3
   - first:
-      213: 1572001433988052925
-    second: Water_Gate_Open_4
+      213: -9025693850469307595
+    second: Water_Gate_Earth_Open_4
   - first:
-      213: 1096351269864270630
-    second: Water_Gate_Open_5
+      213: -1849249868366322071
+    second: Water_Gate_Earth_Open_5
   - first:
-      213: -9009501833917482828
-    second: Water_Gate_Open_6
+      213: 8506732063209019739
+    second: Water_Gate_Earth_Open_6
   - first:
-      213: 5429542212971298555
-    second: Water_Gate_Open_7
+      213: 44461933831043487
+    second: Water_Gate_Earth_Open_7
   - first:
-      213: 2406119266277019175
-    second: Water_Gate_Open_8
+      213: -7888761596816720758
+    second: Water_Gate_Earth_Open_8
   - first:
-      213: 9062640076406738776
-    second: Water_Gate_Open_9
+      213: -5429301043529556284
+    second: Water_Gate_Earth_Open_9
   - first:
-      213: 5417413932421820602
-    second: Water_Gate_Open_10
+      213: 3714229369187221084
+    second: Water_Gate_Earth_Open_10
   - first:
-      213: 6064406505124743403
-    second: Water_Gate_Open_11
+      213: -7966463011133261208
+    second: Water_Gate_Earth_Open_11
   - first:
-      213: 3317361398516094882
-    second: Water_Gate_Open_12
+      213: -8998732517820886200
+    second: Water_Gate_Earth_Open_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water_Gate_Open_0
+      name: Water_Gate_Earth_Open_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23b4a76db02e10a70800000000000000
-      internalID: 8791556488074775346
+      spriteID: e56e02cbea7269a90800000000000000
+      internalID: -7307609713927985570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_1
+      name: Water_Gate_Earth_Open_1
       rect:
         serializedVersion: 2
         x: 256
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53c0fae0b29650e90800000000000000
-      internalID: -7060121207182521291
+      spriteID: 0531cf069663c1f60800000000000000
+      internalID: 8006334063784498000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_2
+      name: Water_Gate_Earth_Open_2
       rect:
         serializedVersion: 2
         x: 512
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2cb6902559b5dae0800000000000000
-      internalID: -1525109123524936662
+      spriteID: 679d400092c2d3490800000000000000
+      internalID: -7765001627911267978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_3
+      name: Water_Gate_Earth_Open_3
       rect:
         serializedVersion: 2
         x: 768
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dbf5e7d31202547c0800000000000000
-      internalID: -4087825759631155267
+      spriteID: be732e83f31cebdd0800000000000000
+      internalID: -2468323068471003157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_4
+      name: Water_Gate_Earth_Open_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db73343b9fed0d510800000000000000
-      internalID: 1572001433988052925
+      spriteID: 53b695f534b4eb280800000000000000
+      internalID: -9025693850469307595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_5
+      name: Water_Gate_Earth_Open_5
       rect:
         serializedVersion: 2
         x: 256
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62bee45dba5073f00800000000000000
-      internalID: 1096351269864270630
+      spriteID: 966661fda052656e0800000000000000
+      internalID: -1849249868366322071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_6
+      name: Water_Gate_Earth_Open_6
       rect:
         serializedVersion: 2
         x: 512
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b83e1201d1d7f280800000000000000
-      internalID: -9009501833917482828
+      spriteID: b59dffaadbbfd0670800000000000000
+      internalID: 8506732063209019739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_7
+      name: Water_Gate_Earth_Open_7
       rect:
         serializedVersion: 2
         x: 768
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfe742130eb995b40800000000000000
-      internalID: 5429542212971298555
+      spriteID: f99b60ca4e5fd9000800000000000000
+      internalID: 44461933831043487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_8
+      name: Water_Gate_Earth_Open_8
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72e4aa979b0446120800000000000000
-      internalID: 2406119266277019175
+      spriteID: a8cfef7cf1d758290800000000000000
+      internalID: -7888761596816720758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_9
+      name: Water_Gate_Earth_Open_9
       rect:
         serializedVersion: 2
         x: 256
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85f41713227f4cd70800000000000000
-      internalID: 9062640076406738776
+      spriteID: 4ce53c1777f37a4b0800000000000000
+      internalID: -5429301043529556284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_10
+      name: Water_Gate_Earth_Open_10
       rect:
         serializedVersion: 2
         x: 512
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab03143d4458e2b40800000000000000
-      internalID: 5417413932421820602
+      spriteID: c5e3ab4bee79b8330800000000000000
+      internalID: 3714229369187221084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Water_Gate_Open_11
+      name: Water_Gate_Earth_Open_11
       rect:
         serializedVersion: 2
         x: 768
@@ -381,8 +381,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be84787f599192450800000000000000
-      internalID: 6064406505124743403
+      spriteID: 86afc197910717190800000000000000
+      internalID: -7966463011133261208
       vertices: []
       indices: 
       edges: []
@@ -390,7 +390,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 44e3521556860544aba712dba10498da
+    spriteID: 6c179ecee64fee041ab28fe110195788
     internalID: 0
     vertices: []
     indices: 
@@ -398,18 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Water_Gate_Open_0: 8791556488074775346
-      Water_Gate_Open_1: -7060121207182521291
-      Water_Gate_Open_10: 5417413932421820602
-      Water_Gate_Open_11: 6064406505124743403
-      Water_Gate_Open_2: -1525109123524936662
-      Water_Gate_Open_3: -4087825759631155267
-      Water_Gate_Open_4: 1572001433988052925
-      Water_Gate_Open_5: 1096351269864270630
-      Water_Gate_Open_6: -9009501833917482828
-      Water_Gate_Open_7: 5429542212971298555
-      Water_Gate_Open_8: 2406119266277019175
-      Water_Gate_Open_9: 9062640076406738776
+      Water_Gate_Earth_Open_0: -7307609713927985570
+      Water_Gate_Earth_Open_1: 8006334063784498000
+      Water_Gate_Earth_Open_10: 3714229369187221084
+      Water_Gate_Earth_Open_11: -7966463011133261208
+      Water_Gate_Earth_Open_2: -7765001627911267978
+      Water_Gate_Earth_Open_3: -2468323068471003157
+      Water_Gate_Earth_Open_4: -9025693850469307595
+      Water_Gate_Earth_Open_5: -1849249868366322071
+      Water_Gate_Earth_Open_6: 8506732063209019739
+      Water_Gate_Earth_Open_7: 44461933831043487
+      Water_Gate_Earth_Open_8: -7888761596816720758
+      Water_Gate_Earth_Open_9: -5429301043529556284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
