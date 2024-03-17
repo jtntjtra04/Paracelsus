@@ -51,7 +51,6 @@ public class GameController : MonoBehaviour
     public BossHPSystem boss_hp;
     public JumpEnemyAttack boss_movement;
 
-
     // Death System
     private bool isDeathInProgress = false;
 
@@ -301,7 +300,7 @@ public class GameController : MonoBehaviour
         if (boss != null)
         {
             boss.transform.position = boss_movement.original_position;
-            boss.transform.rotation = quaternion.Euler(0, 0, 0);
+            //boss.transform.rotation = quaternion.Euler(0, 180, 0);
             boss_movement.speed = 0;
         }
 

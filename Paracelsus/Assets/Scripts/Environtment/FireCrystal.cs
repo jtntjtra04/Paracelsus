@@ -23,13 +23,14 @@ public class FireCrystal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Fire")) // if crystal got hit by wind element
+        if (collision.CompareTag("Fire")) // if crystal got hit by fire element
         {
             if (Door != null)
             {
                 if (door_animator != null)
                 {
                     door_animator.SetTrigger("Open"); // play animation
+                    AudioManager.instance.PlaySFX("OpenGate");
                 }
                 Collider2D door_collider = Door.GetComponent<Collider2D>(); //Take Reference from box collider
                 if (door_collider != null)
@@ -40,6 +41,7 @@ public class FireCrystal : MonoBehaviour
 
             polygon_collider.enabled = false;
             anim.SetTrigger("break"); // the crystal also break
+            AudioManager.instance.PlaySFX("CrystalBreak");
         }
     }
     private void CrystalBreak()

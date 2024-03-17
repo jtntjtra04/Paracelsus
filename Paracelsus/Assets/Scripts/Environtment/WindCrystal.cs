@@ -31,6 +31,7 @@ public class WindCrystal : MonoBehaviour
                 if(door_animator != null)
                 {
                     door_animator.SetTrigger("Open");
+                    AudioManager.instance.PlaySFX("OpenGate");
                 }
                 Collider2D door_collider = Door.GetComponent<Collider2D>();
                 if (door_collider != null)
@@ -41,6 +42,7 @@ public class WindCrystal : MonoBehaviour
 
             polygon_collider.enabled = false;
             anim.SetTrigger("break"); // the crystal also break
+            AudioManager.instance.PlaySFX("CrystalBreak");
         }
     }
     private void CrystalBreak()

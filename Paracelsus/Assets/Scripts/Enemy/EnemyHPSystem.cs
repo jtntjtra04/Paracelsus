@@ -23,6 +23,7 @@ public class EnemyHPSystem : MonoBehaviour
     private SlimeAIWrS16 slime_movement_16; // slime movement 16
     public EnemyHealthBar hp_bar;
     private Animator anim;
+    public GameController player_hp;
 
     //audio
     //public AudioSource EnemyAudio;
@@ -46,6 +47,17 @@ public class EnemyHPSystem : MonoBehaviour
         hp_bar.SetHealth(curr_health, health);
         body = GetComponent<Rigidbody2D>();
         box_collider = GetComponent<BoxCollider2D>();
+    }
+    private void Update()
+    {
+        if(player_hp != null)
+        {
+            if(player_hp.currHP <= 0)
+            {
+                curr_health = health;
+                hp_bar.SetHealth(curr_health, health);
+            }
+        }
     }
     public void EnemyTakeDamage(float damage)
     {
