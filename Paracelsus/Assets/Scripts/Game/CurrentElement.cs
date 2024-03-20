@@ -34,7 +34,5 @@ public class CurrentElement : MonoBehaviour
             Icons[currentElement - 1].sprite = ElementIcons[currentElement - 1];
             previousElement = currentElement - 1;
         }
-    }
-
-    
+    }  
 }

@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour
     public float currHP { get; private set; }
 
     // HP Potion
-    private float hpPotion = 3;
+    public float maxPotion = 5f;
+    public float hpPotion = 3f;
 
     // Spawn Positions
     private Vector2 startPosition;
@@ -243,11 +244,12 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(currHP < 3)
+            if (currHP < 3)
             {
                 Heal();
             }
         }
+
         else if (wind_spirit && Input.GetKeyDown(KeyCode.F) && !double_jump)
         {
             double_jump = true;
@@ -273,14 +275,16 @@ public class GameController : MonoBehaviour
             AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
     }
-    void Heal()
+    public void Heal()
     {
         if (hpPotion > 0)
         {
             currHP += 1;
+            hpPotion -= 1;
         }
-        hpPotion -= 1;
     }
+
+
     void SetCheckpoint()
     {
         checkpointPosition = transform.position;

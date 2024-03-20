@@ -46,10 +46,7 @@ public class SwitchSkills : MonoBehaviour
                 CastBarrier();
                 
             }
-            if (barrierPrefabInstance != null)
-            {
-                UpdateWaterBarrierPosition();
-            }
+            
         }else if(current_element == 1)
         {
            if(Input.GetMouseButtonDown(1))
@@ -76,8 +73,12 @@ public class SwitchSkills : MonoBehaviour
                 UpdatePillarDirection();
             }
         }
-        
-         //Debug.Log(" " + IsBarrierActive());
+        if (barrierPrefabInstance != null)
+        {
+            UpdateWaterBarrierPosition();
+        }
+
+        //Debug.Log(" " + IsBarrierActive());
     }
 
     private void CastBarrier()
