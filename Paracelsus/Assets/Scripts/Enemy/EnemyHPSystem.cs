@@ -83,13 +83,13 @@ public class EnemyHPSystem : MonoBehaviour
 
         if (skeleton_movement != null)
         {
-            AudioManager.instance.PlaySFX("SkeletonDeath");
             Debug.Log("Disabled movement");
             skeleton_movement.enabled = false;
             body.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
         if (skeleton_attack != null)
         {
+            AudioManager.instance.PlaySFX("SkeletonDeath");
             Debug.Log("Disables attack");
             skeleton_attack.enabled = false;
         }

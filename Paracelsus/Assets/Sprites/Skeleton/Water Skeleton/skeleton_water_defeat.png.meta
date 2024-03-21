@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: b0465d95eb0cbce40b0075c06d49c0b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5065439524147604126
+    second: skeleton_water_defeat_0
+  - first:
+      213: -1434365894132546553
+    second: skeleton_water_defeat_1
+  - first:
+      213: 1123456855676298017
+    second: skeleton_water_defeat_2
+  - first:
+      213: -3495757767256993725
+    second: skeleton_water_defeat_3
+  - first:
+      213: 6584684149164892250
+    second: skeleton_water_defeat_4
+  - first:
+      213: 7300156696857282398
+    second: skeleton_water_defeat_5
+  - first:
+      213: 4041851585459240381
+    second: skeleton_water_defeat_6
+  - first:
+      213: -1375227700719698392
+    second: skeleton_water_defeat_7
+  - first:
+      213: -5570700265517533199
+    second: skeleton_water_defeat_8
+  - first:
+      213: 5639644695061564393
+    second: skeleton_water_defeat_9
+  - first:
+      213: -1563582769544291489
+    second: skeleton_water_defeat_10
+  - first:
+      213: -160984039824048777
+    second: skeleton_water_defeat_11
+  - first:
+      213: 9220715428889494722
+    second: skeleton_water_defeat_12
+  - first:
+      213: 2759515418414211180
+    second: skeleton_water_defeat_13
+  - first:
+      213: 1110917844054967485
+    second: skeleton_water_defeat_14
+  - first:
+      213: 6879475820930510605
+    second: skeleton_water_defeat_15
+  - first:
+      213: 5665794271224680436
+    second: skeleton_water_defeat_16
+  - first:
+      213: -3274286144803688616
+    second: skeleton_water_defeat_17
+  - first:
+      213: -1312002059731263528
+    second: skeleton_water_defeat_18
+  - first:
+      213: 4820761824383475585
+    second: skeleton_water_defeat_19
+  - first:
+      213: -1397073696233386737
+    second: skeleton_water_defeat_20
+  - first:
+      213: -6034907512615329528
+    second: skeleton_water_defeat_21
+  - first:
+      213: 6492015682474647792
+    second: skeleton_water_defeat_22
+  - first:
+      213: 8490138254354195153
+    second: skeleton_water_defeat_23
+  - first:
+      213: -4967951872812419620
+    second: skeleton_water_defeat_24
+  - first:
+      213: -5753074777166666836
+    second: skeleton_water_defeat_25
+  - first:
+      213: 9132495232687828764
+    second: skeleton_water_defeat_26
+  - first:
+      213: -642716978645977219
+    second: skeleton_water_defeat_27
+  - first:
+      213: -682368960428137125
+    second: skeleton_water_defeat_28
+  - first:
+      213: -8971515093446118186
+    second: skeleton_water_defeat_29
+  - first:
+      213: -8845405649054863212
+    second: skeleton_water_defeat_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skeleton_water_defeat_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f117bc73325c5624cb90398623b510e2
+      internalID: -2096791442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_water_defeat_1
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bafc06569284440ab7f4748df81413
+      internalID: 1752402406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_water_defeat_2
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8ee2ecbbf94b3449d735f924da4f5b
+      internalID: 1296539037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_water_defeat_3
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e820f829ca4fb644b9490db6ea2d8b4
+      internalID: -1812674658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_water_defeat_4
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fbbd5bd75ff004abc3c82037a6cafd
+      internalID: -1182802481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_water_defeat_5
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3484e4c18cbb604999e664551ba1bf4
+      internalID: -249900314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_water_defeat_6
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1299ed1e4453d04ab74ae682cb26da7
+      internalID: 1159469224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_water_defeat_7
+      rect:
+        serializedVersion: 2
+        x: 6272
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a227135ddfb3a4cb5f730ca61a5d78
+      internalID: -1915778744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_water_defeat_8
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 0
+        width: 896
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1c1d0f76b8cad428d3fcfb8970c836
+      internalID: 1299144478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a2dfba3764d3a12428fd49ef353aef80
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      skeleton_water_defeat_0: -2096791442
+      skeleton_water_defeat_1: 1752402406
+      skeleton_water_defeat_2: 1296539037
+      skeleton_water_defeat_3: -1812674658
+      skeleton_water_defeat_4: -1182802481
+      skeleton_water_defeat_5: -249900314
+      skeleton_water_defeat_6: 1159469224
+      skeleton_water_defeat_7: -1915778744
+      skeleton_water_defeat_8: 1299144478
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
