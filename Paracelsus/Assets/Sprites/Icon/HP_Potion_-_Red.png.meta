@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HP_Potion_-_Red_0: 6453172228796724650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
