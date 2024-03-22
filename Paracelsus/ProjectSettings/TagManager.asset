@@ -31,6 +31,7 @@ TagManager:
   - WindSkill
   - FireSkill
   - SlimeKing
+  - HP Potion
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,7 @@ TagManager:
   - Test
   - CameraBounds
   - PlayerProjectile
-  - 
+  - Items
   - 
   - 
   - 
