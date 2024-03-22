@@ -1,8 +1,11 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -45,6 +48,8 @@ public class GameController : MonoBehaviour
 
     // UI
     public GameObject DeathUI;
+    public GameObject EndGameUI;
+    public Image BlackPanel;
 
     // References
     private Animator anim;
@@ -162,6 +167,10 @@ public class GameController : MonoBehaviour
         else if(collision.CompareTag("EarthSpirit"))
         {
             earth_spirit = true;
+        }
+        else if (collision.CompareTag("Ending"))
+        {
+            StartCoroutine(EndGame());
         }
     }
 
@@ -364,6 +373,36 @@ public class GameController : MonoBehaviour
         }
 
         Respawn();
+    }
+    private IEnumerator EndGame()
+    {
+        Image fade_panel = BlackPanel;
+
+        float fade_transition = 4f;
+
+        AudioManager.instance.music_source.Stop();
+
+        float timer = 0f;
+
+        Color startColor = fade_panel.color;
+        Color targetColor = Color.black;
+
+        while (timer < fade_transition)
+        {
+            timer += Time.deltaTime;
+            fade_panel.color = Color.Lerp(startColor, targetColor, timer / fade_transition);
+            yield return null;
+        }
+
+        fade_panel.color = Color.black;
+
+        EndGameUI.SetActive(true);
+
+        while (!Input.GetMouseButtonDown(0))
+        {
+            yield return null;
+        }
+        SceneManager.LoadScene("MainMenu");
     }
     public void KnockBack(Vector2 knockback_direction)
     {
