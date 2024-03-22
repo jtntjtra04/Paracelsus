@@ -1,5 +1,7 @@
+using Ink.Parsed;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SkeletonAI : MonoBehaviour
@@ -85,10 +87,15 @@ public class SkeletonAI : MonoBehaviour
         {
             Vector3 direction = (player.position - transform.position).normalized;
             body.AddForce(direction * pillarForce, ForceMode2D.Force);
-           
-            
+
+
             Debug.Log(Vector2.Distance(transform.position, player.position));
             yield return null;
+
+            EnemyHPSystem enemy_hp = GetComponent<EnemyHPSystem>();
+
+            enemy_hp.EnemyTakeDamage(100);
+
         }
     }
     private bool PlayerDetected()
@@ -122,11 +129,14 @@ public class SkeletonAI : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("WindSkill"))
-        {   
+        {
             body.AddForce(Vector2.up * suspensionForce);
             isSuspended = true;
         }
-        EnemyHPSystem enemy_hp = other.GetComponent<EnemyHPSystem>();
+
+        EnemyHPSystem enemy_hp = GetComponent<EnemyHPSystem>();
+
+        enemy_hp.EnemyTakeDamage(50);
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
