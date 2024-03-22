@@ -30,6 +30,19 @@ public class SwitchSkills : MonoBehaviour
     public float pelletTime = 0.5f;
     public SpriteRenderer pillarFlip;
     public float pillarDistance = 5f;
+    private float windDuration = 5f;
+    private float windTimer = 0f;
+    private float fireDuration = 8f;
+    private float fireTimer = 0f;
+    private float waterDuration = 10f;
+    private float waterTimer = 0f;
+    private float earthDuration = 8f;
+    private float earthTimer = 0f;
+    public bool waterReady =true;
+    public bool fireReady = true;
+    public bool windReady = true;
+    public bool earthReady = true;
+    
   
     void Update()
     {
@@ -41,37 +54,82 @@ public class SwitchSkills : MonoBehaviour
         }
         if(current_element == 2)
         {
-            if(Input.GetMouseButtonDown(1))
+            if (!waterReady)
+            {
+                waterTimer += Time.deltaTime;
+
+            }
+            if (waterTimer >= waterDuration)
+            {
+                waterReady = true;
+                waterTimer = 0.0f;
+            }
+            if(Input.GetMouseButtonDown(1) && waterReady)
             {
                 CastBarrier();
+                waterReady = false;
                 
             }
             
         }else if(current_element == 1)
         {
-           if(Input.GetMouseButtonDown(1))
+            if (!windReady)
+            {
+                windTimer += Time.deltaTime;
+
+            }
+            if (windTimer >= windDuration)
+            {
+                windReady = true;
+                windTimer = 0.0f;
+            }
+           if(Input.GetMouseButtonDown(1) && windReady)
             {
                 CastTornado();
+                windReady = false;
                 
             } 
         }else if(current_element == 4)
         {
-            if (Input.GetMouseButtonDown(1))
+             if (!earthReady)
+            {
+                earthTimer += Time.deltaTime;
+
+            }
+            if (earthTimer >= earthDuration)
+            {
+                earthReady = true;
+                earthTimer = 0.0f;
+            }
+            if (Input.GetMouseButtonDown(1) && earthReady)
             {
                 CastPillar();
+                earthReady = false;
 
             }
-        }else if(current_element == 3)
-        {
-            if (Input.GetMouseButtonDown(1))
-            {
-                CastShotgun();
-
-            }
-            if (pillarPrefabInstance != null)
+             if (pillarPrefabInstance != null)
             {
                 UpdatePillarDirection();
             }
+        }else if(current_element == 3)
+        {
+             if (!fireReady)
+            {
+                fireTimer += Time.deltaTime;
+
+            }
+            if (fireTimer >= fireDuration)
+            {
+                fireReady = true;
+                fireTimer = 0.0f;
+            }
+            if (Input.GetMouseButtonDown(1) && fireReady)
+            {
+                CastShotgun();
+                fireReady = false;
+
+            }
+           
         }
         if (barrierPrefabInstance != null)
         {

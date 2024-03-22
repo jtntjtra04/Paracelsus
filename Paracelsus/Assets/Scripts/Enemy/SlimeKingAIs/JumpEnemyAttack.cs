@@ -5,6 +5,20 @@ using UnityEngine.UI;
 
 public class JumpEnemyAttack : MonoBehaviour
 {
+    [Header("For Skills")]
+    private SwitchSkills skills;
+    private float suspendedGravityScale = 0.5f;
+    private float suspensionDuration = 1f;
+    private bool isSuspended = false;
+    private float suspensionTimer = 0f;
+    [SerializeField] private float suspensionForce;
+    public float StaggerTime = 0.5f;
+    public Transform pillarPosition;
+    public bool isBeingPushed;
+    public float pillarForce = 100f;
+    public float stoppingDistance = 1f;
+    private bool isStaggered;
+   
     [Header("For Patrolling")]
     public float speed;
     private float direction = 1;
@@ -48,6 +62,7 @@ public class JumpEnemyAttack : MonoBehaviour
         anim = GetComponent<Animator>();
         boss_hp = GetComponent<BossHPSystem>();
         original_position = transform.position;
+        skills = FindFirstObjectByType<SwitchSkills>();
     }
     void FixedUpdate()
     {
@@ -58,6 +73,7 @@ public class JumpEnemyAttack : MonoBehaviour
 
         anim.SetBool("PlayerDetected", player_detected && player_hp.currHP > 0);
         anim.SetBool("Grounded", grounded);
+        anim.SetBool("Staggered", isStaggered);
 
         if (!player_detected && grounded)
         {
@@ -83,7 +99,51 @@ public class JumpEnemyAttack : MonoBehaviour
                 }
             }
         }
+         if (isSuspended)
+        {
+            // Adjust gravity scale while suspended
+            body.gravityScale = suspendedGravityScale;
+            suspensionTimer += Time.deltaTime;
+            body.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            if (suspensionTimer >= suspensionDuration)
+            {
+                // Revert gravity scale after suspension duration
+                body.gravityScale = 3f;
+                isSuspended = false;
+                suspensionTimer = 0f;
+                body.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+            }
+        }
+        if(skills.earthFunc == true)
+        {
+            Vector2 enemyDirection = (transform.localScale.x < 0) ? -transform.right : transform.right;
+            StartCoroutine(MoveTowardsPlayer());
+            // StartCoroutine(StaggeredFor(StaggerTime));
+            isStaggered = true;
+            skills.earthFunc = false;
+            isBeingPushed = true;
+        }
+     
+        
     }
+     private IEnumerator MoveTowardsPlayer()
+    {
+        while (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+        {
+            Vector3 direction = (player.position - transform.position).normalized;
+            body.AddForce(direction * pillarForce, ForceMode2D.Force);
+           
+            
+            Debug.Log(Vector2.Distance(transform.position, player.position));
+            yield return null;
+        }
+    }
+    // private IEnumerator StaggeredFor(float duration)
+    // {
+    //     isStaggered = true;
+    //     yield return new WaitForSeconds(duration);
+    //     isStaggered = false;
+    // }
     void Patrolling()
     {
         if (!check_ground || check_wall)
@@ -142,5 +202,18 @@ public class JumpEnemyAttack : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, boss_sight);
+    }
+     private void OnTriggerEnter2D(Collider2D other)
+    {
+        
+        if (other.gameObject.CompareTag("WindSkill"))
+        {   
+            Debug.Log("HIT!");
+            body.AddForce(Vector2.up * suspensionForce);
+            isSuspended = true;
+           
+        }
+
+        EnemyHPSystem enemy_hp = other.GetComponent<EnemyHPSystem>();
     }
 }

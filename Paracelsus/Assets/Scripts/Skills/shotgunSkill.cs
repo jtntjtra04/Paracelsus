@@ -22,6 +22,7 @@ public class shotgunSkill : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyHPSystem enemy_hp = collision.GetComponent<EnemyHPSystem>();
+        BossHPSystem boss_hp = collision.GetComponent<BossHPSystem>();
             
         if (enemy_hp != null)
         {
@@ -32,6 +33,13 @@ public class shotgunSkill : MonoBehaviour
             else if (collision.CompareTag("WindEnemy"))
             {
                 enemy_hp.EnemyTakeDamage(damage * 1.5f);
+            }
+            
+        }else if(boss_hp != null)
+        {
+            if(collision.CompareTag("SlimeKing"))
+            {
+                boss_hp.BossTakeDamage(damage);
             }
         }
     } 
