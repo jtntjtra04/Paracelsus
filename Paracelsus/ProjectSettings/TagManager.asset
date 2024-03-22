@@ -32,6 +32,7 @@ TagManager:
   - FireSkill
   - SlimeKing
   - HP Potion
+  - Ending
   layers:
   - Default
   - TransparentFX
