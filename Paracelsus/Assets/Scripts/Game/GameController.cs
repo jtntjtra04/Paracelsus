@@ -21,10 +21,14 @@ public class GameController : MonoBehaviour
     private bool canSetCheckpoint = false;
 
     // Spirit
-    private bool wind_spirit = false;
+    private bool wind_spirit = false; // for temporary element
     private bool fire_spirit = false;
     private bool water_spirit = false;
     private bool earth_spirit = false;
+    public bool permanent_wind = false; // for permanent element
+    public bool permanent_fire = false;
+    public bool permanent_water = false;
+    public bool permanent_earth = false;
 
     // Player Ability
     public bool double_jump = false; // double jump locked
@@ -51,6 +55,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject boss;
     public BossHPSystem boss_hp;
     public JumpEnemyAttack boss_movement;
+    private ElementSwitching element;
 
     // Death System
     private bool isDeathInProgress = false;
@@ -71,6 +76,7 @@ public class GameController : MonoBehaviour
         player_attack = GetComponent<PlayerAttack>();
         body = GetComponent<Rigidbody2D>();
         barrier = GetComponent<SwitchSkills>();
+        element = GetComponent<ElementSwitching>();
         if (barrier == null)
         {
             Debug.Log("Barrier GameObject is null in GameController!");
@@ -249,28 +255,36 @@ public class GameController : MonoBehaviour
                 Heal();
             }
         }
-
-        else if (wind_spirit && Input.GetKeyDown(KeyCode.F) && !double_jump)
+        // spirit mechanic
+        if (wind_spirit && Input.GetKeyDown(KeyCode.F) && !double_jump)
         {
             double_jump = true;
+            permanent_wind = true; // unlock permanent element
+            element.wind_element = true;
             Debug.Log("Double Jump Ability Unlocked");
             AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
-        else if (water_spirit && Input.GetKeyDown(KeyCode.F) && !glide)
+        if (water_spirit && Input.GetKeyDown(KeyCode.F) && !glide)
         {
             glide = true;
+            permanent_water = true;
+            element.water_element = true;
             Debug.Log("Glide Ability Unlocked");
             AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
-        else if (fire_spirit && Input.GetKeyDown(KeyCode.F) && !dash)
+        if (fire_spirit && Input.GetKeyDown(KeyCode.F) && !dash)
         {
             dash = true;
+            permanent_fire = true;
+            element.fire_element = true;
             Debug.Log("Dash Ability Unlocked");
             AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
-        else if (earth_spirit && Input.GetKeyDown(KeyCode.F) && !stomp)
+        if (earth_spirit && Input.GetKeyDown(KeyCode.F) && !stomp)
         {
             stomp = true;
+            permanent_earth = true;
+            element.earth_element = true;
             Debug.Log("Stomp Ability Unlocked");
             AudioManager.instance.PlaySFX("AbilityUnlocked");
         }

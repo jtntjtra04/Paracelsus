@@ -14,25 +14,32 @@ public class ElementSwitching : MonoBehaviour
     private bool water_pillar = false;
 
     // fire element
-    private bool fire_element = false;
+    public bool fire_element = false;
     private float fire_timer = 0f;
     private float fire_duration = 60f;
 
     //wind element
-    private bool wind_element = false;
+    public bool wind_element = false;
     private float wind_timer = 0f;
     private float wind_duration = 60f;
 
     //earth element
-    private bool earth_element = false;
+    public bool earth_element = false;
     private float earth_timer = 0f;
     private float earth_duration = 60f;
 
     //water element
-    private bool water_element = false;
+    public bool water_element = false;
     private float water_timer = 0f;
     private float water_duration = 60f;
 
+    //References
+    private GameController spirit; // to use permanent element
+
+    private void Awake()
+    {
+        spirit = GetComponent<GameController>(); // spirit
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("FirePillar"))
@@ -94,7 +101,7 @@ public class ElementSwitching : MonoBehaviour
         {
             fire_timer -= Time.deltaTime; // reduce the timer
 
-            if (fire_timer <= 0)
+            if (fire_timer <= 0 && !spirit.permanent_fire) // if timer 0 or permanent element still locked
             {
                 SwitchElement(5); // switch back to neutral element
                 fire_element = false; // set to false again so it doesn't infinite loop
@@ -104,7 +111,7 @@ public class ElementSwitching : MonoBehaviour
         {
             wind_timer -= Time.deltaTime;
 
-            if(wind_timer <= 0)
+            if(wind_timer <= 0 && !spirit.permanent_wind)
             {
                 SwitchElement(5);
                 wind_element = false;
@@ -114,7 +121,7 @@ public class ElementSwitching : MonoBehaviour
         {
             earth_timer -= Time.deltaTime;
 
-            if (earth_timer <= 0)
+            if (earth_timer <= 0 && !spirit.permanent_fire)
             {
                 SwitchElement(5);
                 earth_element = false;
@@ -124,7 +131,7 @@ public class ElementSwitching : MonoBehaviour
         {
             water_timer -= Time.deltaTime;
 
-            if(water_timer <= 0)
+            if(water_timer <= 0 && !spirit.permanent_water)
             {
                 SwitchElement(5);
                 water_element = false;
