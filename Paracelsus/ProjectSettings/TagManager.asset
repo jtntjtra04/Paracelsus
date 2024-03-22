@@ -47,7 +47,7 @@ TagManager:
   - PlayerProjectile
   - Items
   - PostProcess
-  - 
+  - Slime
   - 
   - 
   - 
@@ -75,4 +75,13 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 4108010597
+    locked: 0
+  - name: Player
+    uniqueID: 1257207547
+    locked: 0
+  - name: Enemies
+    uniqueID: 4140707893
+    locked: 0
+  - name: Traps
+    uniqueID: 2261270543
     locked: 0
