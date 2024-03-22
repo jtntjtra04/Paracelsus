@@ -70,12 +70,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: HP UI
-    uniqueID: 1119848603
-    locked: 0
-  - name: UI
-    uniqueID: 4108010597
-    locked: 0
   - name: Player
     uniqueID: 1257207547
     locked: 0
@@ -84,4 +78,10 @@ TagManager:
     locked: 0
   - name: Traps
     uniqueID: 2261270543
+    locked: 0
+  - name: HP UI
+    uniqueID: 1119848603
+    locked: 0
+  - name: UI
+    uniqueID: 4108010597
     locked: 0
