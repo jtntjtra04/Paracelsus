@@ -377,10 +377,9 @@ public class GameController : MonoBehaviour
     }
     private IEnumerator EndGame()
     {
-        DialogueManager.CutscenePlay = true;
         FadeBox.Play("FadeOut");
         yield return new WaitForSeconds(5);
-
+        DialogueManager.CutscenePlay = true;
         AudioManager.instance.music_source.Stop();
 
         EndGameUI.SetActive(true);
@@ -392,6 +391,7 @@ public class GameController : MonoBehaviour
             yield return null;
         }
         DialogueManager.CutscenePlay = false;
+        AudioManager.instance.music_source.Stop();
         SceneManager.LoadScene("MainMenu");
     }
     public void KnockBack(Vector2 knockback_direction)

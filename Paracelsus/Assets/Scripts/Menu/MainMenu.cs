@@ -7,7 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     private void Start()
     {
-        AudioManager.instance.PlayMusic("TitleMusic");
+        /*AudioManager.instance.music_source.Stop();
+        AudioManager.instance.PlayMusic("TitleMusic");*/
     }
     public void PlayGame()
     {
