@@ -304,6 +304,7 @@ public class GameController : MonoBehaviour
         {
             currHP += 1;
             hpPotion -= 1;
+            AudioManager.instance.PlaySFX("PotionDrink");
         }
     }
 
