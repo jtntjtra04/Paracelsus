@@ -169,6 +169,7 @@ public class JumpEnemyAttack : MonoBehaviour
         {
             body.AddForce(new Vector2(distance, jump_height), ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
+            AudioManager.instance.PlaySFX("SlimeKingJump");
         }
         speed = 10;
     }

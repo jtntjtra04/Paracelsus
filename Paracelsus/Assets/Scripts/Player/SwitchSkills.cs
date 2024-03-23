@@ -141,11 +141,13 @@ public class SwitchSkills : MonoBehaviour
 
     private void CastBarrier()
     {
+        
          if (barrierPrefabInstance == null)
         {
             // Instantiate water barrier prefab
             barrierPrefabInstance = Instantiate(barrierPrefab, transform.position, Quaternion.identity);
             barrierTime += Time.deltaTime;
+            AudioManager.instance.PlaySFX("WaterSkill");
             // Adjust the position so it's in front of the player
             Vector3 offset = new Vector3(0f, 0f, 1f);
             barrierPrefabInstance.transform.position += offset;
@@ -175,6 +177,7 @@ public class SwitchSkills : MonoBehaviour
         {
             tornadoPrefabInstance = Instantiate(tornadoPrefab, firepoint.position, Quaternion.identity);
             Rigidbody2D tornadoRigidbody = tornadoPrefabInstance.GetComponent<Rigidbody2D>();
+            AudioManager.instance.PlaySFX("WindSkill");
 
              
 
@@ -244,6 +247,7 @@ public class SwitchSkills : MonoBehaviour
             transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
             pelletPrefabInstance = Instantiate(pelletPrefab, firepoint.position, Quaternion.identity);
             Rigidbody2D pelletRb = pelletPrefabInstance.GetComponent<Rigidbody2D>();
+            AudioManager.instance.PlaySFX("FireSkill");
 
             float playerScaleX = transform.localScale.x;
             

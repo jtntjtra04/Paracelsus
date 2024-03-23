@@ -60,6 +60,7 @@ public class PlayerAttack : MonoBehaviour
     {
         anim.SetTrigger("attack");
         cooldown_timer = 0;
+        AudioManager.instance.PlaySFX("CelsusAttack");
 
         loop_fire = Instantiate(elements[current_element], firepoint.position, Quaternion.identity);
         loop_fire.GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
