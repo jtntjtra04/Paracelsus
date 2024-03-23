@@ -68,6 +68,9 @@ public class BossHPSystem : MonoBehaviour
         }
         yield return new WaitForSeconds(7.2f);
 
+        AudioManager.instance.music_source.Stop();
+        AudioManager.instance.PlayMusic("Theme");
+
         BossDie();
     }
     public void BossDie()

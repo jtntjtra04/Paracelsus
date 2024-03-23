@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1185576599951667564}
   - component: {fileID: 543760962311054519}
   - component: {fileID: 7574778793999179888}
+  - component: {fileID: 5075717241034488964}
   m_Layer: 10
   m_Name: Waterball
   m_TagString: Water
@@ -199,3 +200,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   damage: 75
+--- !u!114 &5075717241034488964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047904836305640733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff98cbacbb22324f9abdd42c6085ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

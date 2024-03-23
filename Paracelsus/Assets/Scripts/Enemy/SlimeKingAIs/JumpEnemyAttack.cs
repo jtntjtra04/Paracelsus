@@ -55,6 +55,7 @@ public class JumpEnemyAttack : MonoBehaviour
     [SerializeField] private GameObject ExitBossGate;
     [SerializeField] private Animator EntryBossGate_anim;
     [SerializeField] private Animator ExitBossGate_anim;
+    private bool PlayBossMusic = false;
 
     void Start()
     {
@@ -88,6 +89,7 @@ public class JumpEnemyAttack : MonoBehaviour
                 EntryBossGate_anim.SetTrigger("Rise");
                 ExitBossGate_anim.SetTrigger("Rise");
                 speed = 0;
+                AudioManager.instance.music_source.Stop();
             }
             else
             {
@@ -96,6 +98,11 @@ public class JumpEnemyAttack : MonoBehaviour
                     boss_hp.boss_healthbar.gameObject.SetActive(true);
                     EntryBossGate_anim.SetTrigger("Fall");
                     ExitBossGate_anim.SetTrigger("Fall");
+                    if(!PlayBossMusic)
+                    {
+                        AudioManager.instance.PlayMusic("slimeboss");
+                        PlayBossMusic = true;
+                    }
                 }
             }
         }

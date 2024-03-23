@@ -1104,6 +1104,8 @@ MonoBehaviour:
   music_sound:
   - name: Theme
     clip: {fileID: 8300000, guid: 6b43692b9e6522248bdd9113c6b36777, type: 3}
+  - name: TitleMusic
+    clip: {fileID: 8300000, guid: 6f887ae47bc65974f98fe724e28729ff, type: 3}
   sfx_sound:
   - name: CelsusDeath
     clip: {fileID: 8300000, guid: 8f9415754d4670a4e87039ee782a1475, type: 3}

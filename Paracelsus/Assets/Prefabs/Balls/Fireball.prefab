@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6365585752753310283}
   - component: {fileID: 1776590878765494443}
   - component: {fileID: 3523946954204619536}
+  - component: {fileID: -1312010534423480869}
   m_Layer: 10
   m_Name: Fireball
   m_TagString: Fire
@@ -199,3 +200,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   damage: 75
+--- !u!114 &-1312010534423480869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083175539199450509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff98cbacbb22324f9abdd42c6085ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
     // UI
     public GameObject DeathUI;
     public GameObject EndGameUI;
-    public Image BlackPanel;
+    public Animator FadeBox;
 
     // References
     private Animator anim;
@@ -377,32 +377,21 @@ public class GameController : MonoBehaviour
     }
     private IEnumerator EndGame()
     {
-        Image fade_panel = BlackPanel;
-
-        float fade_transition = 4f;
+        DialogueManager.CutscenePlay = true;
+        FadeBox.Play("FadeOut");
+        yield return new WaitForSeconds(5);
 
         AudioManager.instance.music_source.Stop();
 
-        float timer = 0f;
-
-        Color startColor = fade_panel.color;
-        Color targetColor = Color.black;
-
-        while (timer < fade_transition)
-        {
-            timer += Time.deltaTime;
-            fade_panel.color = Color.Lerp(startColor, targetColor, timer / fade_transition);
-            yield return null;
-        }
-
-        fade_panel.color = Color.black;
-
         EndGameUI.SetActive(true);
+        FadeBox.Play("FadeIn");
+        AudioManager.instance.PlayMusic("EndingMusic");
 
         while (!Input.GetMouseButtonDown(0))
         {
             yield return null;
         }
+        DialogueManager.CutscenePlay = false;
         SceneManager.LoadScene("MainMenu");
     }
     public void KnockBack(Vector2 knockback_direction)

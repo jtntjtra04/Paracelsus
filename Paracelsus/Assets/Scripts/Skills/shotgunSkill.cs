@@ -34,8 +34,32 @@ public class shotgunSkill : MonoBehaviour
             {
                 enemy_hp.EnemyTakeDamage(damage * 1.5f);
             }
-            
-        }else if(boss_hp != null)
+            else if (collision.CompareTag("WaterEnemy"))
+            {
+                enemy_hp.EnemyTakeDamage(damage);
+            }
+            else if (collision.CompareTag("EarthEnemy"))
+            {
+                enemy_hp.EnemyTakeDamage(damage);
+            }
+            else if (collision.CompareTag("WindSlime"))
+            {
+                enemy_hp.EnemyTakeDamage(damage * 1.5f);
+            }
+            else if (collision.CompareTag("FireSlime"))
+            {
+                enemy_hp.EnemyTakeDamage(damage * 0.75f);
+            }
+            else if (collision.CompareTag("WaterSlime"))
+            {
+                enemy_hp.EnemyTakeDamage(damage);
+            }
+            else if (collision.CompareTag("EarthSlime"))
+            {
+                enemy_hp.EnemyTakeDamage(damage);
+            }
+        }
+        else if(boss_hp != null)
         {
             if(collision.CompareTag("SlimeKing"))
             {

@@ -26,7 +26,7 @@ public class CurrentElement : MonoBehaviour
                 
                 if(currentElement == 1)
                 {
-                    Icons[4].sprite = BWIcons[4];
+                    /*Icons[4].sprite = BWIcons[4];*/
                     Icons[0].sprite = ElementIcons[0];
                     
                 }else
@@ -38,7 +38,7 @@ public class CurrentElement : MonoBehaviour
                 else
                 {
                     Icons[0].sprite  = OriginalIcons[0];
-                    Icons[4].sprite = ElementIcons[4];
+                    /*Icons[4].sprite = ElementIcons[4];*/
                 
                 }
             }else
@@ -61,7 +61,7 @@ public class CurrentElement : MonoBehaviour
                 
                 if(currentElement == 2)
                 {
-                    Icons[4].sprite = BWIcons[4];
+                    /*Icons[4].sprite = BWIcons[4];*/
                     Icons[1].sprite = ElementIcons[1];
                 }else
                 {
@@ -71,7 +71,7 @@ public class CurrentElement : MonoBehaviour
                 else
                 {
                     Icons[1].sprite  = OriginalIcons[1];
-                    Icons[4].sprite = ElementIcons[4];
+                    /*Icons[4].sprite = ElementIcons[4];*/
                 }
             }else
             {
@@ -92,7 +92,7 @@ public class CurrentElement : MonoBehaviour
                 
                 if(currentElement == 3)
                 {
-                    Icons[4].sprite = ElementIcons[4];
+                    /*Icons[4].sprite = ElementIcons[4];*/
                     Icons[2].sprite = ElementIcons[2];
                 }else
                 {
@@ -113,7 +113,14 @@ public class CurrentElement : MonoBehaviour
                 }
             }else
             {
-                Icons[2].sprite = CDIcons[2];
+                if (Element.fire_element)
+                {
+                    Icons[2].sprite = CDIcons[2];
+                }
+                else
+                {
+                    Icons[2].sprite = OriginalIcons[2];
+                }
             }
            
             //---------------------------------------------------------------
@@ -121,20 +128,23 @@ public class CurrentElement : MonoBehaviour
             {
                 if (Element.earth_element) // check if element is active
                 {
-                if(currentElement == 4)
-                {
-                    Icons[4].sprite = ElementIcons[4];
-                    Icons[3].sprite = ElementIcons[3];
-                }else
-                {
-                    Icons[3].sprite = BWIcons[3];
+                    if(currentElement == 4)
+                    {
+                        /*Icons[4].sprite = ElementIcons[4];*/
+                        Icons[3].sprite = ElementIcons[3];
+                    }
+                    else
+                    {
+                        Icons[3].sprite = BWIcons[3];
+                    }
                 }
-            }
             else
             {
                 Icons[3].sprite  = OriginalIcons[3];
             }
-            }else
+            }
+
+            else
             {
                 if(Element.earth_element)
                 {
@@ -144,7 +154,17 @@ public class CurrentElement : MonoBehaviour
                     Icons[3].sprite  = OriginalIcons[3];
                 }
             }
-           
+            if(currentElement == 5)
+            {
+                /*Icons[4].sprite = ElementIcons[4];*/
+                 Icons[4].sprite = ElementIcons[4];
+                
+            }
+            else
+            {
+                Icons[4].sprite = BWIcons[4];
+            }
+
         } 
     
 
