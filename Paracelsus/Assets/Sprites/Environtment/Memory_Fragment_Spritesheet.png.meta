@@ -1,0 +1,299 @@
+fileFormatVersion: 2
+guid: ce040b1bf3613d54296634d5faaad230
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2665303694889693042
+    second: Memory_Fragment_Spritesheet_0
+  - first:
+      213: -8794068892445717962
+    second: Memory_Fragment_Spritesheet_1
+  - first:
+      213: 5211296488217255781
+    second: Memory_Fragment_Spritesheet_2
+  - first:
+      213: 5746541307056022548
+    second: Memory_Fragment_Spritesheet_3
+  - first:
+      213: 6959310326919420453
+    second: Memory_Fragment_Spritesheet_4
+  - first:
+      213: 759410472837026539
+    second: Memory_Fragment_Spritesheet_5
+  - first:
+      213: -6153272194708256110
+    second: Memory_Fragment_Spritesheet_6
+  - first:
+      213: -9056999279749448484
+    second: Memory_Fragment_Spritesheet_7
+  - first:
+      213: -1189361634053015775
+    second: Memory_Fragment_Spritesheet_8
+  - first:
+      213: -1468273999433147148
+    second: Memory_Fragment_Spritesheet_9
+  - first:
+      213: -4831517864996014463
+    second: Memory_Fragment_Spritesheet_10
+  - first:
+      213: 5318670585088481329
+    second: Memory_Fragment_Spritesheet_11
+  - first:
+      213: 6816908727812664812
+    second: Memory_Fragment_Spritesheet_12
+  - first:
+      213: 2820608250806059608
+    second: Memory_Fragment_Spritesheet_13
+  - first:
+      213: 1771777795193973694
+    second: Memory_Fragment_Spritesheet_14
+  - first:
+      213: 7929095197644791903
+    second: Memory_Fragment_Spritesheet_15
+  - first:
+      213: -6289939101565252921
+    second: Memory_Fragment_Spritesheet_16
+  - first:
+      213: -3637111927719501881
+    second: Memory_Fragment_Spritesheet_17
+  - first:
+      213: 4245109557311293622
+    second: Memory_Fragment_Spritesheet_18
+  - first:
+      213: -6094006301247988505
+    second: Memory_Fragment_Spritesheet_19
+  - first:
+      213: -688134965492411118
+    second: Memory_Fragment_Spritesheet_20
+  - first:
+      213: -7944237722121040843
+    second: Memory_Fragment_Spritesheet_21
+  - first:
+      213: 7287058663606954160
+    second: Memory_Fragment_Spritesheet_22
+  - first:
+      213: -8707974356873038213
+    second: Memory_Fragment_Spritesheet_23
+  - first:
+      213: -476235465993740958
+    second: Memory_Fragment_Spritesheet_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Memory_Fragment_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33953df7ad901a548b7072ee0ee72cf2
+      internalID: -1680882563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory_Fragment_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa280f3f42e66a8408f151c40a291295
+      internalID: -173630209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory_Fragment_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823ea433ce2e41d479c0536e36a910ef
+      internalID: -846819644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory_Fragment_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c098b3b3ced1064aaecf7cec396cae7
+      internalID: 544330193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory_Fragment_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9dd44aae7c0ee408fe64da6755d8a8
+      internalID: 1600234666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 71676965f6135f44399ef9b1f5d09aef
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Memory_Fragment_Spritesheet_0: -1680882563
+      Memory_Fragment_Spritesheet_1: -173630209
+      Memory_Fragment_Spritesheet_2: -846819644
+      Memory_Fragment_Spritesheet_3: 544330193
+      Memory_Fragment_Spritesheet_4: 1600234666
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

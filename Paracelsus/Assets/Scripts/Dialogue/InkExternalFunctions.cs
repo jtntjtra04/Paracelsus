@@ -22,7 +22,7 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("Music");
         story.UnbindExternalFunction("Flashback");
         story.UnbindExternalFunction("SE");
-         story.UnbindExternalFunction("Effect");
+        story.UnbindExternalFunction("Effect");
     }
 
 

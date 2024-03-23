@@ -6,7 +6,7 @@ using UnityEngine;
 //yield return new WaitForSeconds(5);
 //FadeBox.Play("FadeOut");
 //FadeBox.Play("FadeIn");
-public class Prologue : MonoBehaviour
+public class SylphMeet : MonoBehaviour
 {
 
     [Header("Background Animator")]
@@ -25,22 +25,25 @@ public class Prologue : MonoBehaviour
         AudioManager.instance.music_source.Stop();
         flashbackAnimator.Play("Double");
         backgroundAnimator.Play("burn");
-        StartCoroutine(Flow());
+        StartCoroutine(Meeting());
     }
 
 
 
-    IEnumerator Flow()
+    IEnumerator Meeting()
    {
+    yield return new WaitForSeconds(5);
         DialogueManager.CutscenePlay = true;
 
-        yield return new WaitForSeconds(7);
-        AudioManager.instance.PlayMusic("fire");
-        FadeBox.Play("FadeIn");
-        yield return new WaitForSeconds(3);
+     
         DialogueManager.GetInstance().EnterDialogueMode(scene1, backgroundAnimator, flashbackAnimator, effectAnimator);
    
        
+
+
+
+
+
         DialogueManager.CutscenePlay = false;
 
     }
