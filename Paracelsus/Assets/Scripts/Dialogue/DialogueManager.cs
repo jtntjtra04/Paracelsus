@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         }
            instance = this;
        
-     //   inkExternalFunctions = new InkExternalFunctions();
+        inkExternalFunctions = new InkExternalFunctions();
         audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
@@ -100,18 +100,23 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON, Animator backgroundAnimator,Animator FlashbackAnimator, Animator effectAnimator)
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-       // inkExternalFunctions.Bind(currentStory);
+      
+
+
+        inkExternalFunctions.Bind(currentStory, backgroundAnimator,FlashbackAnimator, effectAnimator);
 
 
         displayNameText.text = "???";
         portraitAnimator.Play("default");
         layoutAnimator.Play("blank");
+      
+        
 
         ContinueStory();
 
@@ -128,7 +133,9 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
-       // inkExternalFunctions.Unbind(currentStory);
+       inkExternalFunctions.Unbind(currentStory);
+
+       
        
 
         dialogueIsPlaying = false;
@@ -145,9 +152,23 @@ public class DialogueManager : MonoBehaviour
                 StopCoroutine(displayLineCoroutine);
             }
 
-            displayLineCoroutine =  StartCoroutine(DisplayLine(currentStory.Continue()));
+            string nextLine = currentStory.Continue();
+            // handle case where the last line is an external function
+            if (nextLine.Equals("") && !currentStory.canContinue)
+            {
+                StartCoroutine(ExitDialogueMode());
+            }
+            // otherwise, handle the normal case for continuing the story
+            else 
+            {
+                // handle tags
+                HandleTags(currentStory.currentTags);
+                displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
+            }
 
-            HandleTags(currentStory.currentTags);
+       //     displayLineCoroutine =  StartCoroutine(DisplayLine(currentStory.Continue()));
+
+         //   HandleTags(currentStory.currentTags);
         }
         else
         {

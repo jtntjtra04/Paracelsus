@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        PlayMusic("Theme"); // When game start play theme
+      //  PlayMusic("Theme"); // When game start play theme
     }
     public void PlayMusic(string name) //Call this function from any script u want to add music
     {

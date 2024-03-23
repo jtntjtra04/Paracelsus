@@ -2,13 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DialogueTestting : MonoBehaviour
 {
 
-    [Header("waittest1")]
+     [Header("Background Animator")]
+    [SerializeField] private Animator backgroundAnimator;
+
+    [SerializeField] private Animator FlashbackAnimator;
+    [SerializeField] private Animator effectAnimator;
+
+
     [SerializeField] private TextAsset waittest1;
 
-    [Header("waittest2")]
+  
     [SerializeField] private TextAsset waittest2;
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -24,11 +31,11 @@ public class DialogueTestting : MonoBehaviour
    {
         DialogueManager.CutscenePlay = true;
 
-       DialogueManager.GetInstance().EnterDialogueMode(waittest1);
+       DialogueManager.GetInstance().EnterDialogueMode(waittest1, backgroundAnimator,FlashbackAnimator,effectAnimator);
 
         yield return new WaitForSeconds(5);
 
-        DialogueManager.GetInstance().EnterDialogueMode(waittest2);
+        DialogueManager.GetInstance().EnterDialogueMode(waittest2, backgroundAnimator,FlashbackAnimator,effectAnimator);
 
         DialogueManager.CutscenePlay = false;
 

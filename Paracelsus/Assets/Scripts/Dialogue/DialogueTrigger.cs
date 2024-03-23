@@ -10,6 +10,11 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
+     [Header("Background Animator")]
+    [SerializeField] private Animator backgroundAnimator;
+     [SerializeField] private Animator flashbackAnimator;
+     [SerializeField] private Animator effectAnimator;
+
 
 
     private bool playerInRange;
@@ -27,7 +32,7 @@ public class DialogueTrigger : MonoBehaviour
             visualCue.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON, backgroundAnimator, flashbackAnimator,effectAnimator);
             }
         }
         else

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bossroom_shield_0: 8309482128559905997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
