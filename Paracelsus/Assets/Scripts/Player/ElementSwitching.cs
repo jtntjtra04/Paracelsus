@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ElementSwitching : MonoBehaviour
 {
-    private int current_element;
+    private int current_element = 5;
 
     //pillars
     private bool fire_pillar = false; 

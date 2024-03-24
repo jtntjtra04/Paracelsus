@@ -54,16 +54,7 @@ public class SwitchSkills : MonoBehaviour
         }
         if(current_element == 2)
         {
-            if (!waterReady)
-            {
-                waterTimer += Time.deltaTime;
-
-            }
-            if (waterTimer >= waterDuration)
-            {
-                waterReady = true;
-                waterTimer = 0.0f;
-            }
+            
             if(Input.GetMouseButtonDown(1) && waterReady)
             {
                 CastBarrier();
@@ -73,16 +64,7 @@ public class SwitchSkills : MonoBehaviour
             
         }else if(current_element == 1)
         {
-            if (!windReady)
-            {
-                windTimer += Time.deltaTime;
-
-            }
-            if (windTimer >= windDuration)
-            {
-                windReady = true;
-                windTimer = 0.0f;
-            }
+           
            if(Input.GetMouseButtonDown(1) && windReady)
             {
                 CastTornado();
@@ -91,16 +73,7 @@ public class SwitchSkills : MonoBehaviour
             } 
         }else if(current_element == 4)
         {
-             if (!earthReady)
-            {
-                earthTimer += Time.deltaTime;
-
-            }
-            if (earthTimer >= earthDuration)
-            {
-                earthReady = true;
-                earthTimer = 0.0f;
-            }
+            
             if (Input.GetMouseButtonDown(1) && earthReady)
             {
                 CastPillar();
@@ -113,17 +86,7 @@ public class SwitchSkills : MonoBehaviour
             }
         }else if(current_element == 3)
         {
-             if (!fireReady)
-            {
-                fireTimer += Time.deltaTime;
-
-            }
-            if (fireTimer >= fireDuration)
-            {
-                fireReady = true;
-                fireTimer = 0.0f;
-            }
-            if (Input.GetMouseButtonDown(1) && fireReady)
+           if (Input.GetMouseButtonDown(1) && fireReady)
             {
                 CastShotgun();
                 fireReady = false;
@@ -135,6 +98,52 @@ public class SwitchSkills : MonoBehaviour
         {
             UpdateWaterBarrierPosition();
         }
+
+        //Cooldown Water Skill
+        if (!waterReady)
+            {
+                waterTimer += Time.deltaTime;
+
+            }
+            if (waterTimer >= waterDuration)
+            {
+                waterReady = true;
+                waterTimer = 0.0f;
+            }
+        //Cooldown Wind Skill
+         if (!windReady)
+            {
+                windTimer += Time.deltaTime;
+
+            }
+            if (windTimer >= windDuration)
+            {
+                windReady = true;
+                windTimer = 0.0f;
+            }
+        //Cooldown Earth Skill
+         if (!earthReady)
+            {
+                earthTimer += Time.deltaTime;
+
+            }
+            if (earthTimer >= earthDuration)
+            {
+                earthReady = true;
+                earthTimer = 0.0f;
+            }
+        //Cooldown Fire Skill
+         if (!fireReady)
+            {
+                fireTimer += Time.deltaTime;
+
+            }
+            if (fireTimer >= fireDuration)
+            {
+                fireReady = true;
+                fireTimer = 0.0f;
+            }
+         
 
         //Debug.Log(" " + IsBarrierActive());
     }

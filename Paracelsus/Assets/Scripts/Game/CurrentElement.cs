@@ -9,7 +9,7 @@ public class CurrentElement : MonoBehaviour
     public Sprite[] CDIcons; 
     private Sprite[] PreviousIcon;
     private int currentElement = 0; // Assuming 0 is the default element 
-    private int previousElement = -1; // Initialize to an invalid element index 
+    
     [SerializeField] private ElementSwitching Element; 
     [SerializeField] private SwitchSkills Skills;
 
@@ -90,26 +90,20 @@ public class CurrentElement : MonoBehaviour
                 if (Element.fire_element) // check if element is active
                 {
                 
-                if(currentElement == 3)
-                {
-                    /*Icons[4].sprite = ElementIcons[4];*/
-                    Icons[2].sprite = ElementIcons[2];
-                }else
-                {
-                    Icons[2].sprite = BWIcons[2];
-                }
-            
+                    if(currentElement == 3)
+                    {
+                        /*Icons[4].sprite = ElementIcons[4];*/
+                        Icons[2].sprite = ElementIcons[2];
+                    }else
+                    {
+                        Icons[2].sprite = BWIcons[2];
+                    }
+                
                 }
                 else
                 {
-                if(Element.fire_element)
-                {
-                    Icons[2].sprite = CDIcons[2];
-                }else
-                {
                     Icons[2].sprite  = OriginalIcons[2];
-                }
-                
+                    
                 }
             }else
             {
@@ -138,10 +132,10 @@ public class CurrentElement : MonoBehaviour
                         Icons[3].sprite = BWIcons[3];
                     }
                 }
-            else
-            {
-                Icons[3].sprite  = OriginalIcons[3];
-            }
+                else
+                {
+                    Icons[3].sprite  = OriginalIcons[3];
+                }
             }
 
             else
