@@ -4,7 +4,9 @@ EXTERNAL Flashback(state)
 EXTERNAL SE(SEName)
 EXTERNAL Effect(EName)
 
-"A small green fairy is floating in the air." #layout:blank
+A small green fairy is floating in the air. #layout:blank
+
+It seems like she's playing, with the wind?
 
 "Excuse me... Are you Sylph, one of the four elemental spirits?" #layout:no #speaker:Celsus
 
@@ -50,13 +52,13 @@ I hold out my hand, and as Sylph touches it, a slight breeze can be felt and a w
 "!!!" #speaker:Celsus #layout:no
 I can feel it, the breeze around me. I can hear the wind whispering to me...#layout:blank
 Every sound, every movement. They told me everything...
-My body feels light, as if I'm one with the wind itself...
+My body feels light, it's like a weight has been lifted off my shoulders, as if I'm one with the wind itself...
 So this is the power of a spirit...
 "Hmm~ This is nostalgic♪" #speaker:Sylph #layout:no
 "Now then."
 "I am Sylph, the Playful Wind."
 "From now on, my wind will dance for you."
-"Let's play together! Celsus! Tihihi♪"
+"Let's play together! Celsus! hihi♪"
 
 
 
