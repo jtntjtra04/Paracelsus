@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
-public class AudioManager : MonoBehaviour
+public class MainMenuAudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    public static MainMenuAudioManager instance;
     public Sound[] music_sound, sfx_sound;
     public AudioSource music_source, sfx_source;
     private void Awake()
     {
-        if(instance == null) // to make things easier (easier to access)
+        if (instance == null) // to make things easier (easier to access)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        //PlayMusic("TitleMusic"); // When game start play theme
+        PlayMusic("TitleMusic"); // When game start play theme
     }
     public void PlayMusic(string name) //Call this function from any script u want to add music
     {
