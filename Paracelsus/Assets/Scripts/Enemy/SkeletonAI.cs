@@ -136,7 +136,7 @@ public class SkeletonAI : MonoBehaviour
 
         EnemyHPSystem enemy_hp = GetComponent<EnemyHPSystem>();
 
-        enemy_hp.EnemyTakeDamage(50);
+        enemy_hp.EnemyTakeDamage(150);
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
