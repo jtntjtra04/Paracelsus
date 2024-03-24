@@ -128,15 +128,14 @@ public class SkeletonAI : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        EnemyHPSystem enemy_hp = GetComponent<EnemyHPSystem>();
+
         if (other.gameObject.CompareTag("WindSkill"))
         {
             body.AddForce(Vector2.up * suspensionForce);
             isSuspended = true;
+            enemy_hp.EnemyTakeDamage(150);
         }
-
-        EnemyHPSystem enemy_hp = GetComponent<EnemyHPSystem>();
-
-        enemy_hp.EnemyTakeDamage(150);
     }
     private void OnCollisionEnter2D(Collision2D other)
     {

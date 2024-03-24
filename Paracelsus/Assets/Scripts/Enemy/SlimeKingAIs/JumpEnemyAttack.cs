@@ -90,6 +90,7 @@ public class JumpEnemyAttack : MonoBehaviour
                 ExitBossGate_anim.SetTrigger("Rise");
                 speed = 0;
                 AudioManager.instance.music_source.Stop();
+                PlayBossMusic = false;
             }
             else
             {
@@ -219,9 +220,8 @@ public class JumpEnemyAttack : MonoBehaviour
             Debug.Log("HIT!");
             body.AddForce(Vector2.up * suspensionForce);
             isSuspended = true;
-           
+            boss_hp.BossTakeDamage(150);
         }
 
-        EnemyHPSystem enemy_hp = other.GetComponent<EnemyHPSystem>();
     }
 }

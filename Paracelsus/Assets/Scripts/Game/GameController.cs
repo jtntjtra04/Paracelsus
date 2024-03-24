@@ -324,6 +324,7 @@ public class GameController : MonoBehaviour
     {
         isDeathInProgress = false;
         boss_hp.boss_healthbar.gameObject.SetActive(false);
+        boss_hp.health = 6000;
 
         if (boss != null)
         {
