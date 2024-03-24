@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pause_menu;
- 
     public SettingsMenu settings_menu;
+    public Animator dialogue;
     public static bool game_paused = false;
 
     private void Start()
@@ -30,7 +30,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void ResumeGame()
     {
-  
         pause_menu.SetActive(false);
         settings_menu.gameObject.SetActive(false);
         Time.timeScale = 1f;
@@ -38,7 +37,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void PauseGame()
     {
- 
         pause_menu.SetActive(true);
         Time.timeScale = 0f;
         game_paused = true;

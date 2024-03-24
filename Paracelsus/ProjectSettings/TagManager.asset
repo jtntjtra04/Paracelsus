@@ -79,6 +79,9 @@ TagManager:
   - name: Traps
     uniqueID: 2261270543
     locked: 0
+  - name: Dialogue UI
+    uniqueID: 1214491157
+    locked: 0
   - name: HP UI
     uniqueID: 1119848603
     locked: 0
