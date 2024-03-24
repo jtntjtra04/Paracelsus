@@ -15,6 +15,8 @@ public class DialogueTrigger : MonoBehaviour
      [SerializeField] private Animator flashbackAnimator;
      [SerializeField] private Animator effectAnimator;
 
+     
+
 
 
     private bool playerInRange;
