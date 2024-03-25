@@ -16,6 +16,7 @@ public class HP_Potion : MonoBehaviour
                 gameController.hpPotion++;
                 Destroy(gameObject);
                 AudioManager.instance.PlaySFX("PotionGet");
+                Debug.Log("PotionGet");
             }
             else
             {

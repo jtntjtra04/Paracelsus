@@ -1,3 +1,4 @@
+using Cinemachine;
 using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
@@ -72,6 +73,10 @@ public class GameController : MonoBehaviour
 
     // Death System
     private bool isDeathInProgress = false;
+
+    // Camera
+    public CinemachineVirtualCamera virtualCamera;
+    public float defaultSize;
 
     private void Start()
     {
@@ -356,6 +361,8 @@ public class GameController : MonoBehaviour
         body.constraints &= ~RigidbodyConstraints2D.FreezePositionX; // unfreeze player position x
         player_movement.enabled = true; // player can move again
         player_attack.enabled = true; // player can attack again
+
+        virtualCamera.m_Lens.OrthographicSize = defaultSize;
 
         anim.Play("Idle"); // play and set to default animation
 

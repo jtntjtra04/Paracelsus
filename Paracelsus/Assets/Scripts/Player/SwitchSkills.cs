@@ -14,6 +14,7 @@ public class SwitchSkills : MonoBehaviour
     public GameObject pillarPrefabInstance;
     public GameObject pelletPrefab;
     public GameObject pelletPrefabInstance;
+    public Transform pillarScale;
 
     public float pillarSpeed = 1000f;
     public GameObject Enemy;
@@ -79,12 +80,16 @@ public class SwitchSkills : MonoBehaviour
                 CastPillar();
                 earthReady = false;
 
+
             }
-             if (pillarPrefabInstance != null)
+            if (Input.GetMouseButtonUp(1))
             {
-                UpdatePillarDirection();
+                
+                Debug.Log("Right mouse button up");
             }
-        }else if(current_element == 3)
+
+        }
+        else if(current_element == 3)
         {
            if (Input.GetMouseButtonDown(1) && fireReady)
             {
@@ -143,9 +148,14 @@ public class SwitchSkills : MonoBehaviour
                 fireReady = true;
                 fireTimer = 0.0f;
             }
-         
+
 
         //Debug.Log(" " + IsBarrierActive());
+
+        
+        
+
+
     }
 
     private void CastBarrier()
@@ -209,42 +219,31 @@ public class SwitchSkills : MonoBehaviour
 
     private void CastPillar()
     {
-        pillarFlip.flipX = false;
-        earthFunc = true;
-        GameObject FireEnemy = GameObject.FindWithTag("FireEnemy");
-        Vector2 EnemyScale = FireEnemy.transform.localScale;
-
-        // Vector2 pillarprefabInstance.localScale = (EnemyScale < 0) ? -transform.right : transform.right;
-
-        if(pillarPrefabInstance == null)
+        if (pillarPrefabInstance == null)
         {
-            Vector2 enemyPosition = FireEnemy.transform.position - FireEnemy.transform.forward * pillarDistance;
-            pillarPrefabInstance = Instantiate(pillarPrefab, enemyPosition, Quaternion.identity);
+            pillarPrefabInstance = Instantiate(pillarPrefab, firepoint.position, Quaternion.identity);
+          
+            Rigidbody2D pillarRigidbody = pillarPrefabInstance.GetComponent<Rigidbody2D>();
+
+
+
+            float playerScaleX = transform.localScale.x;
+            Vector2 playerDirection = (playerScaleX < 0) ? -transform.right : transform.right; // Assuming the tornado should move to the right relative to the player's facing direction
+
+
+
+            
             Destroy(pillarPrefabInstance, 1f);
-            Rigidbody2D enemyRb= FireEnemy.GetComponent<Rigidbody2D>();
-            enemyRb.AddForce(FireEnemy.transform.forward * pillarSpeed);
-           
-        
+            
+
         }
 
-       
+
+
+
     }
 
-    private void UpdatePillarDirection()
-    {
-        GameObject FireEnemy = GameObject.FindWithTag("FireEnemy");
-        Vector2 EnemyScale = FireEnemy.transform.localScale;
-        if(FireEnemy.transform.localScale.x < 0)
-        {
-            Debug.Log(EnemyScale);
-            pillarFlip.flipX = true;
-        }
-        else
-        {
-            Debug.Log(EnemyScale);
-            pillarFlip.flipX = false;
-        }
-    }
+    
    
 
     private void CastShotgun()
