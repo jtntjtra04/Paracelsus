@@ -78,6 +78,10 @@ public class GameController : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
     public float defaultSize;
 
+    // Floor Music
+    public static bool floor1_music = false;
+    public static bool floor2_music = false;
+
     private void Start()
     {
         // Respawn point
@@ -233,6 +237,24 @@ public class GameController : MonoBehaviour
                 }
             }   
         }
+        if (collision.collider.tag == "WindFloor")
+        {
+            if (!floor1_music)
+            {
+                AudioManager.instance.ChangeMusic("Theme");
+                floor1_music = true;
+            }
+            floor2_music = false;
+        }
+        else if (collision.collider.tag == "WaterFloor")
+        {
+            if(!floor2_music)
+            {
+                AudioManager.instance.ChangeMusic("WaterMusic");
+                floor2_music = true;
+            }
+            floor1_music = false;
+        }
     }
     private void Update()
     {
@@ -272,7 +294,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (currHP < 3)
+            if (currHP < 3 && currHP > 0)
             {
                 Heal();
             }
@@ -358,6 +380,11 @@ public class GameController : MonoBehaviour
         }
         currHP = startHP;
 
+        if (hpPotion < 3)
+        {
+            hpPotion = 3;
+        }
+
         body.constraints &= ~RigidbodyConstraints2D.FreezePositionX; // unfreeze player position x
         player_movement.enabled = true; // player can move again
         player_attack.enabled = true; // player can attack again
@@ -366,8 +393,15 @@ public class GameController : MonoBehaviour
 
         anim.Play("Idle"); // play and set to default animation
 
-        AudioManager.instance.PlayMusic("Theme");
-
+        if (floor1_music)
+        {
+            AudioManager.instance.PlayMusic("Theme");
+        }
+        else if(!floor1_music)
+        {
+            AudioManager.instance.PlayMusic("WaterMusic");
+        }
+        
         DeathUI.SetActive(false);
     }    
     private IEnumerator DeathAnimation(float wait_time)

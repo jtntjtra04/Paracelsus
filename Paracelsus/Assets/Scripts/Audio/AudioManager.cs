@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
@@ -23,7 +24,7 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        //PlayMusic("TitleMusic"); // When game start play theme
+        //PlayMusic("Theme"); // When game start play theme
     }
     public void PlayMusic(string name) //Call this function from any script u want to add music
     {
@@ -65,5 +66,25 @@ public class AudioManager : MonoBehaviour
     public void SFXVolume(float volume)
     {
         sfx_source.volume = volume;
+    }
+    public void ChangeMusic(string name)
+    {
+        Sound sound = Array.Find(music_sound, x => x.name == name);
+        if (sound != null)
+        {
+            if(music_source.clip == null || music_source.clip == sound.clip)
+            {
+                Debug.Log("Same Song Played");
+                return;
+            }
+            music_source.Stop(); 
+            music_source.clip = sound.clip;
+            music_source.clip.LoadAudioData();
+            music_source.Play(); 
+        }
+        else
+        {
+            Debug.Log("Music Not Found");
+        }
     }
 }

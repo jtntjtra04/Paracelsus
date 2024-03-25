@@ -22,6 +22,7 @@ public class BossHPSystem : MonoBehaviour
     [SerializeField] private GameObject ExitBossGate;
     [SerializeField] private Animator EntryBossGate_anim;
     [SerializeField] private Animator ExitBossGate_anim;
+    [SerializeField] private GameObject room_shield;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -51,6 +52,7 @@ public class BossHPSystem : MonoBehaviour
         boss_defeat = true;
         EntryBossGate_anim.SetBool("BossDefeat", true);
         ExitBossGate_anim.SetBool("BossDefeat", true);
+        Destroy(room_shield);
         //Destroy(EntryBossGate);
         //Destroy(ExitBossGate_anim);
         
@@ -68,8 +70,7 @@ public class BossHPSystem : MonoBehaviour
         }
         yield return new WaitForSeconds(7.2f);
 
-        AudioManager.instance.music_source.Stop();
-        AudioManager.instance.PlayMusic("Theme");
+        AudioManager.instance.ChangeMusic("WaterMusic");
 
         BossDie();
     }

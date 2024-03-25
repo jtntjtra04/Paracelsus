@@ -74,7 +74,6 @@ public class JumpEnemyAttack : MonoBehaviour
 
         anim.SetBool("PlayerDetected", player_detected && player_hp.currHP > 0);
         anim.SetBool("Grounded", grounded);
-        anim.SetBool("Staggered", isStaggered);
 
         if (!player_detected && grounded)
         {
@@ -90,6 +89,7 @@ public class JumpEnemyAttack : MonoBehaviour
                 ExitBossGate_anim.SetTrigger("Rise");
                 speed = 0;
                 AudioManager.instance.music_source.Stop();
+                GameController.floor2_music = false;
                 PlayBossMusic = false;
             }
             else
@@ -101,7 +101,8 @@ public class JumpEnemyAttack : MonoBehaviour
                     ExitBossGate_anim.SetTrigger("Fall");
                     if(!PlayBossMusic)
                     {
-                        AudioManager.instance.PlayMusic("slimeboss");
+                        AudioManager.instance.ChangeMusic("slimeboss");
+                        GameController.floor2_music = true;
                         PlayBossMusic = true;
                     }
                 }
@@ -122,17 +123,6 @@ public class JumpEnemyAttack : MonoBehaviour
                 body.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
             }
         }
-        if(skills.earthFunc == true)
-        {
-            Vector2 enemyDirection = (transform.localScale.x < 0) ? -transform.right : transform.right;
-            StartCoroutine(MoveTowardsPlayer());
-            // StartCoroutine(StaggeredFor(StaggerTime));
-            isStaggered = true;
-            skills.earthFunc = false;
-            isBeingPushed = true;
-        }
-     
-        
     }
      private IEnumerator MoveTowardsPlayer()
     {
@@ -146,12 +136,7 @@ public class JumpEnemyAttack : MonoBehaviour
             yield return null;
         }
     }
-    // private IEnumerator StaggeredFor(float duration)
-    // {
-    //     isStaggered = true;
-    //     yield return new WaitForSeconds(duration);
-    //     isStaggered = false;
-    // }
+
     void Patrolling()
     {
         if (!check_ground || check_wall)
