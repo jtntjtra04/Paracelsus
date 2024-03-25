@@ -34,6 +34,7 @@ public class DialogueTrigger : MonoBehaviour
             visualCue.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
+
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON, backgroundAnimator, flashbackAnimator,effectAnimator);
             }
         }

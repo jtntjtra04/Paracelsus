@@ -9,6 +9,14 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    //Dialogue stuff
+    
+    [SerializeField] private Animator backgroundAnimator;
+    [SerializeField] private Animator flashbackAnimator;
+    [SerializeField] private Animator effectAnimator;
+    [SerializeField] private TextAsset windmeet;
+    [SerializeField] private TextAsset watermeet;
+
     // HP
     [SerializeField] private float startHP;
     [SerializeField] private float respawn_timer;
@@ -271,7 +279,8 @@ public class GameController : MonoBehaviour
             permanent_wind = true; // unlock permanent element
             element.wind_element = true;
             Debug.Log("Double Jump Ability Unlocked");
-            AudioManager.instance.PlaySFX("AbilityUnlocked");
+            DialogueManager.GetInstance().EnterDialogueMode(windmeet, backgroundAnimator, flashbackAnimator, effectAnimator);
+           // AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
         if (water_spirit && Input.GetKeyDown(KeyCode.F) && !glide)
         {
@@ -279,7 +288,8 @@ public class GameController : MonoBehaviour
             permanent_water = true;
             element.water_element = true;
             Debug.Log("Glide Ability Unlocked");
-            AudioManager.instance.PlaySFX("AbilityUnlocked");
+            DialogueManager.GetInstance().EnterDialogueMode(watermeet, backgroundAnimator, flashbackAnimator, effectAnimator);
+          //  AudioManager.instance.PlaySFX("AbilityUnlocked");
         }
         if (fire_spirit && Input.GetKeyDown(KeyCode.F) && !dash)
         {

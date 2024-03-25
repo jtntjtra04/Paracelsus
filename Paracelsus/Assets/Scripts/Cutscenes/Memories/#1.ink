@@ -4,6 +4,6 @@ EXTERNAL Flashback(state)
 EXTERNAL SE(SEName)
 EXTERNAL Effect(EName)
 
-
-....
-test.
+(Go into town, go to bar, at night, meet the pupil and take him in)
+...
+"Haaaa~"

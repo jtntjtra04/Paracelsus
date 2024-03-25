@@ -69,7 +69,7 @@ private bool playerInRange;
    {
         DialogueManager.CutscenePlay = true;
         AudioManager.instance.music_source.Stop();
-         effectAnimator.Play("redflash");
+        effectAnimator.Play("redflash");
         AudioManager.instance.PlaySFX("activate");
         yield return new WaitForSeconds(3);
         AudioManager.instance.PlaySFX("memory");
