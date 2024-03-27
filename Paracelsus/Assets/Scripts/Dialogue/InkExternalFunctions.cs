@@ -12,7 +12,7 @@ public class InkExternalFunctions
           story.BindExternalFunction("Flashback", (string state) => Flashback(state, FlashbackAnimator));
           story.BindExternalFunction("SE", (string SEName) => PlaySE(SEName));
           story.BindExternalFunction("Effect", (string EName) => Effect(EName, effectAnimator));
-          story.BindExternalFunction("MoveScene", (string Confirm) => Movescene(Confirm));
+          //story.BindExternalFunction("MoveScene", (string Confirm) => Movescene(Confirm));
 
 
     }
@@ -24,7 +24,7 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("Flashback");
         story.UnbindExternalFunction("SE");
         story.UnbindExternalFunction("Effect");
-        story.UnbindExternalFunction("Movescene");
+      //  story.UnbindExternalFunction("Movescene");
     }
 
 
