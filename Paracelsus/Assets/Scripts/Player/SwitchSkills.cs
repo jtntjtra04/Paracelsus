@@ -94,8 +94,6 @@ public class SwitchSkills : MonoBehaviour
             {
                 if(isCharging)
                 {
-                    AudioManager.instance.PlaySFX("EarthCharge");
-                    AudioManager.instance.sfx_source.loop = true;
                     chargeTimer += Time.deltaTime;
                     chargeTimer = Mathf.Clamp(chargeTimer, 0f, 3f);
                 }
@@ -114,7 +112,6 @@ public class SwitchSkills : MonoBehaviour
                     else
                     {
                         Destroy(pillarPrefabInstance);
-                        AudioManager.instance.sfx_source.loop = false;
                         AudioManager.instance.sfx_source.Stop();
                     }
                 }
@@ -263,6 +260,7 @@ public class SwitchSkills : MonoBehaviour
 
     public void CastPillar()
     {
+        AudioManager.instance.PlaySFX("EarthCharge");
         if (pillarPrefabInstance == null)
         {
             pillarPrefabInstance = Instantiate(pillarPrefab, pillarFirepoint.position, Quaternion.identity);

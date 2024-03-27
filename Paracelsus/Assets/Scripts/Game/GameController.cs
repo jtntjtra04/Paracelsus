@@ -114,7 +114,6 @@ public class GameController : MonoBehaviour
         if (barrier.isCharging)
         {
             Destroy(barrier.pillarPrefabInstance);
-            AudioManager.instance.sfx_source.loop = false;
             AudioManager.instance.sfx_source.Stop();
         }
         currHP = Mathf.Clamp(currHP - damage, 0, startHP);
