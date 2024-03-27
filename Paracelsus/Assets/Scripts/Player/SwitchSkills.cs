@@ -15,6 +15,7 @@ public class SwitchSkills : MonoBehaviour
     public GameObject pelletPrefab;
     public GameObject pelletPrefabInstance;
     public Transform pillarScale;
+    
 
     public float pillarSpeed = 1000f;
     public GameObject Enemy;
@@ -25,6 +26,7 @@ public class SwitchSkills : MonoBehaviour
     public float tornadoTime = 1f;
     public bool earthFunc = false;
     [SerializeField] private Transform firepoint;
+    [SerializeField] private Transform pillarFirepoint;
     public int amountOfBullets = 7;
     public float pelletSpeed = 100f;
     public float range = 10f;
@@ -39,10 +41,17 @@ public class SwitchSkills : MonoBehaviour
     private float waterTimer = 0f;
     private float earthDuration = 8f;
     private float earthTimer = 0f;
+    private float pillarChargeUp = 0f;
     public bool waterReady =true;
     public bool fireReady = true;
     public bool windReady = true;
     public bool earthReady = true;
+    private bool isCharging;
+    private float chargeTimer = 0f;
+
+    public Animator pillarAnimator;
+    private bool isAnimationFrozen = false;
+
     
   
     void Update()
@@ -77,16 +86,37 @@ public class SwitchSkills : MonoBehaviour
             
             if (Input.GetMouseButtonDown(1) && earthReady)
             {
+                isCharging = true;
+                chargeTimer = 0f;
                 CastPillar();
-                earthReady = false;
-
-
+                pillarAnimator.SetTrigger("IsCharging");
             }
-            if (Input.GetMouseButtonUp(1))
+            if(Input.GetMouseButton(1))
             {
-                
-                Debug.Log("Right mouse button up");
+                if(isCharging)
+                {
+                    chargeTimer += Time.deltaTime;
+                    chargeTimer = Mathf.Clamp(chargeTimer, 0f, 3f);
+                }
             }
+            if(Input.GetMouseButtonUp(1))
+            {
+                if(isCharging)
+                {
+                    if(chargeTimer >= 3f)
+                    {
+                        LaunchPillar();
+                        pillarAnimator.SetTrigger("Launched");
+                    }
+                }
+                isCharging = false;
+                chargeTimer = 0f;
+                earthReady = false;
+                
+                
+            }
+            
+            
 
         }
         else if(current_element == 3)
@@ -98,6 +128,11 @@ public class SwitchSkills : MonoBehaviour
 
             }
            
+        }
+
+        if(pillarPrefabInstance != null)
+        {
+            UpdateEarthPillarPosition();
         }
         if (barrierPrefabInstance != null)
         {
@@ -217,35 +252,52 @@ public class SwitchSkills : MonoBehaviour
 
     }
 
-    private void CastPillar()
+    public void CastPillar()
     {
         if (pillarPrefabInstance == null)
         {
-            pillarPrefabInstance = Instantiate(pillarPrefab, firepoint.position, Quaternion.identity);
-          
-            Rigidbody2D pillarRigidbody = pillarPrefabInstance.GetComponent<Rigidbody2D>();
+            pillarPrefabInstance = Instantiate(pillarPrefab, pillarFirepoint.position, Quaternion.identity);
+             float playerScaleX = transform.localScale.x;
+            Vector2 playerDirection = (playerScaleX < 0) ? -transform.right : transform.right; // Assuming the tornado should move to the right relative to the player's facing direction
 
+            pillarPrefabInstance.transform.localScale = new Vector3(playerScaleX, transform.localScale.y, transform.localScale.z);
+         
+            
+        }
+       
+    }
 
+    private void LaunchPillar()
+    {
+         Rigidbody2D pillarRigidbody = pillarPrefabInstance.GetComponent<Rigidbody2D>();
+        
 
+             
+
+        float playerScaleX = transform.localScale.x;
+        Vector2 playerDirection = (playerScaleX < 0) ? -transform.right : transform.right; // Assuming the tornado should move to the right relative to the player's facing direction
+
+        pillarPrefabInstance.transform.localScale = new Vector3(playerScaleX, transform.localScale.y, transform.localScale.z);
+
+        // Apply force to the tornado in the calculated direction
+            pillarRigidbody.AddForce(playerDirection * tornadoSpeed);
+
+            // Destroy the tornado after 1 second
+            Destroy(pillarPrefabInstance, 5f);
+    }
+    
+    public void UpdateEarthPillarPosition()
+    {
+        if(isCharging)
+        {
+            pillarPrefabInstance.transform.position = pillarFirepoint.position;
             float playerScaleX = transform.localScale.x;
             Vector2 playerDirection = (playerScaleX < 0) ? -transform.right : transform.right; // Assuming the tornado should move to the right relative to the player's facing direction
 
-
-
-            
-            Destroy(pillarPrefabInstance, 1f);
-            
-
+            pillarPrefabInstance.transform.localScale = new Vector3(playerScaleX, transform.localScale.y, transform.localScale.z);
         }
-
-
-
-
+         
     }
-
-    
-   
-
     private void CastShotgun()
     {
         for(int i = 0; i < amountOfBullets; i++)
