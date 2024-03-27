@@ -94,6 +94,8 @@ public class SwitchSkills : MonoBehaviour
             {
                 if(isCharging)
                 {
+                    AudioManager.instance.PlaySFX("EarthCharge");
+                    AudioManager.instance.sfx_source.loop = true;
                     chargeTimer += Time.deltaTime;
                     chargeTimer = Mathf.Clamp(chargeTimer, 0f, 3f);
                 }
@@ -112,6 +114,8 @@ public class SwitchSkills : MonoBehaviour
                     else
                     {
                         Destroy(pillarPrefabInstance);
+                        AudioManager.instance.sfx_source.loop = false;
+                        AudioManager.instance.sfx_source.Stop();
                     }
                 }
                 isCharging = false;
@@ -274,10 +278,10 @@ public class SwitchSkills : MonoBehaviour
 
     private void LaunchPillar()
     {
-         Rigidbody2D pillarRigidbody = pillarPrefabInstance.GetComponent<Rigidbody2D>();
+        AudioManager.instance.sfx_source.loop = false;
+        AudioManager.instance.PlaySFX("EarthLaunch");
+        Rigidbody2D pillarRigidbody = pillarPrefabInstance.GetComponent<Rigidbody2D>();
         
-
-             
 
         float playerScaleX = transform.localScale.x;
         Vector2 playerDirection = (playerScaleX < 0) ? -transform.right : transform.right; // Assuming the tornado should move to the right relative to the player's facing direction
