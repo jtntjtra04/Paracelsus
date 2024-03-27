@@ -9,11 +9,13 @@ public class Push : MonoBehaviour
     private Rigidbody2D body;
     public float damage;
     private bool hit;
+    public SwitchSkills earthskill;
     private void Awake()
     {
         BoxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+        earthskill = FindFirstObjectByType<SwitchSkills>();
     }
     // Update is called once per frame
     void Update()
@@ -44,10 +46,12 @@ public class Push : MonoBehaviour
                 boss_hp.BossTakeDamage(damage);
             }
         }
-        hit = true;
-       BoxCollider.enabled = false;
-       anim.SetTrigger("Explode");
-       
+        if (!earthskill.isCharging)
+        {
+            hit = true;
+            BoxCollider.enabled = false;
+            anim.SetTrigger("Explode");
+        }
     }
 
      private void deactivate()

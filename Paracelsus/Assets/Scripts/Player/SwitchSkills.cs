@@ -46,7 +46,7 @@ public class SwitchSkills : MonoBehaviour
     public bool fireReady = true;
     public bool windReady = true;
     public bool earthReady = true;
-    private bool isCharging;
+    public bool isCharging;
     private float chargeTimer = 0f;
 
     public Animator pillarAnimator;
@@ -89,7 +89,6 @@ public class SwitchSkills : MonoBehaviour
                 isCharging = true;
                 chargeTimer = 0f;
                 CastPillar();
-                pillarAnimator.SetTrigger("IsCharging");
             }
             if(Input.GetMouseButton(1))
             {
@@ -105,13 +104,19 @@ public class SwitchSkills : MonoBehaviour
                 {
                     if(chargeTimer >= 3f)
                     {
+                        isCharging = false;
                         LaunchPillar();
                         pillarAnimator.SetTrigger("Launched");
+                        
+                    }
+                    else
+                    {
+                        Destroy(pillarPrefabInstance);
                     }
                 }
                 isCharging = false;
                 chargeTimer = 0f;
-                earthReady = false;
+                
                 
                 
             }
@@ -281,14 +286,14 @@ public class SwitchSkills : MonoBehaviour
 
         // Apply force to the tornado in the calculated direction
             pillarRigidbody.AddForce(playerDirection * tornadoSpeed);
-
-            // Destroy the tornado after 1 second
-            Destroy(pillarPrefabInstance, 5f);
+        earthReady = false;
+        // Destroy the tornado after 1 second
+        Destroy(pillarPrefabInstance, 5f);
     }
-    
+
     public void UpdateEarthPillarPosition()
     {
-        if(isCharging)
+        if (isCharging)
         {
             pillarPrefabInstance.transform.position = pillarFirepoint.position;
             float playerScaleX = transform.localScale.x;
@@ -296,7 +301,7 @@ public class SwitchSkills : MonoBehaviour
 
             pillarPrefabInstance.transform.localScale = new Vector3(playerScaleX, transform.localScale.y, transform.localScale.z);
         }
-         
+
     }
     private void CastShotgun()
     {

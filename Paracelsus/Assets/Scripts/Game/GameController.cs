@@ -111,6 +111,10 @@ public class GameController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         // Damage calculations
+        if (barrier.isCharging)
+        {
+            Destroy(barrier.pillarPrefabInstance);
+        }
         currHP = Mathf.Clamp(currHP - damage, 0, startHP);
         AudioManager.instance.PlaySFX("CelsusHurt");
         Debug.Log("Current HP: " + currHP); // Add this line
