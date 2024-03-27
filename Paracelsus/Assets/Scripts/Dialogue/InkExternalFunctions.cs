@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
-
+using UnityEngine.SceneManagement;
 public class InkExternalFunctions 
 {
     public void Bind(Story story, Animator backgroundAnimator, Animator FlashbackAnimator, Animator effectAnimator)
@@ -12,6 +12,7 @@ public class InkExternalFunctions
           story.BindExternalFunction("Flashback", (string state) => Flashback(state, FlashbackAnimator));
           story.BindExternalFunction("SE", (string SEName) => PlaySE(SEName));
           story.BindExternalFunction("Effect", (string EName) => Effect(EName, effectAnimator));
+          story.BindExternalFunction("MoveScene", (string Confirm) => Movescene(Confirm));
 
 
     }
@@ -23,6 +24,7 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("Flashback");
         story.UnbindExternalFunction("SE");
         story.UnbindExternalFunction("Effect");
+        story.UnbindExternalFunction("Movescene");
     }
 
 
@@ -56,6 +58,18 @@ public class InkExternalFunctions
     {
      
         AudioManager.instance.PlaySFX(SEName);
+      
+    }
+
+      public void Movescene(string Confirm)
+    {
+      if(Confirm == "yes")
+      {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("GameScene");
+      }
+     
+      
       
     }
 

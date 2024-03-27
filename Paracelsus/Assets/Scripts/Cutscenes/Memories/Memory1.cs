@@ -34,7 +34,7 @@ private bool playerInRange;
 
     private void Update()
     {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying && !DialogueManager.CutscenePlay)
         {
             visualCue.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
@@ -79,11 +79,9 @@ private bool playerInRange;
         FadeBox.Play("defaultfadeout");
         yield return new WaitForSeconds(2);
         FadeBox.Play("FadeIn");
+        flashbackAnimator.Play("Double");
+        backgroundAnimator.Play("cityoutside");
         yield return new WaitForSeconds(5);
-
-
-
-
         DialogueManager.GetInstance().EnterDialogueMode(scene1, backgroundAnimator, flashbackAnimator, effectAnimator);
    
        
