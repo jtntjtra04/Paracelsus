@@ -35,6 +35,7 @@ TagManager:
   - Ending
   - WindFloor
   - WaterFloor
+  - MemoryDone
   layers:
   - Default
   - TransparentFX

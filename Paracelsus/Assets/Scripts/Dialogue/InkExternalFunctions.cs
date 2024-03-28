@@ -57,7 +57,8 @@ public class InkExternalFunctions
      public void PlaySE(string SEName)
     {
      
-        AudioManager.instance.PlaySFX(SEName);
+      AudioManager.instance.PlaySFX(SEName);
+
       
     }
 

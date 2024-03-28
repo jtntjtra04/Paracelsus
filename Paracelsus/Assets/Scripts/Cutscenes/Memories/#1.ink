@@ -5,9 +5,6 @@ EXTERNAL SE(SEName)
 EXTERNAL Effect(EName)
 
 ~Music("townmusic")
-
-
-
 ...
 "Hmm~" #layout:no #speaker:Celsus
 "Never thought a city's scenery would be this good, eh Fergus?"#layout:no #speaker:Celsus
@@ -47,6 +44,7 @@ I take a sip from the glass while laying my back onto the wall. #layout:blank #s
 "Hmm?" #layout:no #speaker:Celsus
 ~Background("black")
 ...
+~Music("tense")
 ~Background("city")
 "Gh!" #layout:no  #speaker:???
 "*cough* *cough*"
@@ -66,15 +64,18 @@ I take a sip from the glass while laying my back onto the wall. #layout:blank #s
 "What? Are you mocking us?!"  #speaker:Ruffian 1
 "Damn asshole! Go ahead and die together with this piece of shit!" #speaker:Ruffian 2
 ~Background("black")
+~Music("stop")
 ~SE("magic1")
 "..."#speaker:Celsus
 ~Background("city")
 "Oi! Celsus! What the fuck are you doin-" #layout:no #speaker:Fergus
+~SE("rush")
 "Hiiii! I-I'M SORRY!" #speaker:Ruffian 1
 "Eh?" #speaker:Fergus
 "*pant* *pant*" #speaker:Celsus
 "Ahahaha.... thought I was gonna die..."
 "..." #speaker:Fergus
+~Music("relief")
 "What the hell were you thinking..."
 Fergus went and grab my shoulders and help me to stand up. #layout:blank
 "T-thanks..." #layout:no #speaker:Celsus
@@ -87,10 +88,11 @@ As we walk away, the boy shouts at us, prompting us to stop and turn towards him
 "Please! Tell me your name!" #speaker:???
 "My name's Paracelsus, but you can call me Celsus." #speaker:Celsus
 As I finish saying my name, the boy gets on all fours and begs me. #layout:blank
-"P-please! Master Paracelsus!" #layout:no #speaker:???
+"P-please! Paracelsus!" #layout:no #speaker:???
 "Make me your apprentice!"
 ~Flashback("remove")
 ~Background("black")
+~Music("stop")
 ... #layout:blank
 ~Background("default")
 ~SE("snapbacktoreality")

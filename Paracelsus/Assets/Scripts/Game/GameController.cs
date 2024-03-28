@@ -11,7 +11,8 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     //Dialogue stuff
-    
+    public bool mem1 = true;
+    public bool mem2,allcompleted = false;
     [SerializeField] private Animator backgroundAnimator;
     [SerializeField] private Animator flashbackAnimator;
     [SerializeField] private Animator effectAnimator;
