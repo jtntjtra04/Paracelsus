@@ -57,25 +57,27 @@ After the pupil sit nexts to me, I took the shining crystal next to my desk. #la
 
 "Well? All that ends well is well, right?" #layout:no #speaker:Celsus
 "That's not the point!" #layout:no #speaker:Pupil
-"Don't you see what happened in the alleyway back there? Even before that I tried asking everyone nearby to stay for the night."
+"Don't you see what happened in the alleyway back then? Even before that I asked everyone for a place to stay for the night."
 "No one accepts me! The hatred for my people still remains to this day!"
 
 "..." #layout:no #speaker:Celsus
 "*sigh* alright, let's go."
 "Huh?" #layout:no #speaker:Pupil
 "You want to be stronger eh? So you can show everyone that you're still capable."  #layout:no #speaker:Celsus
-"I'll teach you a couple of skills that I know."
+"I get that feeling..."
+"So I'll teach you a couple of skills that I know."
 "Ahh, Yes! Teacher!" #layout:no #speaker:Pupil
-"Waaait, before we start, how old are you again?" #layout:no #speaker:Celsus
+"Hold on, before we start, I want to know, how old are you again?" #layout:no #speaker:Celsus
 "Eh?! Well..."#layout:no #speaker:Pupil
 "Considering the time that I born... I think, I'm around..."
 "*mumble* *mumble*"
-"29 years old?"
+"22 years old?"
 ~Music("FOOLINGAROUND")
 ~SE("Shock")
-"29?!!!" #layout:no #speaker:Celsus
-"THAT'S ONLY 9 YEARS APART FROM ME! BUT YOU LOOK LIKE A DAMN 12 YEAR OLD!"
-"Hah?! Teacher, are you even listening to my story?!" #layout:no #speaker:Pupil
+"22?!!!" #layout:no #speaker:Celsus
+"THAT'S ONLY 9 YEARS APART FROM ME! BUT YOU LOOK LIKE A DAMN 10 YEAR OLD!"
+"Teacher..." #layout:no #speaker:Pupil
+"Are you even listening to my story..."
 ~Flashback("remove")
 ~Background("black")
 ~Music("stop")

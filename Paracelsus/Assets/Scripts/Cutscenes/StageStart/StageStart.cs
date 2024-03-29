@@ -23,6 +23,7 @@ public class StageOpening : MonoBehaviour
 
     private void Start()
     {
+       AudioManager.instance.music_source.Stop();
         StartCoroutine(StageStart());
     }
 
