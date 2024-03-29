@@ -23,7 +23,7 @@ public class StageOpening : MonoBehaviour
 
     private void Start()
     {
-       AudioManager.instance.music_source.Stop();
+     
         StartCoroutine(StageStart());
     }
 
@@ -35,7 +35,7 @@ public class StageOpening : MonoBehaviour
        
 
         yield return new WaitForSeconds(2);
-        AudioManager.instance.PlayMusic("Theme");
+
         FadeBox.Play("FadeIn");
         yield return new WaitForSeconds(2);
         DialogueManager.GetInstance().EnterDialogueMode(stage1, backgroundAnimator, flashbackAnimator, effectAnimator);
