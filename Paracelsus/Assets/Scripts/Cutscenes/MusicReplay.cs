@@ -7,9 +7,9 @@ public class MusicReplay1 : MonoBehaviour
     public AudioSource musicsource;
      public void OnTriggExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player" && !musicsource.isPlaying )
+        if (collider.gameObject.tag == "Player" )
         {
-             AudioManager.instance.PlayMusic("Theme");
+            GameController.floor2_music = true;
         }
     }
   
