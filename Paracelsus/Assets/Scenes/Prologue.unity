@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 966095531}
   - component: {fileID: 966095530}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music_sound:
   - name: Theme
-    clip: {fileID: 8300000, guid: 6b43692b9e6522248bdd9113c6b36777, type: 3}
+    clip: {fileID: 8300000, guid: 742f592cefb78c04f9f25e7b94b0181e, type: 3}
   - name: fire
     clip: {fileID: 8300000, guid: a6d7b74bc8e154548bed9952cd93f247, type: 3}
   - name: fireplace

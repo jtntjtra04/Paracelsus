@@ -52,6 +52,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void MainMenu()
     {
+        pausetransition.ComefromPause = true;
         AudioManager.instance.PlaySFX("ClickSound");
         AudioManager.instance.music_source.Stop();
         SceneManager.LoadScene("MainMenu");

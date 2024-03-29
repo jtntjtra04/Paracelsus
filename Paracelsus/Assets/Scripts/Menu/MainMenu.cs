@@ -12,9 +12,18 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+       if(pausetransition.ComefromPause == false)
+       {
         MainMenuAudioManager.instance.PlaySFX("ClickSound");
         MainMenuAudioManager.instance.music_source.Stop();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       }else if (pausetransition.ComefromPause == true) 
+       {
+        MainMenuAudioManager.instance.PlaySFX("ClickSound");
+        MainMenuAudioManager.instance.music_source.Stop();
+        SceneManager.LoadScene("GameScene");
+       }
+        
     }
     public void GoToSettingsMenu()
     {

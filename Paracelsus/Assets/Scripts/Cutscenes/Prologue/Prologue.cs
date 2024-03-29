@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //DialogueManager.GetInstance().EnterDialogueMode(scene1, backgroundAnimator);
 //StartCoroutine(Flow());
 //yield return new WaitForSeconds(5);
@@ -19,6 +20,8 @@ public class Prologue : MonoBehaviour
 
     [SerializeField] private TextAsset scene1;
 
+    private bool GotoGame;
+
 
     private void Start()
     {
@@ -26,6 +29,15 @@ public class Prologue : MonoBehaviour
         flashbackAnimator.Play("Double");
         backgroundAnimator.Play("burn");
         StartCoroutine(Flow());
+    }
+
+    private void Update()
+    {
+        if(GotoGame == true && !DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            StartCoroutine(GameGo());
+        }
+
     }
 
 
@@ -39,9 +51,18 @@ public class Prologue : MonoBehaviour
         FadeBox.Play("FadeIn");
         yield return new WaitForSeconds(3);
         DialogueManager.GetInstance().EnterDialogueMode(scene1, backgroundAnimator, flashbackAnimator, effectAnimator);
+        GotoGame = true;
+
    
        
         DialogueManager.CutscenePlay = false;
+
+    }
+
+    IEnumerator GameGo()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("GameScene");
 
     }
 
