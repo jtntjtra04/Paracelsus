@@ -83,7 +83,7 @@ After the pupil sit nexts to me, I took the shining crystal next to my desk. #la
 ~Background("default")
 ~SE("snapbacktoreality")
 ~Effect("whiteflash")
-~Music("WaterMusic")
+
 
 
 

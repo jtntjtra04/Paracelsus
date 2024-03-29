@@ -441,7 +441,7 @@ MonoBehaviour:
   dialogueText: {fileID: 566923408}
   displayNameText: {fileID: 72852979}
   portraitAnimator: {fileID: 709831612}
-  dialogueTypingSoundClip: {fileID: 8300000, guid: 732953fde58852548b0dd87339c7040c, type: 3}
+  dialogueTypingSoundClip: {fileID: 8300000, guid: b2ba45498652a7d449958e351dc77cab, type: 3}
   stopAudioSource: 1
 --- !u!1 &709831611
 GameObject:

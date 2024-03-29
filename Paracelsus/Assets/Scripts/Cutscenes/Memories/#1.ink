@@ -97,7 +97,7 @@ As I finish saying my name, the boy gets on all fours and begs me. #layout:blank
 ~Background("default")
 ~SE("snapbacktoreality")
 ~Effect("whiteflash")
-~Music("Theme")
+
 
 
 
