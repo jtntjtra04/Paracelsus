@@ -727,11 +727,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: aa2e3028-e1fc-4bc3-b207-2bf871207263
+  cloudProjectId: 5af833a7-3d93-4ad1-b19c-cbf39e51ce2e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Paracelsus 2023-12-05_23-30-26
-  organizationId: zentsuka
+  projectName: Paracelsus
+  organizationId: gamerfish
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
