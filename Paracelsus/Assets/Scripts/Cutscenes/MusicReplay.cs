@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class MusicReplay1 : MonoBehaviour
 {
-    public AudioSource musicsource;
-     public void OnTriggExit2D(Collider2D collider)
+    public void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Player" )
         {
-            GameController.floor2_music = true;
+            AudioManager.instance.ChangeMusic("Theme");
         }
     }
   
