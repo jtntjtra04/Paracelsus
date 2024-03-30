@@ -15,11 +15,11 @@ public class AudioManager : MonoBehaviour
         if(instance == null) // to make things easier (easier to access)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+          //  Destroy(gameObject);
         }
     }
     private void Start()

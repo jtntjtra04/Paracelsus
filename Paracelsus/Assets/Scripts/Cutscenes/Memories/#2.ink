@@ -73,7 +73,7 @@ After the pupil sit nexts to me, I took the shining crystal next to my desk. #la
 "*mumble* *mumble*"
 "22 years old?"
 ~Music("FOOLINGAROUND")
-~SE("Shock")
+~SE("shock")
 "22?!!!" #layout:no #speaker:Celsus
 "THAT'S ONLY 9 YEARS APART FROM ME! BUT YOU LOOK LIKE A DAMN 10 YEAR OLD!"
 "Teacher..." #layout:no #speaker:Pupil
