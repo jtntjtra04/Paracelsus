@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      woodhouse1_0: 1419255118720204293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
