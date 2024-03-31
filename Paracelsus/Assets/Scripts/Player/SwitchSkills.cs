@@ -268,7 +268,7 @@ public class SwitchSkills : MonoBehaviour
             Vector2 playerDirection = (playerScaleX < 0) ? -transform.right : transform.right; // Assuming the tornado should move to the right relative to the player's facing direction
 
             pillarPrefabInstance.transform.localScale = new Vector3(playerScaleX, transform.localScale.y, transform.localScale.z);
-         
+            Destroy(pillarPrefabInstance, 10f);
             
         }
        
@@ -277,7 +277,10 @@ public class SwitchSkills : MonoBehaviour
     private void LaunchPillar()
     {
         AudioManager.instance.sfx_source.loop = false;
-        AudioManager.instance.PlaySFX("EarthLaunch");
+        if(pillarPrefabInstance != null)
+        {
+            AudioManager.instance.PlaySFX("EarthLaunch");
+        }
         Rigidbody2D pillarRigidbody = pillarPrefabInstance.GetComponent<Rigidbody2D>();
         
 
@@ -290,7 +293,7 @@ public class SwitchSkills : MonoBehaviour
             pillarRigidbody.AddForce(playerDirection * tornadoSpeed);
         earthReady = false;
         // Destroy the tornado after 1 second
-        Destroy(pillarPrefabInstance, 5f);
+        Destroy(pillarPrefabInstance, 2f);
     }
 
     public void UpdateEarthPillarPosition()
