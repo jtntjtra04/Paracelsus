@@ -56,6 +56,9 @@ public class GameController : MonoBehaviour
     public bool KnockFromRight;
     public bool KnockFromLeft;
 
+    // Invincible Effect
+    public bool invincible = false;
+
     // UI
     public GameObject DeathUI;
     public GameObject EndGameUI;
@@ -88,6 +91,8 @@ public class GameController : MonoBehaviour
         // Respawn point
         startPosition = transform.position;
         checkpointPosition = startPosition;
+
+        invincible = false;
     }
 
     private void Awake()
@@ -125,6 +130,10 @@ public class GameController : MonoBehaviour
         {
             Death();
         }
+        else
+        {
+            StartCoroutine(InvincibleTime());
+        }
     }
 
     // Hitting an Obstacle or Checkpoint or Pillar
@@ -133,7 +142,7 @@ public class GameController : MonoBehaviour
         if (collision.CompareTag("Obstacles"))
         {
             // Player hitting wind slime
-            if(barrier.barrierPrefabInstance == null)
+            if(barrier.barrierPrefabInstance == null && !invincible)
             {
                 if (currHP > 0)
                 {
@@ -153,7 +162,7 @@ public class GameController : MonoBehaviour
         else if (collision.CompareTag("WindSlime") || collision.CompareTag("EarthSlime") || collision.CompareTag("WaterSlime") || collision.CompareTag("FireSlime"))
         {
             // Player hitting normal slime
-            if(barrier.barrierPrefabInstance == null)
+            if(barrier.barrierPrefabInstance == null && !invincible)
             {
                 Debug.Log("Barrier is null");
                 if(currHP > 0)
@@ -196,7 +205,6 @@ public class GameController : MonoBehaviour
             StartCoroutine(EndGame());
         }
     }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Checkpoint"))
@@ -225,7 +233,7 @@ public class GameController : MonoBehaviour
         if (collision.collider.tag == "SlimeKing")
         {
             // Player hitting boss slime
-            if (barrier.barrierPrefabInstance == null)
+            if (barrier.barrierPrefabInstance == null && !invincible)
             {
                 Debug.Log("Barrier is null");
                 if(currHP > 0)
@@ -350,8 +358,6 @@ public class GameController : MonoBehaviour
             AudioManager.instance.PlaySFX("PotionDrink");
         }
     }
-
-
     void SetCheckpoint()
     {
         checkpointPosition = transform.position;
@@ -464,5 +470,40 @@ public class GameController : MonoBehaviour
         {
             KnockFromLeft = true;
         }
+    }
+    private IEnumerator InvincibleTime()
+    {
+        invincible = true;
+
+        SpriteRenderer sprite_renderer = GetComponent<SpriteRenderer>();
+
+        // Calculate target color with 60% opacity
+        Color default_color = sprite_renderer.color;
+        Color target_color = new Color(default_color.r, default_color.g, default_color.b, 0.5f); // 60% opacity
+
+        //Blinking
+        float blink_interval = 0.05f;
+        float elapsed_time = 0f;
+        float duration = 5f; // Total duration of invincibility
+
+        while (elapsed_time < duration)
+        {
+            // Toggle between original color and target color every blinkInterval seconds
+            if (sprite_renderer.color.a >= 1f)
+            {
+                sprite_renderer.color = target_color;
+            }
+            else
+            {
+                sprite_renderer.color = default_color;
+            }
+
+            yield return new WaitForSeconds(blink_interval);
+            elapsed_time += blink_interval;
+        }
+
+        // Ensure the final color is exactly the target color
+        sprite_renderer.color = default_color;
+        invincible = false;
     }
 }

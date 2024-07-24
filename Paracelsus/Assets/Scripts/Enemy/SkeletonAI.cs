@@ -116,7 +116,7 @@ public class SkeletonAI : MonoBehaviour
     }
     private void DamagePlayer()
     {
-        if (PlayerDetected() && player_HP.currHP != 0 && skills.barrierPrefabInstance == null) //Player still in range or still hit the box 
+        if (PlayerDetected() && player_HP.currHP != 0 && skills.barrierPrefabInstance == null && !player_HP.invincible) //Player still in range or still hit the box 
         {
             // Get the direction from the player to the skeleton
             Vector2 knockback_direction = (player_HP.transform.position - transform.position).normalized;
