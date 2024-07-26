@@ -484,7 +484,7 @@ public class GameController : MonoBehaviour
         //Blinking
         float blink_interval = 0.05f;
         float elapsed_time = 0f;
-        float duration = 5f; // Total duration of invincibility
+        float duration = 1f; // Total duration of invincibility
 
         while (elapsed_time < duration)
         {
